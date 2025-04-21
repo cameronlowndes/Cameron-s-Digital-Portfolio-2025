@@ -1,0 +1,114 @@
+/* Navigation Bar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lavender;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 999;
+  padding: 5px 10px; /* Reduced padding */
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px; /* Reduced logo size */
+  margin-right: 8px; /* Reduced margin */
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.welcome h1 {
+  font-size: 18px; /* Reduced font size */
+  font-weight: bold;
+  margin: 0; /* Removed margin */
+  color: black;
+}
+
+.welcome h2 {
+  font-size: 14px; /* Reduced font size */
+  font-weight: normal;
+  margin: 0;
+  color: #999;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  white-space: nowrap; /* Prevent line breaks in list items */
+}
+
+a {
+  display: block;
+  padding: 8px 12px; /* Reduced padding */
+  color: #333;
+  text-decoration: none;
+  font-size: 14px; /* Reduced font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+a:hover {
+  color: #e74c3c;
+}
+
+ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px; /* Reduced width */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 1;
+  text-align: center;
+}
+
+li:hover > ul {
+  display: block;
+}
+
+ul ul li {
+  position: relative;
+}
+
+ul ul ul {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 180px; /* Reduced width */
+}
+
+ul ul a {
+  padding: 6px 8px; /* Reduced padding */
+  color: #333;
+  font-size: 12px; /* Reduced font size */
+  font-weight: normal;
+  text-transform: none;
+  transition: color 0.2s;
+  white-space: nowrap; /* Prevent text from wrapping in submenus */
+}
+
+ul ul a:hover {
+  color: #e74c3c;
+}

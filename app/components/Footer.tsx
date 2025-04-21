@@ -1,15 +1,21 @@
-// components/Footer.tsx
+import Link from 'next/link';
 
-import React from "react";
+export default function Footer() {
+    const currentYear = new Date().getFullYear(); // Get the current year
 
-const Footer = ({ className }: { className?: string }) => {
-  return (
-    <footer className={`bg-gray-800 text-white py-4 ${className}`}>
-      <div className="text-center">
-        <p>© 2025 Cameron Lowndes. All Rights Reserved.</p>
-      </div>
-    </footer>
-  );
-};
+    return (
+      <footer className="w-full bg-gray-800 text-black shadow-md py-4 px-8 flex justify-center items-center fixed bottom-0 left-0 right-0 z-50">
 
-export default Footer;
+        <p className="text-sm text-center text-white">
+          &copy; {currentYear} Cameron lowndes:| Follow me  on{" "}
+          <a href="https://www.facebook.com/profile.php?id=61556621159422" className="underline">
+            Facebook
+          </a>{" "} |{" "}
+          <Link href="/terms" className="underline">
+            Terms
+          </Link>{" "} 
+          
+        </p>
+      </footer>
+    );
+}

@@ -3,15 +3,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Services() {
   return (
-    <div className="bg-white min-h-screen flex flex-col pt-24 pb-1 px-4">
+    <div className="min-h-screen flex flex-col pt-16 px-4">
       <Head>
-        {/* Custom Page Title */}
         <title>Services | Cameron Lowndes - Full-Stack Developer</title>
-
-        {/* SEO Metadata */}
         <meta
           name="description"
           content="Discover the services offered by Cameron Lowndes, a skilled full-stack developer, including web development, cloud solutions, and custom software development."
@@ -21,10 +19,7 @@ export default function Services() {
           property="og:description"
           content="Discover the services offered by Cameron Lowndes, a skilled full-stack developer, including web development, cloud solutions, and custom software development."
         />
-        <meta
-          property="og:image"
-          content="/image/cameron.jpg"
-        />
+        <meta property="og:image" content="/image/cameron.jpg" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,155 +27,196 @@ export default function Services() {
 
       <Navbar />
 
-      <section className="max-w-4xl mx-auto mt-12 p-6">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">Services</h1>
+      <main className="max-w-6xl mx-auto w-full py-16">
+        <h1 className="text-5xl font-semibold text-center text-gray-900 mb-16">
+          Services I Offer
+        </h1>
 
-        <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            As a full-stack developer with experience in various technologies and cloud computing, I offer a range of services designed to help you achieve your business goals.
-          </p>
+        <div className="space-y-24">
+          {/* Web Development */}
+          <ServiceSection
+            title="Web Development"
+            description="Modern, responsive websites using Next.js, React, and Node.js. Perfect for everything from simple static sites to full-blown web applications."
+            services={[
+              {
+                title: "Next.js/React Development",
+                description:
+                  "Build fast and scalable websites using Next.js or React, optimized for performance.",
+                price: "£1500 - £3000",
+                link: "/services/nextjs-react-development",
+              },
+              {
+                title: "Basic HTML/CSS Development",
+                description:
+                  "For simple and clean static websites, I offer basic HTML and CSS development.",
+                price: "£500 - £1000",
+                link: "/services/html-css-development",
+              },
+            ]}
+          />
 
-          {/* Web Development Service */}
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Web Development</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            I specialize in creating responsive, fast, and user-friendly websites. From static sites to dynamic web applications, I build solutions tailored to your needs. I work with modern frameworks and technologies like <strong className="text-lavender-400">Next.js</strong>, <strong className="text-lavender-400">React</strong>, and <strong className="text-lavender-400">Node.js</strong>.
-          </p>
+          {/* Cloud Solutions (Coming Soon) */}
+          <ServiceSection
+            title="Cloud Solutions"
+            description="Cloud-native development with Azure and AWS. I handle migrations, deployments, and infrastructure optimization for performance and cost savings."
+            services={[
+              {
+                title: "Cloud Migration",
+                description:
+                  "Migrate your applications to the cloud for improved performance and scalability.",
+                price: "£2000 - £5000",
+                link: "/services/cloud-migration",
+                comingSoon: true,
+              },
+              {
+                title: "Cloud Deployment & Management",
+                description:
+                  "Deployment and management of your cloud infrastructure to ensure smooth operations.",
+                price: "£1500 - £3000",
+                link: "/services/cloud-deployment-management",
+                comingSoon: true,
+              },
+            ]}
+          />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-              <h3 className="font-semibold text-xl text-gray-800 mb-4">Next.js/React Development</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                Build fast and scalable websites using Next.js or React, optimized for performance.
-              </p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">
-                £1500 - £3000
-              </p>
-              <button className="bg-lavender-400 text-black px-4 py-2 rounded-md">Get Started</button>
-            </div>
+          {/* Custom Software Development */}
+          <ServiceSection
+            title="Custom Software Development"
+            description="Tailored software built to match your business needs—from custom web apps to integrations that improve workflow and efficiency."
+            services={[
+              {
+                title: "Custom Web Application",
+                description:
+                  "Fully customized web applications to suit your unique business needs.",
+                price: "£2500 - £8000",
+                link: "/services/custom-web-application",
+                comingSoon: true,
+              },
+              {
+                title: "API Integration",
+                description:
+                  "Seamless API integration to enhance your applications with third-party services.",
+                price: "£1000 - £2500",
+                link: "/services/api-integration",
+                comingSoon: true,
+              },
+            ]}
+          />
 
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-              <h3 className="font-semibold text-xl text-gray-800 mb-4">Basic HTML/CSS Development</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                For simple and clean static websites, I offer basic HTML and CSS development.
-              </p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">
-                £500 - £1000
-              </p>
-              <button className="bg-lavender-400 text-whit px-4 py-2 rounded-md">Get Started</button>
-            </div>
-          </div>
+          {/* Maintenance */}
+          <ServiceSection
+            title="Maintenance & Support"
+            description="Post-launch support to keep your site running smoothly—bug fixes, performance tuning, and updates included."
+            services={[
+              {
+                title: "Ongoing Maintenance",
+                description:
+                  "Ongoing support and optimization to keep your application running smoothly.",
+                price: "£500 - £1500 / month",
+                link: "/services/ongoing-maintenance",
+              },
+            ]}
+          />
 
-          {/* Cloud Solutions Service */}
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Cloud Solutions</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            With expertise in <strong className="text-lavender-400">Azure</strong> and <strong className="text-lavender-400">AWS</strong>, I can help you migrate, deploy, and manage applications in the cloud. Whether you're looking to scale your application or leverage cloud services, I provide solutions that enhance performance and reduce operational costs.
-          </p>
+          {/* Consulting */}
+          <ServiceSection
+            title="Consulting"
+            description="Not sure where to start? I offer technical consulting to help plan your project architecture, stack, and roadmap."
+            services={[
+              {
+                title: "Consultation Hourly Rate",
+                description:
+                  "Hourly consultation to help you navigate the best path forward.",
+                price: "£100 - £200 / hour",
+                link: "/services/consultation",
+              },
+            ]}
+          /> 
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-              <h3 className="font-semibold text-xl text-gray-800 mb-4">Cloud Migration</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                Migrate your applications to the cloud for improved performance and scalability.
-              </p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">
-                £2000 - £5000
-              </p>
-              <button className="bg-lavender-400 text-black px-4 py-2 rounded-md">Get Started</button>
-            </div>
-
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-              <h3 className="font-semibold text-xl text-gray-800 mb-4">Cloud Deployment & Management</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                Deployment and management of your cloud infrastructure to ensure smooth operations.
-              </p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">
-                £1500 - £3000
-              </p>
-              <button className="bg-lavender-400 text-black px-4 py-2 rounded-md">Get Started</button>
-            </div>
-          </div>
-
-          {/* Custom Software Development Service */}
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Custom Software Development</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            I offer custom software development services to create solutions that are tailored specifically to your business needs. From database design to API integration, I build systems that streamline workflows and improve efficiency.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-              <h3 className="font-semibold text-xl text-gray-800 mb-4">Custom Web Application</h3>
-              <p className="text-lg text-black text-gray-700 mb-4">
-                Fully customized web applications to suit your unique business needs.
-              </p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">
-                £2500 - £8000
-              </p>
-              <button className="bg-lavender-400 text-black px-4 py-2 rounded-md">Get Started</button>
-            </div>
-
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-              <h3 className="font-semibold text-xl text-gray-800 mb-4">API Integration</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                Seamless API integration to enhance your applications with third-party services.
-              </p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">
-                £1000 - £2500
-              </p>
-              <button className="bg-lavender-400 texte-black px-4 py-2 rounded-md">Get Started</button>
-            </div>
-          </div>
-
-          {/* Maintenance and Support Service */}
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Maintenance and Support</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Post-launch, I offer maintenance and support to ensure your website or application continues to run smoothly. Whether it's troubleshooting issues or implementing updates, I’m here to keep your systems optimized.
-          </p>
+          {/* Special Offer for Small Companies */}
+          <ServiceSection
+            title="Special Offer for Small Companies"
+            description="If you’re a small business, I offer customized pricing and special discounts. Please get in touch—I'd love to help your business grow."
+            services={[
+              {
+                title: "Consultation Hourly Rate",
+                description:
+                  "Hourly consultation to help you navigate the best path forward.",
+                price: "Special Discounted Rate",
+                link: "/services/small-business-consultation",
+              },
+            ]}
+          />
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-              <h3 className="font-semibold text-xl text-gray-800 mb-4">Ongoing Maintenance</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                Ongoing support and optimization to keep your application running smoothly.
-              </p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">
-                £500 - £1500 per month
-              </p>
-              <button className="bg-lavender-400 text-black px-4 py-2 rounded-md">Get Started</button>
-            </div>
-          </div>
-
-          {/* Consulting Service */}
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Consulting</h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            If you’re unsure where to start, I offer consulting services to help guide your project. I provide advice on architecture, technology stacks, and best practices to ensure your project is set up for success.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
-              <h3 className="font-semibold text-xl text-gray-800 mb-4">Consultation Hourly Rate</h3>
-              <p className="text-lg text-gray-700 mb-4">
-                Hourly consultation to help you navigate the best path forward.
-              </p>
-              <p className="text-2xl font-bold text-gray-800 mb-4">
-                £100 - £200 per hour
-              </p>
-              <button className="bg-lavender-400 text-black px-4 py-2 rounded-md">Get Started</button>
-            </div>
-          </div>
-
-          {/* Small Business Offer */}
-          <div className="mt-12 text-center">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Special Offer for Small Companies</h3>
-            <p className="text-lg text-gray-700 mb-4">
-              If you’re a small business, I offer customized pricing and special discounts. Please get in touch with me, and I’d be happy to discuss how I can help your business succeed.
-            </p>
-            <button className="bg-lavender-400 text-black px-6 py-3 rounded-md">Contact Me</button>
-          </div>
-
         </div>
-      </section>
+      </main>
 
       <Footer />
+    </div>
+  );
+}
+
+function ServiceSection({
+  title,
+  description,
+  services,
+}: {
+  title: string;
+  description: string;
+  services: {
+    title: string;
+    description: string;
+    price: string;
+    link: string;
+    comingSoon?: boolean;
+  }[];
+}) {
+  return (
+    <section>
+      <h2 className="text-3xl font-bold text-gray-800 mb-4">{title}</h2>
+      <p className="text-lg text-gray-700 mb-8">{description}</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <ServiceCard key={service.title} {...service} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ServiceCard({
+  title,
+  description,
+  price,
+  link,
+  comingSoon = false,
+}: {
+  title: string;
+  description: string;
+  price: string;
+  link: string;
+  comingSoon?: boolean;
+}) {
+  return (
+    <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 text-center border border-gray-100">
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-base text-gray-700 mb-4">{description}</p>
+      <p className="text-lg font-bold text-gray-800 mb-6">{price}</p>
+
+      {comingSoon ? (
+        <button
+          disabled
+          className="bg-gray-300 text-gray-600 px-4 py-2 rounded-md cursor-not-allowed"
+        >
+          Coming Soon
+        </button>
+      ) : (
+        <Link href={link}>
+          <button className="bg-lavender-400 text-black px-4 py-2 rounded-md hover:bg-lavender-500 transition cursor-pointer">
+            Get Started
+          </button>
+        </Link>
+      )}
     </div>
   );
 }

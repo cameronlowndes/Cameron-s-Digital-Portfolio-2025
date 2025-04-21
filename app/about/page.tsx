@@ -6,7 +6,7 @@ import Head from "next/head";
 
 export default function About() {
   return (
-    <div className="bg-white min-h-screen flex flex-col pt-24 pb-1 px-4">
+    <div className="flex flex-col items-center mt-6 mb-10">
       <Head>
         {/* Custom Page Title */}
         <title>About Me | Cameron Lowndes - Full-Stack Developer</title>
@@ -32,7 +32,7 @@ export default function About() {
 
       <Navbar />
 
-      <section className="max-w-4xl mx-auto mt-12 p-6">
+      <section className="max-w-4xl mx-auto mt-12"> {/* Added mt-12 for margin top */}
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">About Me</h1>
 
         <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200">

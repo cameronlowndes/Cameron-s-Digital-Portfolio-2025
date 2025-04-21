@@ -1,0 +1,117 @@
+/* General reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vw; /* Adjusted to vw units for better scaling */
+  line-height: 1.6;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* Container for content */
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; /* Center horizontally */
+  width: 100%;
+  max-width: 1200px; /* Optional: limit width */
+  padding: 20px; /* Added padding for spacing */
+}
+
+/* Image holder styling */
+.img-holder {
+  background-color: #e5e5e5;
+  width: 25%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px; /* Adjusted for a more subtle curve */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  margin-top: 100px; /* Reduced for better alignment */
+}
+
+/* Image styling */
+.img {
+  padding: 10px;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px; /* Added rounded corners */
+}
+
+/* Profile section styling */
+.profile-section {
+  width: 60%;
+  padding: 30px;
+  text-align: left;
+  margin-top: 50px; /* Reduced for better alignment */
+}
+
+/* Profile container styling */
+.profile {
+  background-color: lavender;
+  border: 2px solid lavender;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Profile title styling */
+.profile-title {
+  color: black;
+  text-align: left;
+  font-size: 1.5rem; /* Adjusted for responsiveness */
+  margin-bottom: 10px;
+}
+
+/* Profile description styling */
+.profile-description {
+  font-size: 1.2rem; /* Adjusted for responsiveness */
+  line-height: 1.5;
+}
+
+/* Row styling */
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Column-large styling */
+.column-large {
+  background-color: lavender;
+  text-align: center;
+  padding: 20px;
+  min-height: 35vh; /* Ensures some minimum height */
+  width: 100%; /* Optional: adjust width for centering */
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px; /* Added rounded corners */
+}
+
+/* Description styling */
+.desc {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 1.2rem; /* Adjusted for responsiveness */
+  margin: 20px; /* Adjusted margins for spacing */
+}
