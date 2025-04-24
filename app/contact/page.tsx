@@ -33,7 +33,7 @@ export default function Contact() {
 
         <div className="relative overflow-hidden rounded-2xl shadow-lg border border-gray-200">
           <iframe
-            src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true"
+            src="https://forms.gle/MdHspXoBw1U2QUrB7"
             width="100%"
             height="800"
             frameBorder="0"

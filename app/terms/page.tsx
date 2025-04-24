@@ -34,70 +34,92 @@ export default function Terms() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Introduction</h2>
           <p className="text-lg text-gray-700 mb-4">
-            These terms and conditions ("Terms") govern your use of the website and the services provided by Cameron Lowndes ("I," "me," or "my"). By accessing or using the website and services, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use the website or services.
+            These Terms and Conditions ("Terms") govern your use of the website and the services provided by Cameron Lowndes, a sole trader operating under the business name [Your Business Name]. By accessing or using the website and services, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use the website or services.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Services</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
           <p className="text-lg text-gray-700 mb-4">
-            Cameron Lowndes provides web development, cloud solutions, custom software development, and consulting services. The services offered will be detailed in the service agreements and are subject to change without prior notice.
+            Cameron Lowndes is a sole trader registered with HMRC in the United Kingdom, offering [description of services]. The business operates under the registered trading name [Your Business Name].
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Use of the Website</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Scope of Services</h2>
           <p className="text-lg text-gray-700 mb-4">
-            You agree to use the website only for lawful purposes and in accordance with these Terms. You must not use the website to transmit or introduce any viruses, malicious code, or harmful data.
+            We provide the following services:
+            <ul className="list-disc pl-6 text-lg text-gray-700">
+              <li>Web development (including design, development, and maintenance)</li>
+              <li>Server management and hosting services</li>
+              <li>Custom web applications</li>
+              <li>SEO optimization</li>
+              <li>Mobile-first website design</li>
+              <li>Technical support and consultancy</li>
+            </ul>
+            These services are subject to availability and may change from time to time. Additional or custom services can be requested and are subject to mutual agreement.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Intellectual Property</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Contract Formation</h2>
           <p className="text-lg text-gray-700 mb-4">
-            All content, logos, designs, and intellectual property on this website are the property of Cameron Lowndes unless otherwise stated. You may not use any content from this website without obtaining permission from me.
+            By placing an order or requesting services from us, you are making an offer to purchase services under these Terms and Conditions. We reserve the right to accept or reject any offer, and the contract will be deemed to have been formed upon our acceptance.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Limitation of Liability</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Payment Terms</h2>
           <p className="text-lg text-gray-700 mb-4">
-            In no event shall Cameron Lowndes be liable for any direct, indirect, incidental, special, or consequential damages arising from the use of the website or services. This includes, but is not limited to, loss of data or business interruption.
+            - Payments for services will be due within <strong>7 days</strong> of the invoice date.<br />
+            - A <strong>5% interest charge</strong> may apply to overdue balances after <strong>7 days</strong> from the invoice date.<br />
+            - Continued <strong>non-payment</strong> may result in <strong>service suspension</strong> until the outstanding amount is paid.<br />
+            - Please <strong>reference the invoice number</strong> when making payment to avoid processing delays.
+          </p>
+          <p className="text-lg text-gray-700 mb-4">
+            Failure to make payment in accordance with these terms may result in the suspension or termination of services, and the client will be responsible for any recovery costs associated with overdue payments.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Indemnification</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Liability</h2>
           <p className="text-lg text-gray-700 mb-4">
-            You agree to indemnify and hold harmless Cameron Lowndes from any claims, damages, liabilities, or expenses (including legal fees) arising from your use of the website or services.
+            Cameron Lowndes will not be liable for any indirect, special, or consequential damages resulting from the use of our services. Our liability is limited to the total amount paid for the services that directly caused the damage.
           </p>
         </section>
 
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Termination</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Privacy and Data Protection</h2>
           <p className="text-lg text-gray-700 mb-4">
-            I reserve the right to suspend or terminate your access to the website and services at any time, without notice, for any violation of these Terms or any unlawful activity.
+            We are committed to protecting your privacy and handling your data in compliance with UK data protection laws, including the Data Protection Act 2018 and GDPR. For more information, please refer to our Privacy Policy.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Cancellation and Refunds</h2>
+          <p className="text-lg text-gray-700 mb-4">
+            If you wish to cancel a service, you must notify us in writing. Refunds are only provided in accordance with our refund policy, which may vary depending on the nature of the service. In most cases, once the work has commenced or services have been rendered, refunds may not be issued.
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Governing Law</h2>
           <p className="text-lg text-gray-700 mb-4">
-            These Terms are governed by and construed in accordance with the laws of the jurisdiction in which I operate. Any legal action or proceeding related to these Terms must be brought in the appropriate court in that jurisdiction.
+            These Terms and Conditions shall be governed by and construed in accordance with the laws of the United Kingdom. Any disputes shall be subject to the exclusive jurisdiction of the courts of the United Kingdom.
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Changes to Terms</h2>
           <p className="text-lg text-gray-700 mb-4">
-            I may update or modify these Terms at any time. Any changes will be posted on this page, and the date of the most recent revision will be reflected at the top of the page.
+            We reserve the right to update or modify these Terms and Conditions at any time. Any changes will be posted on this page, and it is your responsibility to review them regularly.
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Information</h2>
           <p className="text-lg text-gray-700 mb-4">
-            If you have any questions or concerns about these Terms, please contact me at: <strong>contact@cameronlowndes.com</strong>.
+            For any questions or concerns regarding these Terms and Conditions, you can contact us at: <strong>contact@cameronlowndes.com</strong>.
           </p>
         </section>
       </main>

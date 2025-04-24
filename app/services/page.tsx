@@ -42,7 +42,7 @@ export default function Services() {
                 title: "Next.js/React Development",
                 description:
                   "Build fast and scalable websites using Next.js or React, optimized for performance.",
-                price: "£1500 - £3000",
+                price: "£499 - £3000",
                 link: "/services/nextjs-react-development",
               },
               {
