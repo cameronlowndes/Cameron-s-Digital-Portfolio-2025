@@ -87,6 +87,7 @@ export default function HtmlCssDevelopment() {
             <li>Multilingual static site support: +£150</li>
             <li>Monthly updates + hosting support: £50/mo</li>
             <li>JavaScript functionality (sliders, modals, validation): +£200</li>
+            <li>Remove WaterMark: +£150</li>
           </ul>
         </section>
 

@@ -83,6 +83,7 @@ export default function NextJsReactDevelopment() {
             <li>Multilingual support: +£250</li>
             <li>Hosting migration: +£100</li>
             <li>Monthly maintenance: £75/month</li>
+            <li>Remove WaterMark: +£300</li>
           </ul>
         </section>
 
