@@ -143,7 +143,7 @@ export default function Services() {
                 description:
                   "Hourly consultation to help you navigate the best path forward.",
                 price: "Special Discounted Rate",
-                link: "/services/small-business-consultation",
+                link: "/services/SpecialOfferPage",
               },
             ]}
           />
