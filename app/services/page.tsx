@@ -113,7 +113,7 @@ export default function Services() {
                 description:
                   "Ongoing support and optimization to keep your application running smoothly.",
                 price: "£500 - £1500 / month",
-                link: "/services/ongoing-maintenance",
+                link: "/services/OngoingMaintenance",
               },
             ]}
           />
@@ -127,7 +127,7 @@ export default function Services() {
                 title: "Consultation Hourly Rate",
                 description:
                   "Hourly consultation to help you navigate the best path forward.",
-                price: "£100 - £200 / hour",
+                price: "£50 - £600+ / hour",
                 link: "/services/consultation",
               },
             ]}
