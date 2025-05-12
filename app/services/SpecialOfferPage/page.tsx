@@ -6,9 +6,9 @@ import { CheckCircle } from "lucide-react";
 
 export default function DiscountedDevOffer() {
   return (
-    <div className="min-h-screen flex flex-col pt-16 bg-gradient-to-b from-white to-gray-100 px-4">
+    <div className="min-h-screen flex flex-col pt-16 bg-gradient-to-b fgray-100 px-4">
       <Head>
-        <title>Discounted Next.js/React Services | Cameron Lowndes</title>
+        <title> Special Discount for Charities & Small Businesses | Cameron Lowndes</title>
         <meta
           name="description"
           content="Affordable, high-quality Next.js and React development services for charities and small businesses. Tailored for impact and accessibility."
@@ -30,7 +30,7 @@ export default function DiscountedDevOffer() {
         {/* Packages */}
         <section className="mb-24">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">💼 Discounted Packages</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-8">
             {/* Starter */}
             <div className="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-green-500 flex flex-col">
               <h3 className="text-2xl font-bold text-green-600 mb-2">🟢 Starter</h3>
@@ -87,7 +87,7 @@ export default function DiscountedDevOffer() {
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
             <li>E-commerce integration (Stripe): +£300</li>
             <li>Multilingual support: +£200</li>
-            <li>Monthly updates & monitoring: £60/month</li>
+            <li>Monthly updates & monitoring: £160/month</li>
             <li>Hosting migration & setup: +£75</li>
             <li>Remove attribution: +£150</li>
           </ul>
@@ -117,7 +117,7 @@ export default function DiscountedDevOffer() {
               src="https://forms.gle/TjquVa2ZnUnfseAz7"
               width="100%"
               height="100%"
-              className="w-full h-[700px] border-0 rounded-xl shadow-lg"
+              className="w-full h-[600px] border-0 rounded-xl shadow-lg"
               loading="lazy"
               allowFullScreen
             >
@@ -126,7 +126,7 @@ export default function DiscountedDevOffer() {
           </div>
         </section>
 
-        <div className="text-center">
+        <div className="text-center mb-20">
           <Link href="/services">
             <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               ⬅ Back to Services
@@ -139,3 +139,4 @@ export default function DiscountedDevOffer() {
     </div>
   );
 }
+

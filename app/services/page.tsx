@@ -1,5 +1,3 @@
-// pages/services.tsx
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
@@ -7,7 +5,7 @@ import Link from "next/link";
 
 export default function Services() {
   return (
-    <div className="min-h-screen flex flex-col pt-16 px-4">
+    <div className="flex flex-col min-h-screen pt-16 px-4">
       <Head>
         <title>Services | Cameron Lowndes - Full-Stack Developer</title>
         <meta
@@ -26,8 +24,7 @@ export default function Services() {
       </Head>
 
       <Navbar />
-
-      <main className="max-w-6xl mx-auto w-full py-16">
+      <main className="flex-1 max-w-6xl mx-auto w-full pt-16 pb-32">
         <h1 className="text-5xl font-semibold text-center text-gray-900 mb-16">
           Services I Offer
         </h1>
@@ -49,7 +46,7 @@ export default function Services() {
                 title: "Basic HTML/CSS Development",
                 description:
                   "For simple and clean static websites, I offer basic HTML and CSS development.",
-                price: "£500 - £1000",
+                price: "£199 - £699",
                 link: "/services/html-css-development",
               },
             ]}
@@ -131,7 +128,7 @@ export default function Services() {
                 link: "/services/consultation",
               },
             ]}
-          /> 
+          />
 
           {/* Special Offer for Small Companies */}
           <ServiceSection
@@ -139,7 +136,7 @@ export default function Services() {
             description="If you’re a small business, I offer customized pricing and special discounts. Please get in touch—I'd love to help your business grow."
             services={[
               {
-                title: "Consultation Hourly Rate",
+                title: " Special Discount for Charities & Small Businesses",
                 description:
                   "Hourly consultation to help you navigate the best path forward.",
                 price: "Special Discounted Rate",
@@ -147,7 +144,6 @@ export default function Services() {
               },
             ]}
           />
-          
         </div>
       </main>
 

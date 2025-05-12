@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex flex-col pt-16 px-4">
+    <div className="min-h-screen flex flex-col pt-16">
       <Head>
         <title>Contact | Cameron Lowndes</title>
         <meta
@@ -23,7 +23,7 @@ export default function Contact() {
 
       <Navbar />
 
-      <main className="max-w-4xl mx-auto w-full py-16 flex-grow">
+      <main className="flex-grow max-w-4xl mx-auto w-full px-4 pt-16 pb-24">
         <h1 className="text-4xl font-semibold text-center text-gray-900 mb-8">
           Let's Work Together
         </h1>

@@ -8,7 +8,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function HtmlCssDevelopment() {
   return (
-    <div className="min-h-screen flex flex-col pt-16 px-4">
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>HTML/CSS Development | Cameron Lowndes</title>
         <meta
@@ -19,7 +19,7 @@ export default function HtmlCssDevelopment() {
 
       <Navbar />
 
-      <main className="max-w-4xl mx-auto w-full py-16">
+      <main className="flex-1 max-w-4xl mx-auto w-full pt-16 pb-32 px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">
           HTML/CSS Development
         </h1>
@@ -83,9 +83,9 @@ export default function HtmlCssDevelopment() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-4 text-center">✨ Add-Ons</h2>
           <ul className="list-disc pl-6 space-y-1 text-gray-700">
             <li>E-commerce-ready templates: +£250</li>
-            <li>Newsletter signup integration: +£100</li>
+            <li>Newsletter signup integration: +200</li>
             <li>Multilingual static site support: +£150</li>
-            <li>Monthly updates + hosting support: £50/mo</li>
+            <li>Monthly updates + hosting support: £150/mo</li>
             <li>JavaScript functionality (sliders, modals, validation): +£200</li>
             <li>Remove WaterMark: +£150</li>
           </ul>
@@ -96,27 +96,27 @@ export default function HtmlCssDevelopment() {
             Ready to get started? Fill out the form below:
           </h2>
 
-          <div className="w-full aspect-[4/3] max-w-3xl mx-auto">
+          <div className="w-full aspect-[4/3] max-w-3xl mx-auto mb-8">
             <iframe
               src="https://forms.gle/y5SKPsfhdXHAZGgg6"
               width="100%"
               height="100%"
-              className="w-full h-[700px] border-0 rounded-lg"
+           className="w-full h-[600px] border-0 rounded-xl shadow-lg"
               loading="lazy"
               allowFullScreen
             >
               Loading…
             </iframe>
           </div>
-        </section>
 
-        <div className="text-center">
-          <Link href="/services">
-            <button className="bg-lavender-400 text-black px-6 py-3 rounded-md hover:bg-lavender-500 transition">
-              Back to Services
-            </button>
-          </Link>
-        </div>
+          <div className="text-center mt-8">
+            <Link href="/services">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
+                ⬅ Back to Services
+              </button>
+            </Link>
+          </div>
+        </section>
       </main>
 
       <Footer />

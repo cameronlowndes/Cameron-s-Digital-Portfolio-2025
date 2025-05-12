@@ -6,7 +6,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function OngoingMaintenance() {
   return (
-    <div className="min-h-screen flex flex-col pt-16 bg-gradient-to-b from-white px-4">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white">
       <Head>
         <title>Post-Launch Support & Ongoing Maintenance | Cameron Lowndes</title>
         <meta
@@ -17,7 +17,7 @@ export default function OngoingMaintenance() {
 
       <Navbar />
 
-      <main className="max-w-6xl mx-auto w-full py-16">
+      <main className="flex-grow pt-16 bg-gradient-to-b from-white px-4 pb-12">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
             Post-Launch Support & Ongoing Maintenance
@@ -38,8 +38,8 @@ export default function OngoingMaintenance() {
                 Ensure your website or application is free from bugs that could affect the user experience.
               </p>
               <p className="text-md font-bold text-red-600 mb-2">
-  💰 Starting from <span className="text-xl">£75</span> per fix or <span className="text-xl">£150/month</span> for basic coverage
-                </p>
+                💰 Starting from <span className="text-xl">£75</span> per fix or <span className="text-xl">£150/month</span> for basic coverage
+              </p>
               <ul className="space-y-2 text-gray-700 flex-1">
                 <li><CheckCircle className="inline mr-2 text-red-500" /> Fix broken links and error pages</li>
                 <li><CheckCircle className="inline mr-2 text-red-500" /> Resolve JavaScript errors and performance issues</li>
@@ -55,8 +55,8 @@ export default function OngoingMaintenance() {
                 Optimize your website’s or app’s speed for a seamless user experience.
               </p>
               <p className="text-md font-bold text-blue-600 mb-2">
-  💰 From <span className="text-xl">£200</span> one-time or <span className="text-xl">£300/month</span> with ongoing optimization
-                </p>
+                💰 From <span className="text-xl">£200</span> one-time or <span className="text-xl">£300/month</span> with ongoing optimization
+              </p>
               <ul className="space-y-2 text-gray-700 flex-1">
                 <li><CheckCircle className="inline mr-2 text-blue-600" /> Optimize loading times for faster performance</li>
                 <li><CheckCircle className="inline mr-2 text-blue-600" /> Image optimization and lazy loading</li>
@@ -76,7 +76,7 @@ export default function OngoingMaintenance() {
               Keep your platform up to date with the latest security patches, features, and improvements.
             </p>
             <p className="text-md font-bold text-purple-600 mb-2">
-  💰 <span className="text-xl">£100/month</span> or <span className="text-xl">£1000/year depending what on it.</span>
+                💰 <span className="text-xl">£100/month</span> or <span className="text-xl">£1000/year</span> depending on scope
             </p>
             <ul className="space-y-2 text-gray-700 flex-1">
               <li><CheckCircle className="inline mr-2 text-purple-600" /> Regular content updates and feature enhancements</li>
@@ -96,8 +96,8 @@ export default function OngoingMaintenance() {
               Get the help you need, whenever you need it, with our ongoing support services.
             </p>
             <p className="text-md font-bold text-green-600 mb-2">
-  💰 <span className="text-xl">£170/month</span> for priority access & proactive monitoring depending what on it
-</p>
+                💰 <span className="text-xl">£170/month</span> for priority access & proactive monitoring depending on scope
+            </p>
             <ul className="space-y-2 text-gray-700 flex-1">
               <li><CheckCircle className="inline mr-2 text-green-600" /> Access to a dedicated support team</li>
               <li><CheckCircle className="inline mr-2 text-green-600" /> Priority handling for urgent issues</li>
@@ -114,10 +114,10 @@ export default function OngoingMaintenance() {
           </h2>
           <div className="w-full aspect-[4/3] max-w-3xl mx-auto">
             <iframe
-              src="https://forms.gle/hPqprkC8yyZsyMAt5"  
+              src="https://forms.gle/hPqprkC8yyZsyMAt5"
               width="100%"
               height="100%"
-              className="w-full h-[700px] border-0 rounded-xl shadow-lg"
+              className="w-full h-[600px] border-0 rounded-xl shadow-lg"
               loading="lazy"
               allowFullScreen
             >
@@ -126,7 +126,7 @@ export default function OngoingMaintenance() {
           </div>
         </section>
 
-        <div className="text-center">
+        <div className="text-center mb-12">
           <Link href="/services">
             <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               ⬅ Back to Services

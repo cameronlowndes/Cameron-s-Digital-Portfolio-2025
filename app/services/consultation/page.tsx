@@ -6,7 +6,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function ConsultationPage() {
   return (
-    <div className="min-h-screen flex flex-col pt-16 bg-gradient-to-b from-white to-gray-100 px-4">
+    <div className="min-h-screen flex flex-col pt-16 bg-gradient-to-b gray-100 px-4">
       <Head>
         <title>Consultation Services | Cameron Lowndes</title>
         <meta
@@ -17,7 +17,7 @@ export default function ConsultationPage() {
 
       <Navbar />
 
-      <main className="max-w-6xl mx-auto w-full py-16">
+      <main className="flex-grow max-w-6xl mx-auto w-full py-16">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
             Expert Consultation Services for Your Business
@@ -28,9 +28,9 @@ export default function ConsultationPage() {
         </div>
 
         {/* Consultation Packages */}
-        <section className="mb-24">
+        <section className="mb-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">💼 Consultation Packages</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {/* Basic Consultation */}
             <div className="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-green-500 flex flex-col">
               <h3 className="text-2xl font-bold text-green-600 mb-2">🟢 Basic</h3>
@@ -88,7 +88,7 @@ export default function ConsultationPage() {
               src="https://forms.gle/EVsMZUHn8armhetx8" 
               width="100%"
               height="100%"
-              className="w-full h-[700px] border-0 rounded-xl shadow-lg"
+              className="w-full h-[600px] border-0 rounded-xl shadow-lg"
               loading="lazy"
               allowFullScreen
             >
@@ -97,7 +97,7 @@ export default function ConsultationPage() {
           </div>
         </section>
 
-        <div className="text-center">
+        <div className="text-center mb-20">
           <Link href="/services">
             <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               ⬅ Back to Services

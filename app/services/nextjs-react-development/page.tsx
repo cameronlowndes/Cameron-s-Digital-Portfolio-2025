@@ -17,7 +17,7 @@ export default function NextJsReactDevelopment() {
 
       <Navbar />
 
-      <main className="max-w-6xl mx-auto w-full py-16">
+      <main className="flex-grow max-w-6xl mx-auto w-full py-16">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
             Next.js / React Development
@@ -30,7 +30,7 @@ export default function NextJsReactDevelopment() {
         {/* Packages */}
         <section className="mb-24">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">💼 Packages & Pricing</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Starter */}
             <div className="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-green-500 flex flex-col">
               <h3 className="text-2xl font-bold text-green-600 mb-2">🟢 Starter</h3>
@@ -76,13 +76,13 @@ export default function NextJsReactDevelopment() {
         </section>
 
         {/* Add-ons */}
-        <section className="mb-24">
+        <section className="mb-5">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">✨ Add-Ons</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
             <li>E-commerce setup (Stripe + product pages): +£400</li>
-            <li>Multilingual support: +£250</li>
+            <li>Multilingual support: +3250</li>
             <li>Hosting migration: +£100</li>
-            <li>Monthly maintenance: £75/month</li>
+            <li>Monthly maintenance: £250/month</li>
             <li>Remove WaterMark: +£300</li>
           </ul>
         </section>
@@ -108,7 +108,7 @@ export default function NextJsReactDevelopment() {
               src="https://forms.gle/6tUbkKQpebgotUpu6"
               width="100%"
               height="100%"
-              className="w-full h-[700px] border-0 rounded-xl shadow-lg"
+              className="w-full h-[600px] border-0 rounded-xl shadow-lg"
               loading="lazy"
               allowFullScreen
             >

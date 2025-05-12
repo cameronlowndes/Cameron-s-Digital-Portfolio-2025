@@ -2,7 +2,7 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
-import ClientSlider from "../components/ClientSlider"; // Import the new ClientSlider component
+import ClientSlider from "../components/ClientSlider";
 
 export default function Projects() {
   const projectData = [
@@ -11,7 +11,7 @@ export default function Projects() {
       description:
         "This project aims to create a responsive, easy-to-manage website for Burton Pride, showcasing news, events, community stories, and volunteer engagement. Built with Next.js and TypeScript, the site ensures long-term stability and accessibility across all devices, with mobile-first design principles in mind.",
       techStack: ["Next.js", "Tailwind CSS", "Node.js"],
-      link: "https://www.burtonpride.co.uk/", // This project has a link
+      link: "https://www.burtonpride.co.uk/",
       images: [
         "/image/burton-pride-1.png",
         "/image/burton-pride-2.png",
@@ -28,7 +28,6 @@ export default function Projects() {
         "/image/portfolio-2.png",
         "/image/portfolio-3.png",
       ],
-      // No 'link' here, so no "Learn more" button will appear
     },
     {
       title: "E-commerce Store",
@@ -47,7 +46,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col pt-16 px-4">
+    <div className="flex flex-col min-h-screen">
       <Head>
         <title>Projects | Cameron Lowndes</title>
         <meta
@@ -58,44 +57,46 @@ export default function Projects() {
 
       <Navbar />
 
-      <main className="max-w-4xl mx-auto w-full py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">
-          My Projects
-        </h1>
-        <p className="text-lg text-gray-700 mb-8 text-center">
-          Below are some of the web development projects I’ve worked on. Click on
-          any project to learn more about the development process, technologies
-          used, and view live demos.
-        </p>
+      <main className="flex-grow flex flex-col items-center justify-start px-4 py-16 pb-24 w-full">
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projectData.map((project, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition"
-            >
-              <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-                {project.title}
-              </h2>
-              <p className="text-gray-700 mb-4">{project.description}</p>
-              <p className="text-gray-600 text-sm mb-4">
-                Tech Stack: {project.techStack.join(", ")}
-              </p>
+        <div className="max-w-4xl w-full">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">
+            My Projects
+          </h1>
+          <p className="text-lg text-gray-700 mb-8 text-center">
+            Below are some of the web development projects I’ve worked on. Click on
+            any project to learn more about the development process, technologies
+            used, and view live demos.
+          </p>
 
-              {/* Use ClientSlider component */}
-              <ClientSlider images={project.images} />
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projectData.map((project, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition duration-300 ease-in-out"
+              >
+                <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+                  {project.title}
+                </h2>
+                <p className="text-gray-700 mb-4">{project.description}</p>
+                <p className="text-gray-600 text-sm mb-4">
+                  <span className="font-medium text-gray-800">Tech Stack:</span>{" "}
+                  {project.techStack.join(", ")}
+                </p>
 
-              {/* Conditional rendering of the Link */}
-              {project.link && (
-                <Link href={project.link}>
-                  <span className="text-blue-500 hover:text-blue-700 cursor-pointer">
-                    Learn more &rarr;
-                  </span>
-                </Link>
-              )}
-            </div>
-          ))}
-        </section>
+                <ClientSlider images={project.images} />
+
+                {project.link && (
+                  <Link href={project.link} target="_blank">
+                    <span className="inline-block mt-4 text-blue-600 hover:text-blue-800 font-medium transition">
+                      Learn more &rarr;
+                    </span>
+                  </Link>
+                )}
+              </div>
+            ))}
+          </section>
+        </div>
       </main>
 
       <Footer />
