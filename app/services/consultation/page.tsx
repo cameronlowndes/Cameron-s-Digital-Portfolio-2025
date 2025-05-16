@@ -27,6 +27,18 @@ export default function ConsultationPage() {
           </p>
         </div>
 
+         <div className="flex justify-center mb-16">
+          <Link href="/terms/ConsultationTerms" passHref>
+            <button
+              className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform text-center whitespace-pre-line"
+              type="button"
+            >
+              Terms and Conditions{"\n"}for{"\n"}Expert Consultation Services for Your Business
+            </button>
+          </Link>
+        </div>
+
+
         {/* Consultation Packages */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">💼 Consultation Packages</h2>

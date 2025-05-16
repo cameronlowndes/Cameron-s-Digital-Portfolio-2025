@@ -27,6 +27,17 @@ export default function OngoingMaintenance() {
           </p>
         </div>
 
+               <div className="flex justify-center mb-16">
+          <Link href="/terms/MaintenanceTerms" passHref>
+            <button
+              className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform text-center whitespace-pre-line"
+              type="button"
+            >
+              Terms and Conditions{"\n"}for{"\n"}Post-Launch Support & Ongoing Maintenance
+            </button>
+          </Link>
+        </div>
+
         {/* Service Breakdown */}
         <section className="mb-24">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">🔧 Our Services</h2>

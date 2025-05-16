@@ -1,0 +1,98 @@
+import Head from "next/head";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Link from "next/link";
+
+export default function ConsultationTerms() {
+  return (
+    <div className="min-h-screen flex flex-col pt-16  px-4">
+      <Head>
+        <title>Consultation Terms & Conditions | Cameron Lowndes</title>
+        <meta
+          name="description"
+          content="Terms and conditions governing the consultation services provided by Cameron Lowndes."
+        />
+      </Head>
+
+      <Navbar />
+
+      <main className="flex-grow max-w-4xl mx-auto w-full py-16">
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">
+          Terms & Conditions for Consultation Services
+        </h1>
+
+        <section className="space-y-6 text-gray-800 text-lg leading-relaxed">
+          <div>
+            <h2 className="text-2xl font-bold mb-2">1. Introduction</h2>
+            <p>
+              These terms and conditions outline the rules and regulations for the use of Cameron Lowndes’ Consultation Services. By booking any consultation package, you accept and agree to be bound by these terms.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-2">2. Booking & Payment</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Full payment is required prior to the consultation date.</li>
+              <li>Payments are non-refundable except in circumstances outlined below.</li>
+              <li>Consultations can be booked via the provided contact form. A confirmation email will follow with details.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-2">3. Cancellation & Rescheduling</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li>You may cancel or reschedule a session up to 48 hours in advance.</li>
+              <li>No refunds are issued for cancellations made within 48 hours of your scheduled session.</li>
+              <li>In the event Cameron Lowndes must reschedule, a new date will be provided promptly or a full refund offered.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-2">4. Service Scope</h2>
+            <p>
+              The consultation services provided are advisory in nature. Any actions taken based on the advice are at your own discretion and risk. Cameron Lowndes accepts no liability for business decisions made as a result of the consultation.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-2">5. Confidentiality</h2>
+            <p>
+              All information shared during consultations will be treated as confidential and will not be disclosed to third parties without written consent unless required by law.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-2">6. Intellectual Property</h2>
+            <p>
+              Any materials or strategies shared during the consultation remain the intellectual property of Cameron Lowndes unless otherwise agreed in writing.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-2">7. Limitation of Liability</h2>
+            <p>
+              Under no circumstances will Cameron Lowndes be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the services provided.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-2">8. Changes to Terms</h2>
+            <p>
+              These terms may be updated from time to time. Clients will be notified of significant changes, and continued use of services implies acceptance of the revised terms.
+            </p>
+          </div>
+        </section>
+
+          <div className="mt-16 text-center pb-6 sm:pb-0">
+          <Link href="/services/consultation">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
+              ⬅ Consultation Services
+            </button>
+          </Link>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

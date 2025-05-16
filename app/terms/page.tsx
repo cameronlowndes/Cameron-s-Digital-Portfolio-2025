@@ -119,7 +119,7 @@ export default function Terms() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Information</h2>
           <p className="text-lg text-gray-700 mb-4">
-            For any questions or concerns regarding these Terms and Conditions, you can contact us at: <strong>contact@cameronlowndes.com</strong>.
+            For any questions or concerns regarding these Terms and Conditions, you can contact us at: <strong>camerondigitalwork@gmail.com</strong>.
           </p>
         </section>
       </main>

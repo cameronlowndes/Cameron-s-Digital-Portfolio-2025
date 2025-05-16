@@ -6,7 +6,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function NextJsReactDevelopment() {
   return (
-    <div className="min-h-screen flex flex-col pt-16 bg-gradient-to-b from-white to-gray-100 px-4">
+    <div className="min-h-screen flex flex-col pt-16 bg-gradient-to-b gray-100 px-4">
       <Head>
         <title>Next.js/React Development | Cameron Lowndes</title>
         <meta
@@ -25,6 +25,17 @@ export default function NextJsReactDevelopment() {
           <p className="text-xl text-gray-700">
             Build blazing-fast, scalable web apps with cutting-edge tech.
           </p>
+        </div>
+
+           <div className="flex justify-center mb-16">
+          <Link href="/terms/TermsNextJsReact" passHref>
+            <button
+              className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform text-center whitespace-pre-line"
+              type="button"
+            >
+              Terms and Conditions{"\n"}for{"\n"}Next.js / React Development
+            </button>
+          </Link>
         </div>
 
         {/* Packages */}
@@ -88,7 +99,7 @@ export default function NextJsReactDevelopment() {
         </section>
 
         {/* Tech stack */}
-        <section className="mb-24">
+        <section className="mb-18">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">🧰 Tech Stack</h2>
           <ul className="list-disc pl-6 text-gray-700 space-y-1">
             <li><strong>Frontend:</strong> React, Next.js, Tailwind, TypeScript</li>
@@ -99,7 +110,7 @@ export default function NextJsReactDevelopment() {
         </section>
 
         {/* Form */}
-        <section className="mb-20">
+        <section className="mb-18">
           <h2 className="text-2xl font-bold text-center text-gray-900 mb-6">
             📩 Let’s Work Together
           </h2>
@@ -117,7 +128,7 @@ export default function NextJsReactDevelopment() {
           </div>
         </section>
 
-        <div className="text-center">
+        <div className="text-center pb-6 sm:pb-0">
           <Link href="/services">
             <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               ⬅ Back to Services

@@ -22,9 +22,18 @@ export default function DiscountedDevOffer() {
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
             Special Discount for Charities & Small Businesses
           </h1>
-          <p className="text-xl text-gray-700">
+          <p className="text-xl text-gray-700 mb-6">
             Empower your cause or startup with modern, scalable web solutions.
           </p>
+
+          {/* 🚀 New Button Linking to This Offer */}
+          <Link href="/terms/discounted-dev-offer">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
+              Trems and Conditions <br>
+              </br>for <br>
+              </br>charities and small bussiness 
+            </button>
+          </Link>
         </div>
 
         {/* Packages */}
@@ -58,7 +67,7 @@ export default function DiscountedDevOffer() {
             {/* Premium */}
             <div className="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-purple-600 flex flex-col">
               <h3 className="text-2xl font-bold text-purple-600 mb-2">🟣 Premium</h3>
-              <p className="text-lg font-semibold mb-4">£1199</p>
+              <p className="text-lg font-semibold mb-4">£1,000</p>
               <ul className="space-y-2 text-gray-700 flex-1">
                 <li><CheckCircle className="inline mr-2 text-purple-600" /> 10+ pages</li>
                 <li><CheckCircle className="inline mr-2 text-purple-600" /> API integrations</li>
@@ -70,7 +79,7 @@ export default function DiscountedDevOffer() {
             {/* Ultimate */}
             <div className="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-yellow-500 flex flex-col">
               <h3 className="text-2xl font-bold text-yellow-600 mb-2">⭐ Ultimate</h3>
-              <p className="text-lg font-semibold mb-4">£1999+</p>
+              <p className="text-lg font-semibold mb-4">£1,500+</p>
               <ul className="space-y-2 text-gray-700 flex-1">
                 <li><CheckCircle className="inline mr-2 text-yellow-500" /> Unlimited features</li>
                 <li><CheckCircle className="inline mr-2 text-yellow-500" /> Full app development</li>
@@ -104,6 +113,7 @@ export default function DiscountedDevOffer() {
             <li><strong>Small Businesses:</strong> Must have under 10 employees and under £200k annual turnover.</li>
             <li>Verification may be requested (e.g. registration number or business documentation).</li>
             <li>This offer is intended to support early-stage growth and community impact.</li>
+            <li>We also offer special payment options for charities and small businesses, which will be detailed in the contract agreement.</li>
           </ul>
         </section>
 
@@ -139,4 +149,3 @@ export default function DiscountedDevOffer() {
     </div>
   );
 }
-
