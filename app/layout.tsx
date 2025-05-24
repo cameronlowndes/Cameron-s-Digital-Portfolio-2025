@@ -15,13 +15,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: "swap",
 });
-
-// Metadata for SEO and social
 export const metadata: Metadata = {
-  title: "Welcome to Cameron's Digital Portfolio",
+  title: "Welcome to Cameron Digital Works",
   description:
-    "Explore the work and skills of Cameron Lowndes, a full-stack web developer with a passion for coding and cloud technologies.",
+    "Cameron Digital Works specializes in crafting high-quality full-stack websites, from clean and responsive HTML/CSS/JavaScript sites to advanced custom web applications built with React, Next.js, and TypeScript. Empower your business with tailored digital solutions designed to grow and succeed online.",
 };
+
 
 export default function RootLayout({
   children,

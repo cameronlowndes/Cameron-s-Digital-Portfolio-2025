@@ -16,8 +16,8 @@ export default function Navbar() {
       {/* Logo */}
       <div className="flex items-center">
         <div className="text-center">
-          <h1 className="text-white text-sm font-bold m-0">Cameron Lowndes</h1>
-          <h2 className="text-gray-400 text-xs font-normal m-0">Welcome to Cameron's Digital Portfolio</h2>
+          <h1 className="text-white text-sm font-bold m-0">Cameron Digital Works</h1>
+          <h2 className="text-gray-400 text-xs font-normal m-0">Welcome to Cameron Digital Works</h2>
         </div>
       </div>
 

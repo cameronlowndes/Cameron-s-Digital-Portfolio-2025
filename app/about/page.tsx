@@ -6,7 +6,7 @@ import Head from "next/head";
 
 export default function About() {
   return (
-    <main className="flex flex-col min-h-screen bg-gray-50">
+    <main className="flex flex-col min-h-screen">
       <Head>
         <title>About Me | Cameron Lowndes - Full-Stack Developer</title>
         <meta
@@ -34,49 +34,49 @@ export default function About() {
 
           <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              I am currently immersed in learning various aspects of coding and am eager to secure a position where I can leverage my education and hands-on experience. Having completed a comprehensive full-stack web development bootcamp, I have gained proficiency in a range of programming languages, including{" "}
-              <strong className="text-purple-600">Python</strong>,{" "}
-              <strong className="text-purple-600">JavaScript</strong>, and{" "}
-              <strong className="text-purple-600">HTML</strong>, as well as other relevant technologies. This educational background has equipped me with the skills necessary to develop and deploy web applications effectively.
+              At Cameron Digital Works, I’m continuously expanding my expertise in full-stack web development while building a foundation for long-term success in the tech industry.
+              Having completed a comprehensive bootcamp in full-stack development, I’ve gained hands-on experience and strong proficiency in technologies such as
+              <strong className="text-purple-600">Python</strong>, <strong className="text-purple-600">JavaScript</strong>, and <strong className="text-purple-600">HTML</strong>.
+              This technical background empowers me to create and deploy responsive, high-quality web applications tailored to real-world needs.
+              Cameron Digital Works reflects both my professional growth and my commitment to delivering modern, scalable digital solutions.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               In addition to my bootcamp experience, I have also pursued a{" "}
-              <strong className="text-purple-600">Python data science program</strong>, which has deepened my understanding of data analysis and machine learning concepts. My goal is to find a job that not only allows me to apply my coding skills but also fosters continuous learning and growth in the tech industry.
+              <strong className="text-purple-600">Python data science program</strong>,
+              which has deepened my understanding of data analysis and machine learning concepts.
+              My goal is to find a job that not only allows me to apply my coding skills but also fosters continuous learning and growth in the tech industry.
             </p>
 
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Purpose of My Portfolio
+              Purpose of Cameron Digital Works
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Thank you for taking the time to explore my portfolio! I designed this space to present my experience and skills in a professional manner, showcasing the various projects and accomplishments I have achieved throughout my coding journey. Each section is crafted to give you insight into my capabilities, creativity, and dedication to continuous improvement in the tech field.
+              Thank you for visiting Cameron Digital Works! This platform was created to professionally showcase the skills,
+              services, and projects behind the brand. It reflects my journey as a full-stack developer and highlights the practical solutions
+              I offer to businesses and individuals alike. Every section is designed to give you a clear view of my capabilities,
+              creative problem-solving, and commitment to building high-quality, scalable digital experiences.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              If you have any questions or would like to discuss my work further, please don’t hesitate to reach out through the contact page. I am eager to connect and will respond as soon as possible. My goal career is to work in software development, creating full-stack online applications that run on all platforms, including mobile devices.
+              If you have any questions or would like to discuss my work further, please don’t hesitate to
+              reach out through the contact page. I am eager to connect and will respond as soon as possible.
+              My goal career is to work in software development, creating full-stack online applications that run on all platforms, including mobile devices.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Courses I'm Taking
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              I'm taking a number of courses to help me realize my desire to become a software developer. Most of them are offered online at{" "}
-              <a
-                href="https://www.udemy.com"
-                className="text-purple-600 hover:underline"
-                target="_blank"
-              >
-                Udemy
-              </a>
-              . These courses provide hands-on experience and deep dives into various technologies that I can apply in my future projects.
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">How I’m Growing as a Web Developer</h2>
+            <p>
+              At Cameron Digital Works, continuous learning is a core part of the mission. I am actively taking a range of advanced courses to further strengthen my skills as a 
+              full-stack software developer. In today’s fast-paced digital landscape, staying current is not just beneficial it’s essential. Technology evolves rapidly, and the rise offer
+               cloud computing platforms like <strong className="text-blue-600">Amazon Web Services (AWS)</strong> and <strong className="text-blue-600">Microsoft Azure</strong> 
+               is reshaping how businesses build, deploy, and scale their applications.
+              By deepening my knowledge in areas such as cloud infrastructure, DevOps practices, and scalable architecture, 
+              I’m equipping myself and Cameron Digital Works to deliver smarter, more efficient, and future ready digital solutions. 
+              Whether it's integrating cloud services into web applications, optimizing performance, or ensuring secure and reliable deployments,
+               I believe that embracing lifelong learning is key to staying relevant and providing real value in a constantly evolving industry.
             </p>
 
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              Skills Development
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              These courses and experiences are advancing my abilities in many ways, allowing me to live more fully in some of the things I enjoy doing. When I achieve my goal job, I will continue to build on my skill set, and I firmly believe in my ability to succeed. The journey will take time, but I am dedicated to reaching my goal and constantly improving.
-            </p>
+            
           </div>
         </section>
       </div>

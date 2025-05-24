@@ -26,7 +26,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <div className="flex flex-col min-h-screen bg-gray-50">
+      <div className="flex flex-col min-h-screen bg-white">
         <Navbar />
 
         <main className="flex-grow flex flex-col items-center justify-center px-4 py-12">
@@ -55,14 +55,9 @@ export default function Home() {
           {/* About Me Section */}
           <section className="max-w-4xl w-full mx-auto flex flex-col md:flex-row items-start gap-6 p-6 bg-white border-2 border-gray-200 rounded-lg shadow-md mb-12">
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              I am currently immersed in learning various aspects of coding as a full-stack web developer.
-              I’ve explored different programming languages like{" "}
-              <strong className="text-purple-600">Python</strong>,{" "}
-              <strong className="text-purple-600">JavaScript</strong>, and{" "}
-              <strong className="text-purple-600">HTML</strong>.
-              I'm also moving to the cloud with{" "}
-              <strong className="text-purple-600">Azure</strong> and{" "}
-              <strong className="text-purple-600">AWS</strong>, expanding my skills into the world of cloud computing.
+              Welcome to <strong className="text-purple-700">Cameron Digital Works</strong>! We specialize in building <strong>full-stack websites</strong> tailored to your needs. Our <span className="font-semibold text-indigo-600">basic website packages</span> include expertly crafted HTML, CSS, and JavaScript to create clean, responsive, and user-friendly sites. For those looking to enhance their online presence, we offer <strong className="text-blue-600">additional JavaScript features and functionalities</strong> as add-ons, giving your website that extra edge to engage your visitors and improve user experience.
+              <br /><br />
+              For businesses seeking a more powerful and scalable solution, we provide full-stack website development using modern frameworks like <strong className="text-green-700">React and Next.js</strong>, combined with <span className="font-semibold text-teal-600">TypeScript</span> for robust and maintainable code. Whether you need a completely custom web application built from scratch or want to rewrite and expand your existing site, <strong className="text-purple-700">Cameron Digital Works</strong> delivers tailored, high-performance web apps designed to help your business grow and succeed in the digital world.
             </p>
           </section>
 
@@ -73,9 +68,9 @@ export default function Home() {
 
           <section className="max-w-4xl w-full mx-auto flex flex-col md:flex-row items-start gap-6 p-6 bg-white border-2 border-gray-200 rounded-lg shadow-md mb-12">
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Thank you for taking the time to explore my portfolio! I designed this space to present my experience and skills in a professional manner, showcasing the various projects and accomplishments I have achieved throughout my coding journey.
-              <br />
-              If you have any questions or would like to discuss my work further, please don’t hesitate to reach out through the contact page. I am eager to connect and will respond as soon as possible.
+              The purpose of this website is to showcase my <strong className="text-purple-700">skills, experience, and portfolio</strong> as a full-stack developer. It serves as a platform to demonstrate the <strong className="text-indigo-600">quality and range of web development projects</strong> I have completed, highlighting both <span className="font-semibold text-blue-600">front-end and back-end expertise</span>. This site also acts as a point of contact for potential clients, employers, or collaborators interested in <strong className="text-green-700">working together or learning more about my services and professional background</strong>.
+              <br /><br />
+              Through this website, I aim to provide visitors with a comprehensive understanding of my <strong className="text-purple-700">technical abilities, project approach</strong>, and <span className="font-semibold text-indigo-600">passion for coding and technology</span>. Whether you are looking for a <strong className="text-blue-600">custom website solution</strong>, want to explore my previous work, or simply want to connect, this site offers an <span className="font-semibold text-green-700">engaging and easy-to-navigate experience</span> to help you make informed decisions.
             </p>
           </section>
         </main>

@@ -93,7 +93,7 @@ export default function NextJsReactDevelopment() {
             <li>E-commerce setup (Stripe + product pages): +£400</li>
             <li>Multilingual support: +3250</li>
             <li>Hosting migration: +£100</li>
-            <li>Monthly maintenance: £250/month</li>
+            <li>Monthly maintenance: £250+/month</li>
             <li>Remove WaterMark: +£300</li>
           </ul>
         </section>
