@@ -137,7 +137,7 @@ export default function HtmlCssDevelopment() {
             <li>E-commerce-ready templates: +£250</li>
             <li>Newsletter signup integration: +£200</li>
             <li>Multilingual static site support: +£150</li>
-            <li>Monthly updates + hosting support: £150/mo</li>
+            <li>Monthly updates + hosting support: +£150/mo</li>
             <li>JavaScript functionality (sliders, modals, validation): +£200</li>
             <li>Remove watermark: +£150</li>
           </ul>

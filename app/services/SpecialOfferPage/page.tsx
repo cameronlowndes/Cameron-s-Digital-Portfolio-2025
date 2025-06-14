@@ -96,7 +96,7 @@ export default function DiscountedDevOffer() {
           <ul className="list-disc pl-6 text-gray-700 space-y-2">
             <li>E-commerce integration (Stripe): +£300</li>
             <li>Multilingual support: +£200</li>
-            <li>Monthly updates & monitoring: £160/month</li>
+            <li>Monthly updates & monitoring: +£160/month</li>
             <li>Hosting migration & setup: +£75</li>
             <li>Remove attribution: +£150</li>
           </ul>
