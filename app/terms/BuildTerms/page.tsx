@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+
 import Link from "next/link";
 
 export default function BuildTerms() {
@@ -14,7 +13,6 @@ export default function BuildTerms() {
         />
       </Head>
 
-      <Navbar />
 
       <main className="flex-grow max-w-4xl mx-auto w-full py-16">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">
@@ -160,7 +158,7 @@ export default function BuildTerms() {
         </div>
       </main>
 
-      <Footer />
+   
     </div>
   );
 }

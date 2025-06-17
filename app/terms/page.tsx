@@ -1,7 +1,3 @@
-// pages/terms.tsx
-
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Head from "next/head";
 
 export default function Terms() {
@@ -24,8 +20,6 @@ export default function Terms() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <Navbar />
-
       <main className="max-w-6xl mx-auto w-full py-16">
         <h1 className="text-5xl font-semibold text-center text-gray-900 mb-16">
           Terms and Conditions
@@ -47,16 +41,16 @@ export default function Terms() {
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Scope of Services</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            We provide the following services:
-            <ul className="list-disc pl-6 text-lg text-gray-700">
-              <li>Web development (including design, development, and maintenance)</li>
-              <li>Server management and hosting services</li>
-              <li>Custom web applications</li>
-              <li>SEO optimization</li>
-              <li>Mobile-first website design</li>
-              <li>Technical support and consultancy</li>
-            </ul>
+          <p className="text-lg text-gray-700 mb-4">We provide the following services:</p>
+          <ul className="list-disc pl-6 text-lg text-gray-700 mb-4">
+            <li>Web development (including design, development, and maintenance)</li>
+            <li>Server management and hosting services</li>
+            <li>Custom web applications</li>
+            <li>SEO optimization</li>
+            <li>Mobile-first website design</li>
+            <li>Technical support and consultancy</li>
+          </ul>
+          <p className="text-lg text-gray-700">
             These services are subject to availability and may change from time to time. Additional or custom services can be requested and are subject to mutual agreement.
           </p>
         </section>
@@ -123,8 +117,6 @@ export default function Terms() {
           </p>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -1,11 +1,9 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 import Link from "next/link";
 
 export default function ConsultationTerms() {
   return (
-    <div className="min-h-screen flex flex-col pt-16  px-4">
+    <div className="min-h-screen flex flex-col pt-16 px-4">
       <Head>
         <title>Consultation Terms & Conditions | Cameron Lowndes</title>
         <meta
@@ -13,8 +11,6 @@ export default function ConsultationTerms() {
           content="Terms and conditions governing the consultation services provided by Cameron Lowndes."
         />
       </Head>
-
-      <Navbar />
 
       <main className="flex-grow max-w-4xl mx-auto w-full py-16">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">
@@ -55,35 +51,45 @@ export default function ConsultationTerms() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold mb-2">5. Confidentiality</h2>
+            <h2 className="text-2xl font-bold mb-2">5. Free Tier Consultation</h2>
+            <p>
+              The Free Tier consultation is available specifically for small businesses and charities. It consists of a 30-minute session providing initial advice and guidance. This tier is designed to support community organizations with limited resources.
+            </p>
+            <p>
+              Due to its complimentary nature, availability may be limited, and sessions are subject to scheduling based on demand. The same general terms of confidentiality and service scope apply.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold mb-2">6. Confidentiality</h2>
             <p>
               All information shared during consultations will be treated as confidential and will not be disclosed to third parties without written consent unless required by law.
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold mb-2">6. Intellectual Property</h2>
+            <h2 className="text-2xl font-bold mb-2">7. Intellectual Property</h2>
             <p>
               Any materials or strategies shared during the consultation remain the intellectual property of Cameron Lowndes unless otherwise agreed in writing.
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold mb-2">7. Limitation of Liability</h2>
+            <h2 className="text-2xl font-bold mb-2">8. Limitation of Liability</h2>
             <p>
               Under no circumstances will Cameron Lowndes be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the services provided.
             </p>
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold mb-2">8. Changes to Terms</h2>
+            <h2 className="text-2xl font-bold mb-2">9. Changes to Terms</h2>
             <p>
               These terms may be updated from time to time. Clients will be notified of significant changes, and continued use of services implies acceptance of the revised terms.
             </p>
           </div>
         </section>
 
-          <div className="mt-16 text-center pb-6 sm:pb-0">
+        <div className="mt-16 text-center pb-6 sm:pb-0">
           <Link href="/services/consultation">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               ⬅ Consultation Services
@@ -91,8 +97,6 @@ export default function ConsultationTerms() {
           </Link>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

@@ -1,18 +1,8 @@
-// pages/services/html-css-development.tsx
-
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 
 export default function HtmlCssDevelopment() {
-  // Helper function to get border class dynamically
-  const getBorderClass = (color: string) => {
-    // e.g. "green-500" => "border-green-500"
-    return `border-l-4 border-${color} pl-4`;
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900">
       <Head>
@@ -23,10 +13,7 @@ export default function HtmlCssDevelopment() {
         />
       </Head>
 
-      <Navbar />
-
       <main className="flex-1 w-full max-w-5xl mx-auto px-4 pt-20 pb-32">
-
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">HTML/CSS Development</h1>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -34,9 +21,8 @@ export default function HtmlCssDevelopment() {
           </p>
         </header>
 
-        {/* Center the button horizontally only, remove min-h-screen */}
         <div className="flex justify-center mb-16">
-          <Link href="/terms/BuildTerms" passHref>
+          <Link href="/terms/BuildTerms">
             <button
               className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform text-center whitespace-pre-line"
               type="button"
@@ -159,16 +145,17 @@ export default function HtmlCssDevelopment() {
             </iframe>
           </div>
           <div className="text-center pb-6 sm:pb-0">
-            <Link href="/services" passHref>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform" type="button">
+            <Link href="/services">
+              <button
+                className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform"
+                type="button"
+              >
                 ⬅ Back to Services
               </button>
             </Link>
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 }

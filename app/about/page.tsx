@@ -1,12 +1,8 @@
-// pages/about.tsx
-
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Head from "next/head";
 
 export default function About() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <>
       <Head>
         <title>About Me | Cameron Lowndes - Full-Stack Developer</title>
         <meta
@@ -23,10 +19,7 @@ export default function About() {
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-
-      <Navbar />
-
-      <div className="flex-grow flex flex-col items-center justify-start px-4 pt-24 pb-32">
+<div className="flex-grow flex flex-col items-center justify-start px-4 pt-24 pb-32">
         <section className="w-full max-w-4xl">
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
             About Me
@@ -80,8 +73,6 @@ export default function About() {
           </div>
         </section>
       </div>
-
-      <Footer />
-    </main>
+    </>
   );
 }

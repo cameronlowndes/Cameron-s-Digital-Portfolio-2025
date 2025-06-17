@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+
 import Link from "next/link";
 
 export default function DiscountedDevTerms() {
@@ -14,7 +13,7 @@ export default function DiscountedDevTerms() {
         />
       </Head>
 
-      <Navbar />
+  
 
       <main className="max-w-4xl mx-auto w-full py-16">
         <div className="mb-10 text-center">
@@ -96,7 +95,7 @@ export default function DiscountedDevTerms() {
         </div>
       </main>
 
-      <Footer />
+
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+
 import Link from "next/link";
 
 export default function MaintenanceTerms() {
@@ -14,7 +13,7 @@ export default function MaintenanceTerms() {
         />
       </Head>
 
-      <Navbar />
+  
 
       <main className="flex-grow pt-20 pb-16 px-6 max-w-5xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-10">
@@ -107,7 +106,7 @@ export default function MaintenanceTerms() {
         </Link>
      </div>
       </main>
-      <Footer />
+
     </div>
   );
 }

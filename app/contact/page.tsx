@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -34,12 +35,9 @@ export default function Contact() {
         <div className="relative overflow-hidden rounded-2xl shadow-lg border border-gray-200">
           <iframe
             src="https://forms.gle/MdHspXoBw1U2QUrB7"
-            width="100%"
-            height="800"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            className="w-full h-[800px]"
+            title="Contact Form"
+            className="w-full h-[800px] border-0"
+            allowFullScreen
           >
             Loading…
           </iframe>

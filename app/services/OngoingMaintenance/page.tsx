@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 
@@ -15,7 +14,7 @@ export default function OngoingMaintenance() {
         />
       </Head>
 
-      <Navbar />
+
 
       <main className="flex-grow pt-16 bg-gradient-to-b from-white px-4 pb-12">
         <div className="text-center mb-12">
@@ -146,7 +145,7 @@ export default function OngoingMaintenance() {
         </div>
       </main>
 
-      <Footer />
+      
     </div>
   );
 }

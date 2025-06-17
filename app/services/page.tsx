@@ -1,36 +1,14 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Head from "next/head";
 import Link from "next/link";
 
 export default function Services() {
   return (
     <div className="flex flex-col min-h-screen pt-16 px-4">
-      <Head>
-        <title>Services | Cameron Lowndes - Full-Stack Developer</title>
-        <meta
-          name="description"
-          content="Discover the services offered by Cameron Lowndes, a skilled full-stack developer, including web development, cloud solutions, and custom software development."
-        />
-        <meta property="og:title" content="Services - Cameron Lowndes" />
-        <meta
-          property="og:description"
-          content="Discover the services offered by Cameron Lowndes, a skilled full-stack developer, including web development, cloud solutions, and custom software development."
-        />
-        <meta property="og:image" content="/image/cameron.jpg" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-
-      <Navbar />
       <main className="flex-1 max-w-6xl mx-auto w-full pt-16 pb-32">
         <h1 className="text-5xl font-semibold text-center text-gray-900 mb-16">
           Services I Offer
         </h1>
 
         <div className="space-y-24">
-          {/* Web Development */}
           <ServiceSection
             title="Web Development"
             description="Modern, responsive websites using Next.js, React, and Node.js. Perfect for everything from simple static sites to full-blown web applications."
@@ -52,7 +30,6 @@ export default function Services() {
             ]}
           />
 
-          {/* Cloud Solutions (Coming Soon) */}
           <ServiceSection
             title="Cloud Solutions"
             description="Cloud-native development with Azure and AWS. I handle migrations, deployments, and infrastructure optimization for performance and cost savings."
@@ -76,7 +53,6 @@ export default function Services() {
             ]}
           />
 
-          {/* Custom Software Development */}
           <ServiceSection
             title="Custom Software Development"
             description="Tailored software built to match your business needs—from custom web apps to integrations that improve workflow and efficiency."
@@ -100,7 +76,6 @@ export default function Services() {
             ]}
           />
 
-          {/* Maintenance */}
           <ServiceSection
             title="Maintenance & Support"
             description="Post-launch support to keep your site running smoothly—bug fixes, performance tuning, and updates included."
@@ -115,7 +90,6 @@ export default function Services() {
             ]}
           />
 
-          {/* Consulting */}
           <ServiceSection
             title="Consulting"
             description="Not sure where to start? I offer technical consulting to help plan your project architecture, stack, and roadmap."
@@ -130,7 +104,6 @@ export default function Services() {
             ]}
           />
 
-          {/* Special Offer for Small Companies */}
           <ServiceSection
             title="Special Offer for Small Companies"
             description="If you’re a small business, I offer customized pricing and special discounts. Please get in touch—I'd love to help your business grow."
@@ -146,8 +119,6 @@ export default function Services() {
           />
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

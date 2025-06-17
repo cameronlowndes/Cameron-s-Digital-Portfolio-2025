@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -5,15 +6,19 @@ import Link from "next/link";
 import ClientSlider from "../components/ClientSlider";
 
 export default function Projects() {
-  const projectData = [
+  const projectData: {
+    title: string;
+    description: React.ReactNode;
+    techStack: string[];
+    links: { url: string; label: string }[];
+    images: string[];
+  }[] = [
     {
       title: "Burton Pride Website",
       description:
         "This project aims to create a responsive, easy-to-manage website for Burton Pride, showcasing news, events, community stories, and volunteer engagement. Built with Next.js and TypeScript, the site ensures long-term stability and accessibility across all devices, with mobile-first design principles in mind.",
       techStack: ["Next.js", "Tailwind CSS", "Typescript"],
-      links: [
-        { url: "https://www.burtonpride.co.uk/", label: "Live Site" },
-      ],
+      links: [{ url: "https://www.burtonpride.co.uk/", label: "Live Site" }],
       images: [
         "/image/BurtonPride/burton-pride-1.png",
         "/image/BurtonPride/burton-pride-2.png",
@@ -52,10 +57,17 @@ export default function Projects() {
       description: (
         <>
           <p>
-            This project was created as a demonstration of my routing capabilities within Next.js. It serves as a showcase of how I structure dynamic pages, nested layouts, and client-side navigation in a real-world setup.
+            This project was created as a demonstration of my routing capabilities
+            within Next.js. It serves as a showcase of how I structure dynamic
+            pages, nested layouts, and client-side navigation in a real-world
+            setup.
           </p>
           <p className="mt-4">
-            Please note that this is a demo project, so not all features are fully functional or production-ready. Unlike my main projects, this build has undergone limited testing and is intended primarily to highlight development concepts rather than deliver a polished user experience.
+            Please note that this is a demo project, so not all features are
+            fully functional or production-ready. Unlike my main projects, this
+            build has undergone limited testing and is intended primarily to
+            highlight development concepts rather than deliver a polished user
+            experience.
           </p>
         </>
       ),
@@ -90,7 +102,7 @@ export default function Projects() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">
             My Projects
           </h1>
-          <p className="text-lg text-gray-700 mb-8 text-center">
+          <p className="text-lg text-gray-700 mb-10 text-center">
             Below are some of the web development projects I’ve worked on. Click on
             any project to learn more about the development process, technologies
             used, and view live demos.
@@ -98,41 +110,59 @@ export default function Projects() {
 
           <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projectData.map((project, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition duration-300 ease-in-out"
-              >
-                <h2 className="text-2xl font-semibold text-gray-900 mb-2">
-                  {project.title}
-                </h2>
-
-                <div className="text-gray-700 mb-4">{project.description}</div>
-
-                <p className="text-gray-600 text-sm mb-4">
-                  <span className="font-medium text-gray-800">Tech Stack:</span>{" "}
-                  {project.techStack.join(", ")}
-                </p>
-
-                <ClientSlider images={project.images} />
-
-                {project.links.length > 0 && (
-                  <div className="mt-4 space-y-1">
-                    {project.links.map((link, i) => (
-                      <Link key={i} href={link.url} target="_blank" rel="noopener noreferrer">
-                        <span className="block text-blue-600 hover:text-blue-800 font-medium transition">
-                          {link.label} &rarr;
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <ProjectCard key={index} {...project} />
             ))}
           </section>
         </div>
       </main>
 
       <Footer />
+    </div>
+  );
+}
+
+function ProjectCard({
+  title,
+  description,
+  techStack,
+  links,
+  images,
+}: {
+  title: string;
+  description: React.ReactNode;
+  techStack: string[];
+  links: { url: string; label: string }[];
+  images: string[];
+}) {
+  return (
+    <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition duration-300 ease-in-out">
+      <h2 className="text-2xl font-semibold text-gray-900 mb-2">{title}</h2>
+
+      <div className="text-gray-700 mb-4">{description}</div>
+
+      <p className="text-gray-600 text-sm mb-4">
+        <span className="font-medium text-gray-800">Tech Stack:</span>{" "}
+        {techStack.join(", ")}
+      </p>
+
+      <ClientSlider images={images} />
+
+      {links.length > 0 && (
+        <div className="mt-4 space-y-1">
+          {links.map((link, i) => (
+            <Link
+              key={i}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="block text-blue-600 hover:text-blue-800 font-medium transition">
+                {link.label} &rarr;
+              </span>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
