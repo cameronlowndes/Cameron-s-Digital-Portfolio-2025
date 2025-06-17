@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export default function Services() {
   return (
-    <div className="flex flex-col min-h-screen pt-16 px-4">
-      <main className="flex-1 max-w-6xl mx-auto w-full pt-16 pb-32">
-        <h1 className="text-5xl font-semibold text-center text-gray-900 mb-16">
+    <div className="flex flex-col min-h-screen pt-20 px-6 bg-gradient-to-b from-indigo-900 via-purple-900 to-indigo-800">
+      <main className="flex-1 max-w-7xl mx-auto w-full pt-16 pb-32">
+        <h1 className="text-6xl font-extrabold text-center text-white mb-20 tracking-tight drop-shadow-lg">
           Services I Offer
         </h1>
 
-        <div className="space-y-24">
+        <div className="space-y-28">
           <ServiceSection
             title="Web Development"
             description="Modern, responsive websites using Next.js, React, and Node.js. Perfect for everything from simple static sites to full-blown web applications."
@@ -140,9 +140,11 @@ function ServiceSection({
 }) {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">{title}</h2>
-      <p className="text-lg text-gray-700 mb-8">{description}</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h2 className="text-4xl font-extrabold text-white mb-6 drop-shadow-lg tracking-wide">
+        {title}
+      </h2>
+      <p className="text-lg text-indigo-200 mb-12 max-w-3xl">{description}</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => (
           <ServiceCard key={service.title} {...service} />
         ))}
@@ -165,23 +167,26 @@ function ServiceCard({
   comingSoon?: boolean;
 }) {
   return (
-    <div className="bg-gray-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 text-center border border-gray-100">
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-base text-gray-700 mb-4">{description}</p>
-      <p className="text-lg font-bold text-gray-800 mb-6">{price}</p>
+    <div className="relative bg-gradient-to-tr from-purple-700 via-indigo-800 to-blue-800 rounded-3xl p-8 shadow-2xl hover:shadow-[0_0_20px_4px_rgba(139,92,246,0.7)] transform hover:-translate-y-1 transition-transform duration-300 text-white border border-indigo-600 cursor-default select-none">
+      <h3 className="text-2xl font-bold mb-3 tracking-tight">{title}</h3>
+      <p className="text-base mb-5 text-indigo-200 leading-relaxed">{description}</p>
+      <p className="text-xl font-semibold mb-6 text-indigo-100">{price}</p>
 
       {comingSoon ? (
         <button
           disabled
-          className="bg-gray-300 text-gray-600 px-4 py-2 rounded-md cursor-not-allowed"
+          className="w-full bg-gray-600 text-gray-300 font-semibold py-3 rounded-xl cursor-not-allowed select-none shadow-inner"
+          title="Coming Soon"
         >
           Coming Soon
         </button>
       ) : (
-        <Link href={link}>
-          <button className="bg-lavender-400 text-black px-4 py-2 rounded-md hover:bg-lavender-500 transition cursor-pointer">
-            Get Started
-          </button>
+        <Link
+          href={link}
+          className="w-full block text-center bg-gradient-to-r from-purple-400 to-indigo-500 text-black font-bold py-3 rounded-xl shadow-lg hover:from-purple-500 hover:to-indigo-600 transition-colors duration-300"
+          aria-label={`Get started with ${title}`}
+        >
+          Get Started
         </Link>
       )}
     </div>

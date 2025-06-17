@@ -1,11 +1,10 @@
 import React from "react";
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex flex-col pt-16">
+    <div className="min-h-screen flex flex-col pt-16 bg-gray-50">
       <Head>
         <title>Contact | Cameron Lowndes</title>
         <meta
@@ -22,29 +21,16 @@ export default function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <Navbar />
-
-      <main className="flex-grow max-w-4xl mx-auto w-full px-4 pt-16 pb-24">
-        <h1 className="text-4xl font-semibold text-center text-gray-900 mb-8">
+      <main className="flex-grow max-w-4xl mx-auto w-full px-6 pt-16 pb-24">
+        <h1 className="text-4xl font-semibold text-center text-gray-900 mb-6">
           Let's Work Together
         </h1>
         <p className="text-center text-lg text-gray-700 mb-12">
           Fill out the form below and I’ll get back to you as soon as I can.
         </p>
 
-        <div className="relative overflow-hidden rounded-2xl shadow-lg border border-gray-200">
-          <iframe
-            src="https://forms.gle/MdHspXoBw1U2QUrB7"
-            title="Contact Form"
-            className="w-full h-[800px] border-0"
-            allowFullScreen
-          >
-            Loading…
-          </iframe>
-        </div>
+        <ContactForm />
       </main>
-
-      <Footer />
     </div>
   );
 }
