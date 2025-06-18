@@ -1,23 +1,25 @@
+"use client";
+
 import React from "react";
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Link from "next/link";
 import ClientSlider from "../components/ClientSlider";
 
+type Project = {
+  title: string;
+  description: string;
+  techStack: string[];
+  links: { url: string; label: string }[];
+  images: string[];
+};
+
 export default function Projects() {
-  const projectData: {
-    title: string;
-    description: React.ReactNode;
-    techStack: string[];
-    links: { url: string; label: string }[];
-    images: string[];
-  }[] = [
+  const projectData: Project[] = [
     {
       title: "Burton Pride Website",
       description:
-        "This project aims to create a responsive, easy-to-manage website for Burton Pride, showcasing news, events, community stories, and volunteer engagement. Built with Next.js and TypeScript, the site ensures long-term stability and accessibility across all devices, with mobile-first design principles in mind.",
-      techStack: ["Next.js", "Tailwind CSS", "Typescript"],
+        "A responsive, accessible website for Burton Pride built with Next.js and TypeScript. Designed to promote events, community stories, and volunteer engagement.",
+      techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
       links: [{ url: "https://www.burtonpride.co.uk/", label: "Live Site" }],
       images: [
         "/image/BurtonPride/burton-pride-1.png",
@@ -28,7 +30,7 @@ export default function Projects() {
     {
       title: "Personal Portfolio",
       description:
-        "A sleek, performance-optimized portfolio to showcase my skills, experience, and projects. Built with HTML, CSS, PHP, and JavaScript.",
+        "A sleek, performance-optimized portfolio to showcase my skills and projects. Built with HTML, CSS, PHP, and JavaScript.",
       techStack: ["HTML", "CSS", "PHP", "JavaScript"],
       links: [],
       images: [
@@ -40,7 +42,7 @@ export default function Projects() {
     {
       title: "E-commerce Store",
       description:
-        "A fully functional e-commerce store with integrated payment systems and a beautiful, user-friendly interface.",
+        "A fully functional e-commerce store with payment integration and a smooth user interface built with React and Stripe.",
       techStack: ["React", "Stripe", "Node.js"],
       links: [],
       images: [
@@ -54,27 +56,15 @@ export default function Projects() {
     },
     {
       title: "Next.js News Website",
-      description: (
-        <>
-          <p>
-            This project was created as a demonstration of my routing capabilities
-            within Next.js. It serves as a showcase of how I structure dynamic
-            pages, nested layouts, and client-side navigation in a real-world
-            setup.
-          </p>
-          <p className="mt-4">
-            Please note that this is a demo project, so not all features are
-            fully functional or production-ready. Unlike my main projects, this
-            build has undergone limited testing and is intended primarily to
-            highlight development concepts rather than deliver a polished user
-            experience.
-          </p>
-        </>
-      ),
-      techStack: ["Next.js", "My own CSS", "JavaScript"],
+      description:
+        "A demo showcasing routing, nested layouts, and client-side navigation in a clean Next.js news site design.",
+      techStack: ["Next.js", "Custom CSS", "JavaScript"],
       links: [
         { url: "https://newswebsite-sand.vercel.app/", label: "Live Demo" },
-        { url: "https://github.com/cameronlowndes/NewsWebsite_1", label: "GitHub" },
+        {
+          url: "https://github.com/cameronlowndes/NewsWebsite_1",
+          label: "GitHub",
+        },
       ],
       images: [
         "/image/NewsWebsite/NewsWebsite-1.png",
@@ -86,7 +76,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <Head>
         <title>Projects | Cameron Lowndes</title>
         <meta
@@ -95,60 +85,79 @@ export default function Projects() {
         />
       </Head>
 
-      <Navbar />
-
-      <main className="flex-grow flex flex-col items-center justify-start px-4 py-16 pb-24 w-full">
-        <div className="max-w-4xl w-full">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">
-            My Projects
+      <div className="min-h-screen bg-gradient-to-b from-indigo-900 via-purple-900 to-pink-900 text-white px-6 py-20">
+        <div className="text-center mb-20">
+          <h1 className="text-5xl font-extrabold drop-shadow-[0_4px_8px_rgba(0,0,0,0.7)] tracking-tight animate-fadeInUp">
+            🚀 My Web Development Projects
           </h1>
-          <p className="text-lg text-gray-700 mb-10 text-center">
-            Below are some of the web development projects I’ve worked on. Click on
-            any project to learn more about the development process, technologies
-            used, and view live demos.
+          <p className="text-xl text-indigo-200 mt-6 max-w-2xl mx-auto animate-fadeInUp delay-200">
+            A collection of real-world, client-focused, and personal development work using cutting-edge technologies and creative design.
           </p>
-
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projectData.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))}
-          </section>
         </div>
-      </main>
 
-      <Footer />
-    </div>
+        <div className="grid md:grid-cols-2 gap-10">
+          {projectData.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <Link href="/services">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-500 px-8 py-4 rounded-full shadow-lg hover:scale-110 hover:shadow-2xl transition-transform font-semibold text-white">
+              ⬅ Back to Services
+            </button>
+          </Link>
+        </div>
+
+        <style jsx>{`
+          @keyframes fadeInUp {
+            0% {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-fadeInUp {
+            animation: fadeInUp 0.7s ease forwards;
+          }
+          .animate-fadeInUp.delay-200 {
+            animation-delay: 0.2s;
+          }
+        `}</style>
+      </div>
+    </>
   );
 }
 
-function ProjectCard({
-  title,
-  description,
-  techStack,
-  links,
-  images,
-}: {
-  title: string;
-  description: React.ReactNode;
-  techStack: string[];
-  links: { url: string; label: string }[];
-  images: string[];
-}) {
+type ProjectCardProps = {
+  project: Project;
+};
+
+function ProjectCard({ project }: ProjectCardProps) {
+  const { title, description, techStack, links, images } = project;
+
   return (
-    <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition duration-300 ease-in-out">
-      <h2 className="text-2xl font-semibold text-gray-900 mb-2">{title}</h2>
+    <div className="bg-white bg-opacity-90 backdrop-blur-md rounded-2xl p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out border border-white/20 text-black leading-relaxed">
+      <h2 className="text-2xl md:text-3xl font-bold mb-3">{title}</h2>
 
-      <div className="text-gray-700 mb-4">{description}</div>
+      <p className="text-base md:text-lg text-gray-800 mb-4">{description}</p>
 
-      <p className="text-gray-600 text-sm mb-4">
-        <span className="font-medium text-gray-800">Tech Stack:</span>{" "}
+      <p className="text-sm text-gray-700 mb-4">
+        <span className="font-semibold">Tech Stack:</span>{" "}
         {techStack.join(", ")}
       </p>
 
-      <ClientSlider images={images} />
+      {images && images.length > 0 && (
+        <div className="mb-4">
+          <ClientSlider images={images} />
+        </div>
+      )}
 
       {links.length > 0 && (
-        <div className="mt-4 space-y-1">
+        <div className="mt-2 space-y-1">
           {links.map((link, i) => (
             <Link
               key={i}
@@ -156,8 +165,8 @@ function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="block text-blue-600 hover:text-blue-800 font-medium transition">
-                {link.label} &rarr;
+              <span className="text-blue-700 hover:underline hover:text-black block font-medium">
+                {link.label} →
               </span>
             </Link>
           ))}

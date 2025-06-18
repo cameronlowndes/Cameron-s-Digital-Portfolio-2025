@@ -1,5 +1,6 @@
+"use client"
+
 import Head from "next/head";
-import styles from './About.module.css';
 
 export default function About() {
   return (
@@ -21,13 +22,18 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="flex-grow flex flex-col items-center justify-start px-6 pt-32 pb-32 bg-gradient-to-tr from-blue-900 via-indigo-900 to-purple-900 min-h-screen text-gray-100 select-none">
-        <section className={`${styles.animateFadeInUp} w-full max-w-4xl bg-gradient-to-br from-indigo-800/80 via-blue-800/80 to-purple-900/90 rounded-3xl shadow-2xl border border-indigo-700 backdrop-blur-md p-12 md:p-16`}>
-          <h1 className="text-5xl font-extrabold text-center mb-12 tracking-wide drop-shadow-lg">
+      <main className="flex-grow flex flex-col items-center justify-start px-6 pt-32 pb-32 bg-gradient-to-tr from-blue-900 via-indigo-900 to-purple-900 min-h-screen text-gray-100 select-none font-sans">
+        <section className="relative w-full max-w-5xl rounded-3xl bg-gradient-to-br from-indigo-800/90 via-blue-800/90 to-purple-900/90 shadow-2xl border border-indigo-700 backdrop-blur-lg p-14 md:p-20 overflow-hidden">
+          {/* Glowing animated background circles */}
+          <div className="absolute -top-20 -left-10 w-72 h-72 bg-purple-700 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-0 -right-20 w-72 h-72 bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+          <div className="absolute -bottom-20 left-1/2 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-6000"></div>
+
+          <h1 className="relative text-6xl md:text-7xl font-extrabold text-center mb-14 tracking-wide drop-shadow-xl">
             About <span className="text-indigo-400">Me</span>
           </h1>
 
-          <div className="space-y-8 text-lg leading-relaxed tracking-wide">
+          <div className="relative space-y-10 text-lg leading-relaxed tracking-wide max-w-3xl mx-auto">
             <p className="text-indigo-200">
               At <strong className="text-indigo-400">Cameron Digital Works</strong>, I’m continuously expanding my expertise in full-stack web development while building a foundation for long-term success in the tech industry.
               Having completed a comprehensive bootcamp in full-stack development, I’ve gained hands-on experience and strong proficiency in technologies such as
@@ -43,7 +49,7 @@ export default function About() {
               My goal is to find a job that not only allows me to apply my coding skills but also fosters continuous learning and growth in the tech industry.
             </p>
 
-            <h2 className="text-3xl font-bold text-indigo-400 mt-12 mb-6 tracking-wide drop-shadow-md">
+            <h2 className="text-4xl font-bold text-indigo-400 mt-16 mb-6 tracking-wide drop-shadow-lg border-b-2 border-indigo-500 pb-2">
               Purpose of Cameron Digital Works
             </h2>
 
@@ -60,7 +66,7 @@ export default function About() {
               My goal career is to work in software development, creating full-stack online applications that run on all platforms, including mobile devices.
             </p>
 
-            <h2 className="text-3xl font-bold text-indigo-400 mt-12 mb-6 tracking-wide drop-shadow-md">
+            <h2 className="text-4xl font-bold text-indigo-400 mt-16 mb-6 tracking-wide drop-shadow-lg border-b-2 border-indigo-500 pb-2">
               How I’m Growing as a Web Developer
             </h2>
 
@@ -80,6 +86,33 @@ export default function About() {
           </div>
         </section>
       </main>
+
+      {/* Tailwind animations */}
+      <style jsx>{`
+        @keyframes blob {
+          0%, 100% {
+            transform: translate(0px, 0px) scale(1);
+          }
+          33% {
+            transform: translate(30px, -50px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+        .animation-delay-6000 {
+          animation-delay: 6s;
+        }
+      `}</style>
     </>
   );
 }

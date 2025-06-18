@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
-import NextContactForm from '../../components/NextContactForm'
+import NextContactForm from '../../components/ContactForms/NextContactForm'
 
 export default function NextJsReactDevelopment() {
   return (
@@ -81,7 +81,7 @@ export default function NextJsReactDevelopment() {
                 "Authentication & roles",
                 "Advanced dashboard",
                 "Full CMS setup",
-                "Ongoing support",
+                "Ongoing support £150+",
               ]}
             />
           </div>

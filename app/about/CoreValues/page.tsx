@@ -73,7 +73,7 @@ export default function Values() {
         />
       </Head>
 
-      <main className="min-h-screen bg-gradient-to-tr from-purple-900 via-indigo-900 to-blue-900 text-white flex flex-col">
+      <main className="min-h-screen flex flex-col pt-16 bg-gradient-to-br from-indigo-950 via-purple-900 to-indigo-800 text-white px-6">
         {/* Hero Section */}
         <section
           className={`flex flex-col items-center justify-center flex-shrink-0 px-6 pt-20 pb-16 text-center max-w-5xl mx-auto ${styles.animateFadeInUp}`}
@@ -110,9 +110,9 @@ export default function Values() {
         </section>
 
         {/* Closing Message */}
-        <section className="bg-indigo-800 py-16 px-6 text-center">
+        <section className="pb-24">
           <p className="max-w-4xl mx-auto text-xl md:text-2xl font-semibold leading-relaxed drop-shadow-lg">
-            By choosing <strong>Cameron Digital Works</strong>, you’re not just getting a website—you’re partnering with a team dedicated to building your online presence grounded in strong core values. Every project we undertake is crafted with integrity, respect, inclusivity, and transparency at its heart, ensuring your website truly reflects these principles while delivering a seamless, user-friendly experience. We commit to creating digital solutions that not only meet your needs but also align with the values that define who we are.
+            By choosing <strong>Cameron Digital Works</strong>, you’re not just getting a website you’re partnering with a team dedicated to building your online presence grounded in strong core values. Every project we undertake is crafted with integrity, respect, inclusivity, and transparency at its heart, ensuring your website truly reflects these principles while delivering a seamless, user-friendly experience. We commit to creating digital solutions that not only meet your needs but also align with the values that define who we are.
           </p>
         </section>
       </main>

@@ -60,7 +60,6 @@ export default function Navbar() {
             <Link href="/about/CoreValues" className="block px-4 py-2 text-white hover:bg-gray-600">
              Core Values
             </Link>
-            
           </div>
         </div>
 
@@ -77,8 +76,8 @@ export default function Navbar() {
           Projects
         </Link>
         <Link
-          href="/contact"
-          className={isActive("/contact") ? "text-yellow-400 font-bold underline" : "hover:underline"}
+          href="/Contact"
+          className={isActive("/Contact") ? "text-yellow-400 font-bold underline" : "hover:underline"}
         >
           Contact Us
         </Link>
@@ -104,12 +103,12 @@ export default function Navbar() {
             Home
           </Link>
 
-          {/* About clickable link and separate submenu toggle */}
+          {/* About clickable link and separate submenu toggle, centered */}
           <div className="w-full">
-            <div className="flex justify-between items-center px-4 py-2">
+            <div className="flex justify-center items-center gap-2 px-4 py-2">
               <Link
                 href="/about"
-                className={`text-left ${
+                className={`${
                   isActive("/about") ? "text-yellow-500 font-bold underline" : "hover:underline"
                 }`}
                 onClick={toggleMenu}
@@ -119,7 +118,7 @@ export default function Navbar() {
               <button
                 onClick={toggleAboutSubmenu}
                 aria-label={isAboutSubmenuOpen ? "Close About submenu" : "Open About submenu"}
-                className="pl-2"
+                className="text-sm"
                 type="button"
               >
                 {isAboutSubmenuOpen ? <FaChevronUp /> : <FaChevronDown />}
@@ -147,9 +146,8 @@ export default function Navbar() {
                     setIsAboutSubmenuOpen(false);
                   }}
                 >
-               Core Values
+                 Core Values
                 </Link>
-               
               </div>
             )}
           </div>
@@ -173,9 +171,9 @@ export default function Navbar() {
             Projects
           </Link>
           <Link
-            href="/contact"
+            href="/Contact"
             className={`py-2 w-full text-center ${
-              isActive("/contact") ? "text-yellow-500 font-bold underline" : "hover:underline"
+              isActive("/Contact") ? "text-yellow-500 font-bold underline" : "hover:underline"
             }`}
             onClick={toggleMenu}
           >

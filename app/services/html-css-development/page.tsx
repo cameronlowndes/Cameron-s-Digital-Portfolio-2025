@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
-import HTMLContactForm from "../../components/HTMLContactForm";
+import HTMLContactForm from "../../components/ContactForms/HTMLContactForm";
 
 export default function HtmlCssDevelopment() {
   return (
