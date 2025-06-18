@@ -84,7 +84,7 @@ export default function DiscountedDevOffer() {
                 <li><CheckCircle className="inline mr-2 text-yellow-500" /> Unlimited features</li>
                 <li><CheckCircle className="inline mr-2 text-yellow-500" /> Full app development</li>
                 <li><CheckCircle className="inline mr-2 text-yellow-500" /> Priority support</li>
-                <li><CheckCircle className="inline mr-2 text-yellow-500" /> Ongoing maintenance</li>
+                <li><CheckCircle className="inline mr-2 text-yellow-500" /> Ongoing maintenance£120+</li>
               </ul>
             </div>
           </div>

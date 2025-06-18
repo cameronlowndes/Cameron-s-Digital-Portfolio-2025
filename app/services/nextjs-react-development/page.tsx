@@ -80,7 +80,7 @@ export default function NextJsReactDevelopment() {
                 <li><CheckCircle className="inline mr-2 text-purple-600" /> Authentication & roles</li>
                 <li><CheckCircle className="inline mr-2 text-purple-600" /> Advanced dashboard</li>
                 <li><CheckCircle className="inline mr-2 text-purple-600" /> Full CMS setup</li>
-                <li><CheckCircle className="inline mr-2 text-purple-600" /> Ongoing support</li>
+                <li><CheckCircle className="inline mr-2 text-purple-600" /> Ongoing support£150+</li>
               </ul>
             </div>
           </div>
