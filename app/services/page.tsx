@@ -1,4 +1,4 @@
-//done
+//hello
 import Link from "next/link";
 export default function Services() {
   return (
@@ -99,7 +99,7 @@ export default function Services() {
                 description:
                   "Hourly consultation to help you navigate the best path forward.",
                 price: "£50 - £600+ / hour",
-                link: "/services/Consultation",
+                link: "/services/consultation",
               },
             ]}
           />
