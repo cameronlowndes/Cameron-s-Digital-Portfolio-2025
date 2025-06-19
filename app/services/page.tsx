@@ -18,14 +18,14 @@ export default function Services() {
                 description:
                   "Build fast and scalable websites using Next.js or React, optimized for performance.",
                 price: "£499 - £3000",
-                link: "/Services/NextRsreactDevelopment",
+                link: "/services/NextRsreactDevelopment",
               },
               {
                 title: "Basic HTML/CSS Development",
                 description:
                   "For simple and clean static websites, I offer basic HTML and CSS development.",
                 price: "£199 - £699",
-                link: "/Services/HTMLCssDevelopment",
+                link: "/services/HTMLCssDevelopment",
               },
             ]}
           />
@@ -85,7 +85,7 @@ export default function Services() {
                 description:
                   "Ongoing support and optimization to keep your application running smoothly.",
                 price: "£500 - £1500 / month",
-                link: "/Services/OngoingMaintenance",
+                link: "/services/OngoingMaintenance",
               },
             ]}
           />
@@ -99,7 +99,7 @@ export default function Services() {
                 description:
                   "Hourly consultation to help you navigate the best path forward.",
                 price: "£50 - £600+ / hour",
-                link: "/Services/Consultation",
+                link: "/services/Consultation",
               },
             ]}
           />
@@ -113,7 +113,7 @@ export default function Services() {
                 description:
                   "Hourly consultation to help you navigate the best path forward.",
                 price: "Special Discounted Rate",
-                link: "/Services/SpecialOfferPage",
+                link: "/services/SpecialOfferPage",
               },
             ]}
           />
