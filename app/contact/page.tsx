@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import ContactForm from "../components//ContactForms/ContactForm";
+import ContactForm from "../components/ContactForms/ContactForm";
 
 export default function Contact() {
   return (

@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import DiscountedDevOfferForm from "./ContactForms/DiscountedDevOfferfrorm";
-import { CheckCircle } from "lucide-react";
+
 
 export default function HomeContent() {
   return (
