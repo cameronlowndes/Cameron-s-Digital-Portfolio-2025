@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* About with clickable link and submenu */}
         <div className="relative group">
           <Link
-            href="/About"
+            href="/about"
             className={`flex items-center gap-1 ${
               isActive("/About") ? "text-yellow-400 font-bold underline" : "hover:underline"
             }`}
@@ -54,29 +54,29 @@ export default function Navbar() {
 
           {/* Submenu */}
           <div className="absolute left-0 -mt-1 w-40 bg-gray-700 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 shadow-lg pointer-events-auto">
-            <Link href="/About" className="block px-4 py-2 text-white hover:bg-gray-600">
+            <Link href="/about" className="block px-4 py-2 text-white hover:bg-gray-600">
               Overview
             </Link>
-            <Link href="/About/CoreValues" className="block px-4 py-2 text-white hover:bg-gray-600">
+            <Link href="/about/CoreValues" className="block px-4 py-2 text-white hover:bg-gray-600">
              Core Values
             </Link>
           </div>
         </div>
 
         <Link
-          href="/Services"
+          href="/services"
           className={isActive("/services") ? "text-yellow-400 font-bold underline" : "hover:underline"}
         >
           Services
         </Link>
         <Link
-          href="/Projects"
+          href="/projects"
           className={isActive("/projects") ? "text-yellow-400 font-bold underline" : "hover:underline"}
         >
           Projects
         </Link>
         <Link
-          href="/Contact"
+          href="/contact"
           className={isActive("/Contact") ? "text-yellow-400 font-bold underline" : "hover:underline"}
         >
           Contact Us
@@ -107,7 +107,7 @@ export default function Navbar() {
           <div className="w-full">
             <div className="flex justify-center items-center gap-2 px-4 py-2">
               <Link
-                href="/About"
+                href="/about"
                 className={`${
                   isActive("/about") ? "text-yellow-500 font-bold underline" : "hover:underline"
                 }`}
@@ -129,7 +129,7 @@ export default function Navbar() {
             {isAboutSubmenuOpen && (
               <div className="flex flex-col w-full bg-gray-100">
                 <Link
-                  href="/About"
+                  href="/about"
                   className="py-2 px-6 hover:bg-gray-200"
                   onClick={() => {
                     toggleMenu();
@@ -139,7 +139,7 @@ export default function Navbar() {
                   Overview
                 </Link>
                 <Link
-                  href="/About/CoreValues"
+                  href="/about/CoreValues"
                   className="py-2 px-6 hover:bg-gray-200"
                   onClick={() => {
                     toggleMenu();
@@ -153,7 +153,7 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/Services"
+            href="/services"
             className={`py-2 w-full text-center ${
               isActive("/services") ? "text-yellow-500 font-bold underline" : "hover:underline"
             }`}
@@ -162,7 +162,7 @@ export default function Navbar() {
             Services
           </Link>
           <Link
-            href="/Projects"
+            href="/projects"
             className={`py-2 w-full text-center ${
               isActive("/projects") ? "text-yellow-500 font-bold underline" : "hover:underline"
             }`}
@@ -171,7 +171,7 @@ export default function Navbar() {
             Projects
           </Link>
           <Link
-            href="/Contact"
+            href="/contact"
             className={`py-2 w-full text-center ${
               isActive("/Contact") ? "text-yellow-500 font-bold underline" : "hover:underline"
             }`}
