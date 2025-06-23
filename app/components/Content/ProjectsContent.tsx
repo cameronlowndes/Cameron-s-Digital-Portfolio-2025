@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import ClientSlider from "./ClientSlider";
+import ClientSlider from "../ClientSlider"; // Make sure this path is correct!
 
 type Project = {
   title: string;
@@ -92,7 +92,7 @@ export default function ProjectsContent() {
       </div>
 
       <div className="mt-20 text-center">
-        <Link href="/services">
+        <Link href="/services" passHref>
           <button className="bg-gradient-to-r from-purple-600 to-blue-500 px-8 py-4 rounded-full shadow-lg hover:scale-110 hover:shadow-2xl transition-transform font-semibold text-white">
             ⬅ Back to Services
           </button>
@@ -133,8 +133,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       <h2 className="text-2xl md:text-3xl font-bold mb-3">{title}</h2>
       <p className="text-base md:text-lg text-gray-800 mb-4">{description}</p>
       <p className="text-sm text-gray-700 mb-4">
-        <span className="font-semibold">Tech Stack:</span>{" "}
-        {techStack.join(", ")}
+        <span className="font-semibold">Tech Stack:</span> {techStack.join(", ")}
       </p>
       {images.length > 0 && (
         <div className="mb-4">
@@ -149,10 +148,9 @@ function ProjectCard({ project }: ProjectCardProps) {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
+              className="text-blue-700 hover:underline hover:text-black block font-medium"
             >
-              <span className="text-blue-700 hover:underline hover:text-black block font-medium">
-                {link.label} →
-              </span>
+              {link.label} →
             </Link>
           ))}
         </div>

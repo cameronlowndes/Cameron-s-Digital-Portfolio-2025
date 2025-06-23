@@ -1,7 +1,19 @@
+"use client";
+
 import Head from "next/head";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
-import NextContactForm from '../../components/ContactForms/NextContactForm'
+import { motion } from "framer-motion";
+import NextContactForm from "../../components/ContactForms/NextContactForm";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
+  }),
+};
 
 export default function NextJsReactDevelopment() {
   return (
@@ -16,17 +28,37 @@ export default function NextJsReactDevelopment() {
 
       <main className="flex-grow max-w-6xl mx-auto w-full py-20 text-white">
         {/* Intro */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h1 className="text-6xl font-extrabold mb-4 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+        <motion.div
+          className="text-center mb-16 max-w-3xl mx-auto"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          custom={0}
+        >
+          <motion.h1
+            className="text-6xl font-extrabold mb-4 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+            variants={fadeInUp}
+            custom={1}
+          >
             Next.js / React Development
-          </h1>
-          <p className="text-2xl font-light text-indigo-200">
+          </motion.h1>
+          <motion.p
+            className="text-2xl font-light text-indigo-200"
+            variants={fadeInUp}
+            custom={2}
+          >
             Build blazing-fast, scalable web apps with cutting-edge technology and modern design.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Terms Link */}
-        <div className="flex justify-center mb-20">
+        <motion.div
+          className="flex justify-center mb-20"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          custom={3}
+        >
           <Link href="/terms/TermsNextJsReact" passHref>
             <button
               type="button"
@@ -37,10 +69,16 @@ export default function NextJsReactDevelopment() {
               Terms and Conditions{"\n"}for{"\n"}Next.js / React Development
             </button>
           </Link>
-        </div>
+        </motion.div>
 
         {/* Packages */}
-        <section className="mb-32">
+        <motion.section
+          className="mb-32"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          custom={4}
+        >
           <h2 className="text-4xl font-extrabold text-center mb-12 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] tracking-wide">
             💼 Packages & Pricing
           </h2>
@@ -57,6 +95,7 @@ export default function NextJsReactDevelopment() {
                 "Vercel deployment",
                 "5–7 day turnaround",
               ]}
+              custom={0}
             />
             <PricingCard
               title="🔵 Professional"
@@ -70,6 +109,7 @@ export default function NextJsReactDevelopment() {
                 "Google Analytics setup",
                 "Admin dashboard (optional)",
               ]}
+              custom={1}
             />
             <PricingCard
               title="🟣 Premium"
@@ -83,43 +123,86 @@ export default function NextJsReactDevelopment() {
                 "Full CMS setup",
                 "Ongoing support £150+",
               ]}
+              custom={2}
             />
           </div>
-        </section>
+        </motion.section>
 
         {/* Add-ons */}
-        <section className="mb-28 max-w-3xl mx-auto bg-indigo-900 bg-opacity-70 rounded-3xl p-10 shadow-2xl">
+        <motion.section
+          className="mb-28 max-w-3xl mx-auto bg-indigo-900 bg-opacity-70 rounded-3xl p-10 shadow-2xl"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          custom={5}
+        >
           <h2 className="text-3xl font-extrabold mb-6 text-indigo-100 tracking-wide">✨ Add-Ons</h2>
           <ul className="list-disc pl-8 text-indigo-200 space-y-3 text-lg font-medium">
-            <li>E-commerce setup (Stripe + product pages): <span className="font-bold">+£400</span></li>
-            <li>Multilingual support: <span className="font-bold">+£250</span></li>
-            <li>Hosting migration: <span className="font-bold">+£100</span></li>
-            <li>Monthly maintenance: <span className="font-bold">£250+/month</span></li>
-            <li>Remove Watermark: <span className="font-bold">+£300</span></li>
+            <li>
+              E-commerce setup (Stripe + product pages): <span className="font-bold">+£400</span>
+            </li>
+            <li>
+              Multilingual support: <span className="font-bold">+£250</span>
+            </li>
+            <li>
+              Hosting migration: <span className="font-bold">+£100</span>
+            </li>
+            <li>
+              Monthly maintenance: <span className="font-bold">£250+/month</span>
+            </li>
+            <li>
+              Remove Watermark: <span className="font-bold">+£300</span>
+            </li>
           </ul>
-        </section>
+        </motion.section>
 
         {/* Tech Stack */}
-        <section className="mb-28 max-w-3xl mx-auto bg-indigo-900 bg-opacity-70 rounded-3xl p-10 shadow-2xl">
+        <motion.section
+          className="mb-28 max-w-3xl mx-auto bg-indigo-900 bg-opacity-70 rounded-3xl p-10 shadow-2xl"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          custom={6}
+        >
           <h2 className="text-3xl font-extrabold mb-6 text-indigo-100 tracking-wide">🧰 Tech Stack</h2>
           <ul className="list-disc pl-8 text-indigo-200 space-y-2 text-lg font-medium">
-            <li><strong>Frontend:</strong> React, Next.js, Tailwind CSS, TypeScript</li>
-            <li><strong>CMS:</strong> Sanity, Strapi, Contentful</li>
-            <li><strong>Hosting:</strong> Vercel, Netlify, DigitalOcean</li>
-            <li><strong>Auth:</strong> Clerk, Firebase, NextAuth.js</li>
+            <li>
+              <strong>Frontend:</strong> React, Next.js, Tailwind CSS, TypeScript
+            </li>
+            <li>
+              <strong>CMS:</strong> Sanity, Strapi, Contentful
+            </li>
+            <li>
+              <strong>Hosting:</strong> Vercel, Netlify, DigitalOcean
+            </li>
+            <li>
+              <strong>Auth:</strong> Clerk, Firebase, NextAuth.js
+            </li>
           </ul>
-        </section>
+        </motion.section>
 
         {/* Form */}
-        <section className="mb-32 max-w-3xl mx-auto">
+        <motion.section
+          className="mb-32 max-w-3xl mx-auto"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          custom={7}
+        >
           <h2 className="text-3xl font-extrabold text-center mb-8 text-indigo-100 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
             📩 Let’s Work Together
           </h2>
           <NextContactForm />
-        </section>
+        </motion.section>
 
         {/* Back to Services */}
-        <div className="text-center pb-10">
+        <motion.div
+          className="text-center pb-10"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+          custom={8}
+        >
           <Link href="/services" passHref>
             <button
               className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700
@@ -129,7 +212,7 @@ export default function NextJsReactDevelopment() {
               ⬅ Back to Services
             </button>
           </Link>
-        </div>
+        </motion.div>
       </main>
     </div>
   );
@@ -140,9 +223,10 @@ type PricingCardProps = {
   price: string;
   color: "green" | "blue" | "purple";
   features: string[];
+  custom?: number;
 };
 
-function PricingCard({ title, price, color, features }: PricingCardProps) {
+function PricingCard({ title, price, color, features, custom = 0 }: PricingCardProps) {
   const colors = {
     green: {
       text: "text-green-400",
@@ -167,9 +251,13 @@ function PricingCard({ title, price, color, features }: PricingCardProps) {
   const colorClasses = colors[color];
 
   return (
-    <div
+    <motion.div
       className={`${colorClasses.bg} rounded-3xl p-8 shadow-2xl border-4 border-opacity-70 border-white flex flex-col text-white
       hover:shadow-[0_0_30px_5px_rgba(255,255,255,0.3)] transition-shadow duration-400`}
+      initial="hidden"
+      animate="visible"
+      variants={fadeInUp}
+      custom={custom + 9} // offset to appear after main content
     >
       <h3 className={`text-3xl font-extrabold mb-3 tracking-tight ${colorClasses.text} drop-shadow-lg`}>
         {title}
@@ -190,6 +278,6 @@ function PricingCard({ title, price, color, features }: PricingCardProps) {
       >
         Coming Soon
       </button>
-    </div>
+    </motion.div>
   );
 }

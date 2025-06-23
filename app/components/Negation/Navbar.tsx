@@ -1,184 +1,147 @@
 "use client";
-
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { FaBars, FaTimes, FaCaretDown } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAboutSubmenuOpen, setIsAboutSubmenuOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (isMenuOpen) setIsAboutSubmenuOpen(false); // close About submenu when main menu closes
-  };
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (aboutRef.current && !aboutRef.current.contains(event.target as Node)) {
+        setIsAboutOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
-  const toggleAboutSubmenu = () => {
-    setIsAboutSubmenuOpen(!isAboutSubmenuOpen);
-  };
+  const isActive = (path: string) => pathname === path;
+  const activeClass = "font-bold underline text-yellow-400";
 
-  const isActive = (path: string) =>
-    pathname === path || pathname.startsWith(path + "/");
+  const toggleAbout = () => {
+    setIsAboutOpen((prev) => !prev);
+  };
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex justify-between items-center bg-gray-800 shadow-md z-50 p-2">
-      {/* Logo */}
-      <Link href="/" className="flex items-center text-center">
-        <div>
-          <h1 className="text-white text-sm font-bold m-0">Cameron Digital Works</h1>
-          <h2 className="text-gray-400 text-xs font-normal m-0">Welcome to Cameron Digital Works</h2>
-        </div>
+    <nav className="w-full bg-blue-900 text-white shadow-md py-4 px-8 flex justify-between items-center fixed top-0 left-0 right-0 z-50">
+      <Link href="/" className="text-xl font-bold text-white drop-shadow-md">
+        Cameron Digital Works
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex gap-6 text-white items-center">
-        <Link
-          href="/"
-          className={isActive("/") ? "text-yellow-400 font-bold underline" : "hover:underline"}
-        >
+      <div className="hidden md:flex gap-6">
+        <Link href="/" className={isActive("/") ? activeClass : "hover:underline"}>
           Home
         </Link>
 
-        {/* About with clickable link and submenu */}
-        <div className="relative group">
-          <Link
-            href="/about"
+        <div ref={aboutRef} className="relative">
+          <button
+            onClick={toggleAbout}
             className={`flex items-center gap-1 ${
-              isActive("/About") ? "text-yellow-400 font-bold underline" : "hover:underline"
+              pathname.startsWith("/about") || pathname.startsWith("/OurCoreValues")
+                ? activeClass
+                : "hover:underline"
             }`}
           >
-            About <FaChevronDown className="text-sm" />
-          </Link>
-
-          {/* Submenu */}
-          <div className="absolute left-0 -mt-1 w-40 bg-gray-700 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 shadow-lg pointer-events-auto">
-            <Link href="/about" className="block px-4 py-2 text-white hover:bg-gray-600">
-              Overview
-            </Link>
-            <Link href="/about/CoreValues" className="block px-4 py-2 text-white hover:bg-gray-600">
-             Core Values
-            </Link>
-          </div>
+            About <FaCaretDown className="text-sm" />
+          </button>
+          {isAboutOpen && (
+            <div className="absolute left-0 mt-2 w-48 bg-white text-black border border-gray-200 rounded-md shadow-lg z-10">
+              <Link href="/about" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>
+                About Us
+              </Link>
+              <Link
+                href="/about/CoreValues"
+                className="block px-4 py-2 hover:bg-gray-100"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Values
+              </Link>
+            </div>
+          )}
         </div>
 
-        <Link
-          href="/services"
-          className={isActive("/services") ? "text-yellow-400 font-bold underline" : "hover:underline"}
-        >
+        <Link href="/services" className={isActive("/services") ? activeClass : "hover:underline"}>
           Services
         </Link>
-        <Link
-          href="/projects"
-          className={isActive("/projects") ? "text-yellow-400 font-bold underline" : "hover:underline"}
-        >
+        <Link href="/projects" className={isActive("/projects") ? activeClass : "hover:underline"}>
           Projects
         </Link>
-        <Link
-          href="/contact"
-          className={isActive("/Contact") ? "text-yellow-400 font-bold underline" : "hover:underline"}
-        >
+        <Link href="/contact" className={isActive("/contact") ? activeClass : "hover:underline"}>
           Contact Us
         </Link>
       </div>
 
       {/* Mobile Menu Button */}
       <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-2xl text-white" aria-label="Toggle menu">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-2xl"
+          aria-label="Toggle menu"
+        >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center py-4 md:hidden z-40">
-          <Link
-            href="/"
-            className={`py-2 w-full text-center ${
-              isActive("/") ? "text-yellow-500 font-bold underline" : "hover:underline"
-            }`}
-            onClick={toggleMenu}
-          >
-            Home
-          </Link>
+        <div className="absolute top-full left-0 w-full bg-white text-black shadow-lg py-4 md:hidden">
+          <div className="flex flex-col sm:flex-row items-center justify-around gap-2">
+            <Link
+              href="/"
+              className={`py-2 ${isActive("/") ? activeClass : "hover:underline"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
 
-          {/* About clickable link and separate submenu toggle, centered */}
-          <div className="w-full">
-            <div className="flex justify-center items-center gap-2 px-4 py-2">
-              <Link
-                href="/about"
-                className={`${
-                  isActive("/about") ? "text-yellow-500 font-bold underline" : "hover:underline"
-                }`}
-                onClick={toggleMenu}
-              >
-                About
-              </Link>
+            <div ref={aboutRef} className="relative">
               <button
-                onClick={toggleAboutSubmenu}
-                aria-label={isAboutSubmenuOpen ? "Close About submenu" : "Open About submenu"}
-                className="text-sm"
-                type="button"
+                onClick={toggleAbout}
+                className={`py-2 flex items-center gap-1 ${
+                  pathname.startsWith("/about") || pathname.startsWith("/OurCoreValues")
+                    ? activeClass
+                    : "hover:underline"
+                }`}
               >
-                {isAboutSubmenuOpen ? <FaChevronUp /> : <FaChevronDown />}
+                About <FaCaretDown className="text-sm" />
               </button>
+              {isAboutOpen && (
+                <div className="absolute bg-white text-black border border-gray-200 rounded-md shadow-lg z-10 left-0 mt-2 w-48">
+                  <Link href="/about" className="block px-4 py-2 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>
+                    About Us
+                  </Link>
+                  <Link
+                    href="/about/CoreValues"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Our Values
+                  </Link>
+                </div>
+              )}
             </div>
 
-            {/* Mobile About submenu */}
-            {isAboutSubmenuOpen && (
-              <div className="flex flex-col w-full bg-gray-100">
-                <Link
-                  href="/about"
-                  className="py-2 px-6 hover:bg-gray-200"
-                  onClick={() => {
-                    toggleMenu();
-                    setIsAboutSubmenuOpen(false);
-                  }}
-                >
-                  Overview
-                </Link>
-                <Link
-                  href="/about/CoreValues"
-                  className="py-2 px-6 hover:bg-gray-200"
-                  onClick={() => {
-                    toggleMenu();
-                    setIsAboutSubmenuOpen(false);
-                  }}
-                >
-                 Core Values
-                </Link>
-              </div>
-            )}
+            <Link
+              href="/projects"
+              className={`py-2 ${isActive("/projects") ? activeClass : "hover:underline"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Projects
+            </Link>
+            <Link
+              href="/contact"
+              className={`py-2 ${isActive("/contact") ? activeClass : "hover:underline"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
           </div>
-
-          <Link
-            href="/services"
-            className={`py-2 w-full text-center ${
-              isActive("/services") ? "text-yellow-500 font-bold underline" : "hover:underline"
-            }`}
-            onClick={toggleMenu}
-          >
-            Services
-          </Link>
-          <Link
-            href="/projects"
-            className={`py-2 w-full text-center ${
-              isActive("/projects") ? "text-yellow-500 font-bold underline" : "hover:underline"
-            }`}
-            onClick={toggleMenu}
-          >
-            Projects
-          </Link>
-          <Link
-            href="/contact"
-            className={`py-2 w-full text-center ${
-              isActive("/Contact") ? "text-yellow-500 font-bold underline" : "hover:underline"
-            }`}
-            onClick={toggleMenu}
-          >
-            Contact Us
-          </Link>
         </div>
       )}
     </nav>

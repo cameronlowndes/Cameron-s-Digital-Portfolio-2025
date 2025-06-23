@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import ProjectsContent from "../components/ProjectsContent";
+import ProjectsContent from "../components/Content/ProjectsContent";
 
 export default function ProjectsPage() {
   return (

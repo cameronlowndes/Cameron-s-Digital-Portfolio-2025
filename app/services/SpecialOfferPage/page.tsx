@@ -1,5 +1,5 @@
 import Head from "next/head";
-import DiscountedDevOfferContent from "../../components/DiscountedDevOfferContent"
+import DiscountedDevOfferContent from "../../components/Content/DiscountedDevOfferContent"
 
 export default function DiscountedDevOfferPage() {
   return (
