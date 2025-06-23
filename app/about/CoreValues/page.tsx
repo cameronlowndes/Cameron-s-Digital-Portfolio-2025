@@ -47,7 +47,7 @@ const values = [
         At Cameron Digital Works, we believe in continuous learning and growth within our business, always striving to improve our skills, processes, and services to better serve our clients and adapt to the ever-changing digital landscape.
         <div className="mt-6">
           <Link
-            href="/Contact"
+            href="/contact"
             className="inline-block bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300 font-semibold tracking-wide"
           >
             Send Feedback
