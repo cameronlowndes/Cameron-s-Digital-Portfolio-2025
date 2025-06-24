@@ -42,11 +42,10 @@ export default function Navbar() {
         <div ref={aboutRef} className="relative">
           <button
             onClick={toggleAbout}
-            className={`flex items-center gap-1 ${
-              pathname.startsWith("/about") || pathname.startsWith("/OurCoreValues")
+            className={`flex items-center gap-1 ${pathname.startsWith("/about") || pathname.startsWith("/OurCoreValues")
                 ? activeClass
                 : "hover:underline"
-            }`}
+              }`}
           >
             About <FaCaretDown className="text-sm" />
           </button>
@@ -103,11 +102,10 @@ export default function Navbar() {
             <div ref={aboutRef} className="relative">
               <button
                 onClick={toggleAbout}
-                className={`py-2 flex items-center gap-1 ${
-                  pathname.startsWith("/about") || pathname.startsWith("/OurCoreValues")
+                className={`py-2 flex items-center gap-1 ${pathname.startsWith("/about") || pathname.startsWith("/OurCoreValues")
                     ? activeClass
                     : "hover:underline"
-                }`}
+                  }`}
               >
                 About <FaCaretDown className="text-sm" />
               </button>
@@ -126,7 +124,13 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-
+            <Link
+              href="/services"
+              className={`py-2 ${isActive("/projects") ? activeClass : "hover:underline"}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              services
+            </Link>
             <Link
               href="/projects"
               className={`py-2 ${isActive("/projects") ? activeClass : "hover:underline"}`}
