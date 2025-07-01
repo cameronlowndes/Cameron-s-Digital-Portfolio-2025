@@ -55,7 +55,7 @@ const projectData: Project[] = [
   {
     title: "Next.js News Website",
     description:
-      "A demo showcasing routing, nested layouts, and client-side navigation in a clean Next.js news site design.",
+      "This is a demo website designed to showcase routing, nested layouts, and client-side navigation in a clean, modern Next.js news site layout. Please note that as a demo, not all features may be fully functional or work exactly as intended—it's built for demonstration purposes only.",
     techStack: ["Next.js", "Custom CSS", "JavaScript"],
     links: [
       { url: "https://newswebsite-sand.vercel.app/", label: "Live Demo" },
@@ -69,6 +69,23 @@ const projectData: Project[] = [
       "/image/NewsWebsite/NewsWebsite-2.png",
       "/image/NewsWebsite/NewsWebsite-3.png",
       "/image/NewsWebsite/NewsWebsite-4.png",
+    ],
+  },
+    {
+    title: "Next.js Data Mutation Website",
+    description:
+      "This is a demo website designed to showcase data mutation features, allowing users to upload pictures with captions. Please note that since this is a demonstration, some features may not be fully functional or behave exactly as intended.",
+    techStack: ["Next.js", "Custom CSS", "JavaScript"],
+    links: [
+      { url: "https://datamutation.vercel.app", label: "Live Demo" },
+      {
+        url: 'https://github.com/cameronlowndes/DataMutation',
+        label: "GitHub",
+      },
+    ],
+    images: [
+      "/image/DataMutation/DataMutationPictureONE.png",
+      "/image/DataMutation/DataMutationPictureTWO.png",
     ],
   },
 ];

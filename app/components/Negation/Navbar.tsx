@@ -129,7 +129,7 @@ export default function Navbar() {
               className={`py-2 ${isActive("/projects") ? activeClass : "hover:underline"}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              services
+              Services
             </Link>
             <Link
               href="/projects"
