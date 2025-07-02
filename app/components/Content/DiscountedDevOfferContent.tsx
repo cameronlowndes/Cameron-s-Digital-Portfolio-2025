@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
-import DiscountedDevOfferForm from "../ContactForms/DiscountedDevOfferfrorm";
+import DiscountedDevOfferForm from "../ContactForms/DiscountedDevOfferfrorm"; 
 import { motion, Variants } from "framer-motion";
 
 const containerVariants: Variants = {
@@ -61,7 +61,10 @@ export default function DiscountedDevOfferContent() {
           </motion.p>
           <motion.div custom={2} variants={fadeInUpVariants} whileHover="hover" {...buttonHover}>
             <Link href="/terms/discounted-dev-offer" passHref>
-              <button className="bg-gradient-to-r from-purple-600 to-blue-500 px-8 py-4 rounded-full shadow-xl transition-transform font-semibold whitespace-pre-line">
+              <button
+                type="button"
+                className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 px-8 py-4 rounded-full shadow-xl transition-transform font-semibold whitespace-pre-line"
+              >
                 Terms and Conditions{"\n"}for{"\n"}charities and small business
               </button>
             </Link>
@@ -100,7 +103,7 @@ export default function DiscountedDevOfferContent() {
             <PackageCard
               color="blue"
               title="Professional"
-              price="£599"
+              price="£699"
               items={[
                 "Up to 6 pages",
                 "CMS integration",
@@ -113,7 +116,7 @@ export default function DiscountedDevOfferContent() {
             <PackageCard
               color="purple"
               title="Premium"
-              price="£1,000"
+              price="£1,100"
               items={[
                 "10+ pages",
                 "API integrations",
@@ -126,7 +129,7 @@ export default function DiscountedDevOfferContent() {
             <PackageCard
               color="yellow"
               title="Ultimate"
-              price="£1,500+"
+              price="£1,600+"
               items={[
                 "Unlimited features",
                 "Full app development",
@@ -187,20 +190,33 @@ export default function DiscountedDevOfferContent() {
           >
             📜 Eligibility Requirements
           </motion.h2>
-          <motion.p
-            className="text-black mb-4 text-center max-w-xl mx-auto"
+          <motion.ul
+            className="list-disc pl-8 space-y-4 text-black text-lg font-medium max-w-xl mx-auto"
+            variants={containerVariants}
             custom={1}
-            variants={fadeInUpVariants}
           >
-            This offer is exclusively for:
-          </motion.p>
-          <motion.ul className="list-disc pl-8 space-y-4 text-black text-lg font-medium max-w-xl mx-auto" variants={containerVariants} custom={2}>
             {[
-              <span key="1"><strong>Charities:</strong> Must be registered with a UK Charity Commission (or equivalent in your country).</span>,
-              <span key="2"><strong>Small Businesses:</strong> Must have under 10 employees and under £200k annual turnover.</span>,
-              <span key="3">Verification may be requested (e.g. registration number or business documentation).</span>,
-              <span key="4">This offer is intended to support early-stage growth and community impact.</span>,
-              <span key="5">We also offer special payment options for charities and small businesses, detailed in the contract.</span>,
+              <>
+                <strong>Charities:</strong> Must be officially registered with the UK Charity Commission or an equivalent authority in their country. Proof of registration (such as a registration number) may be required to verify eligibility.
+              </>,
+              <>
+                <strong>Small Businesses:</strong> Must have fewer than 10 employees and an annual turnover under £200,000. Verification through business registration or financial documentation may be requested to confirm eligibility.
+              </>,
+              <>
+                These criteria protect my time and resources by focusing efforts on clients who genuinely qualify and align with this offer’s scope. It prevents misuse of discounted or special terms and ensures fair treatment for all eligible clients.
+              </>,
+              <>
+                <strong>Verification is Mandatory:</strong> Failure to provide requested documentation or falsifying eligibility information will result in immediate disqualification from this offer.
+              </>,
+              <>
+                <strong>Offer Limitations:</strong> This offer is not intended for larger enterprises, individuals, or organizations outside these eligibility brackets to avoid resource strain and maintain service quality.
+              </>,
+              <>
+                <strong>Contractual Clarity:</strong> All terms, including eligibility and pricing, are clearly documented in the contract. Non-compliance or misrepresentation may lead to termination of service without refund.
+              </>,
+              <>
+                By accepting this offer, clients confirm that they meet these eligibility criteria and agree to provide any necessary documentation promptly. This approach ensures a professional, smooth working relationship while safeguarding my business interests.
+              </>,
             ].map((item, i) => (
               <motion.li key={i} custom={i} variants={listItemVariants}>
                 {item}
@@ -238,8 +254,11 @@ export default function DiscountedDevOfferContent() {
           whileHover="hover"
           {...buttonHover}
         >
-          <Link href="/services">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-full shadow-xl transition-transform font-semibold tracking-wide">
+          <Link href="/services" passHref>
+            <button
+              type="button"
+              className="cursor-pointer bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-full shadow-xl transition-transform font-semibold tracking-wide"
+            >
               ⬅ Back to Services
             </button>
           </Link>

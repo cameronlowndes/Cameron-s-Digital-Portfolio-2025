@@ -147,10 +147,15 @@ export default function BuildTerms() {
             </p>
           </div>
 
+              {/* Explanation of "+" symbol for prices */}
+        <section className="mb-16 max-w-md mx-auto bg-indigo-100 bg-opacity-30 rounded-lg p-4 text-center text-gray-700 italic text-sm">
+          <strong>Note:</strong> The symbol <span className="font-bold">+</span> next to a price (e.g., £1999+) indicates that the price is a starting estimate and may vary based on project scope and additional requirements.
+        </section>
+
         </section>
 
         <div className="mt-16 text-center pb-6 sm:pb-0">
-          <Link href="/services/html-css-development">
+          <Link href="/services/HTMLCssDevelopment">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               ⬅HTML/CSS Development
             </button>

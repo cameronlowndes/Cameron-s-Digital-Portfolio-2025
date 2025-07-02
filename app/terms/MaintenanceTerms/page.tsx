@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Link from "next/link";
 
 export default function MaintenanceTerms() {
@@ -13,14 +12,12 @@ export default function MaintenanceTerms() {
         />
       </Head>
 
-  
-
       <main className="flex-grow pt-20 pb-16 px-6 max-w-5xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-10">
           📜 Terms & Conditions: Ongoing Maintenance & Post-Launch Support
         </h1>
 
-        {/* Section: Overview */}
+        {/* Overview */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Overview</h2>
           <p className="text-gray-700 text-lg">
@@ -28,7 +25,7 @@ export default function MaintenanceTerms() {
           </p>
         </section>
 
-        {/* Section: Services Included */}
+        {/* Services Included */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Services Included</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
@@ -40,7 +37,7 @@ export default function MaintenanceTerms() {
           </ul>
         </section>
 
-        {/* Section: Pricing & Payment */}
+        {/* Pricing & Payment */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Pricing & Payment</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
@@ -52,7 +49,7 @@ export default function MaintenanceTerms() {
           </ul>
         </section>
 
-        {/* Section: Cancellations & Termination */}
+        {/* Cancellations & Termination */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Cancellations & Termination</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
@@ -62,7 +59,7 @@ export default function MaintenanceTerms() {
           </ul>
         </section>
 
-        {/* Section: Client Responsibilities */}
+        {/* Client Responsibilities */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Client Responsibilities</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
@@ -72,7 +69,7 @@ export default function MaintenanceTerms() {
           </ul>
         </section>
 
-        {/* Section: Liability & Warranty */}
+        {/* Liability & Warranty */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Liability & Warranty</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
@@ -82,7 +79,7 @@ export default function MaintenanceTerms() {
           </ul>
         </section>
 
-        {/* Section: Privacy & Confidentiality */}
+        {/* Privacy & Confidentiality */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Privacy & Confidentiality</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700 text-lg">
@@ -91,22 +88,27 @@ export default function MaintenanceTerms() {
           </ul>
         </section>
 
-        {/* Section: Changes to Terms */}
+        {/* Changes to Terms */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Changes to These Terms</h2>
           <p className="text-gray-700 text-lg">
             These terms may be updated occasionally. Clients will be notified of major changes. Continued use of services after changes constitutes acceptance of the revised terms.
           </p>
         </section>
-        <div className="mt-16 text-center pb-6 sm:pb-0">
-        <Link href="/services/OngoingMaintenance">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
-            ⬅ Ongoing Maintenance<br />&<br />Post-Launch Support
-            </button>
-        </Link>
-     </div>
-      </main>
 
+        {/* Explanation of "+" symbol for prices */}
+        <section className="mb-16 max-w-md mx-auto bg-indigo-100 bg-opacity-30 rounded-lg p-4 text-center text-gray-700 italic text-sm">
+          <strong>Note:</strong> The symbol <span className="font-bold">+</span> next to a price (e.g., £1999+) indicates that the price is a starting estimate and may vary based on project scope and additional requirements.
+        </section>
+
+        <div className="mt-16 text-center pb-6 sm:pb-0">
+          <Link href="/services/OngoingMaintenance">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
+              ⬅ Ongoing Maintenance<br />&<br />Post-Launch Support
+            </button>
+          </Link>
+        </div>
+      </main>
     </div>
   );
 }

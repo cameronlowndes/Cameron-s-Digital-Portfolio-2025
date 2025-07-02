@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import ClientSlider from "../ClientSlider"; // Make sure this path is correct!
+import ClientSlider from "../ClientSlider";
 
 type Project = {
   title: string;
@@ -59,10 +59,7 @@ const projectData: Project[] = [
     techStack: ["Next.js", "Custom CSS", "JavaScript"],
     links: [
       { url: "https://newswebsite-sand.vercel.app/", label: "Live Demo" },
-      {
-        url: "https://github.com/cameronlowndes/NewsWebsite_1",
-        label: "GitHub",
-      },
+      { url: "https://github.com/cameronlowndes/NewsWebsite_1", label: "GitHub" },
     ],
     images: [
       "/image/NewsWebsite/NewsWebsite-1.png",
@@ -71,17 +68,14 @@ const projectData: Project[] = [
       "/image/NewsWebsite/NewsWebsite-4.png",
     ],
   },
-    {
+  {
     title: "Next.js Data Mutation Website",
     description:
       "This is a demo website designed to showcase data mutation features, allowing users to upload pictures with captions. Please note that since this is a demonstration, some features may not be fully functional or behave exactly as intended.",
     techStack: ["Next.js", "Custom CSS", "JavaScript"],
     links: [
       { url: "https://datamutation.vercel.app", label: "Live Demo" },
-      {
-        url: 'https://github.com/cameronlowndes/DataMutation',
-        label: "GitHub",
-      },
+      { url: "https://github.com/cameronlowndes/DataMutation", label: "GitHub" },
     ],
     images: [
       "/image/DataMutation/DataMutationPictureONE.png",
@@ -92,25 +86,25 @@ const projectData: Project[] = [
 
 export default function ProjectsContent() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-900 via-purple-900 to-pink-900 text-white px-6 py-20">
-      <div className="text-center mb-20">
-        <h1 className="text-5xl font-extrabold drop-shadow-[0_4px_8px_rgba(0,0,0,0.7)] tracking-tight animate-fadeInUp">
+    <div className="min-h-screen bg-gradient-to-b from-indigo-900 via-purple-900 to-pink-900 text-white px-4 sm:px-6 py-10 sm:py-20">
+      <div className="text-center pt-10 sm:pt-16 mb-16 sm:mb-20">
+        <h1 className="text-4xl sm:text-5xl font-extrabold drop-shadow-[0_4px_8px_rgba(0,0,0,0.7)] tracking-tight animate-fadeInUp">
           🚀 My Web Development Projects
         </h1>
-        <p className="text-xl text-indigo-200 mt-6 max-w-2xl mx-auto animate-fadeInUp delay-200">
+        <p className="text-lg sm:text-xl text-indigo-200 mt-6 max-w-2xl mx-auto animate-fadeInUp delay-200">
           A collection of real-world, client-focused, and personal development work using cutting-edge technologies and creative design.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {projectData.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
       </div>
 
-      <div className="mt-20 text-center">
+      <div className="mt-16 text-center pb-10">
         <Link href="/services" passHref>
-          <button className="bg-gradient-to-r from-purple-600 to-blue-500 px-8 py-4 rounded-full shadow-lg hover:scale-110 hover:shadow-2xl transition-transform font-semibold text-white">
+          <button className="bg-gradient-to-r from-purple-600 to-blue-500 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg rounded-full shadow-lg md:hover:scale-110 hover:shadow-2xl transition-transform font-semibold text-white w-full sm:w-auto">
             ⬅ Back to Services
           </button>
         </Link>
@@ -146,9 +140,9 @@ function ProjectCard({ project }: ProjectCardProps) {
   const { title, description, techStack, links, images } = project;
 
   return (
-    <div className="bg-white bg-opacity-90 backdrop-blur-md rounded-2xl p-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out border border-white/20 text-black leading-relaxed">
-      <h2 className="text-2xl md:text-3xl font-bold mb-3">{title}</h2>
-      <p className="text-base md:text-lg text-gray-800 mb-4">{description}</p>
+    <div className="bg-white bg-opacity-90 backdrop-blur-md rounded-2xl p-5 sm:p-6 shadow-xl md:hover:shadow-2xl md:hover:scale-105 transition duration-300 ease-in-out border border-white/20 text-black leading-relaxed">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3">{title}</h2>
+      <p className="text-sm sm:text-base md:text-lg text-gray-800 mb-4">{description}</p>
       <p className="text-sm text-gray-700 mb-4">
         <span className="font-semibold">Tech Stack:</span> {techStack.join(", ")}
       </p>

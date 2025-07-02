@@ -68,7 +68,7 @@ export default function ServicesClient() {
               description:
                 "Build fast and scalable websites using Next.js or React, optimized for SEO, accessibility, and performance. Includes SSR, SSG, and client-side interactivity.",
               price: "£499 - £3000",
-              link: "/services/NextRsreactDevelopment",
+              link: "/services/NextJSDevelopment",
             },
             {
               title: "Basic HTML/CSS Development",

@@ -1,10 +1,9 @@
 import Head from "next/head";
-
 import Link from "next/link";
 
 export default function TermsNextJsReact() {
   return (
-    <div className="min-h-screen flex flex-col pt-16  px-4">
+    <div className="min-h-screen flex flex-col pt-16 px-4">
       <Head>
         <title>Terms & Conditions | Next.js/React Development</title>
         <meta
@@ -13,11 +12,9 @@ export default function TermsNextJsReact() {
         />
       </Head>
 
-     
-
       <main className="flex-grow max-w-4xl mx-auto w-full py-16">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
-          Terms & Conditions for  Next.js / React Development
+          Terms & Conditions for Next.js / React Development
         </h1>
 
         <section className="mb-8">
@@ -36,14 +33,14 @@ export default function TermsNextJsReact() {
 
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-2">⏱️ Turnaround Time</h2>
-           <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-2">
             <li>For <strong>projects priced over £1000</strong>, a <strong>50% upfront payment</strong> is required before development begins. The remaining 50% is due upon project completion and approval.</li>
             <li>For <strong>projects priced at £1000 or below</strong>, <strong>full payment is required upfront</strong> before work commences.</li>
             <li><strong>All payments are non-refundable</strong> once development has started.</li>
             <li>Timeline estimates (e.g. 5–7 days) are dependent on prompt communication and asset delivery.</li>
             <li>Revisions beyond the agreed scope may incur additional charges.</li>
             <li>Final project delivery includes deployment and basic handover support. Ongoing maintenance is available as an add-on.</li>
-        </ul>
+          </ul>
         </section>
 
         <section className="mb-8">
@@ -80,16 +77,20 @@ export default function TermsNextJsReact() {
             By commissioning a package or submitting the Google Form, you agree to these terms and conditions. These may be updated periodically.
           </p>
         </section>
-          <div className="mt-16 text-center pb-6 sm:pb-0">
-          <Link href="/services/nextjs-react-development">
+
+        {/* Explanation of "+" symbol for prices */}
+        <section className="mb-16 max-w-md mx-auto bg-indigo-100 bg-opacity-30 rounded-lg p-4 text-center text-gray-700 italic text-sm">
+          <strong>Note:</strong> The symbol <span className="font-bold">+</span> next to a price (e.g., £1999+) indicates that the price is a starting estimate and may vary based on project scope and additional requirements.
+        </section>
+
+        <div className="mt-16 text-center pb-6 sm:pb-0">
+          <Link href="/services/NextJSDevelopment">
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               ⬅ Next.js / React Development
             </button>
           </Link>
         </div>
       </main>
-
- 
     </div>
   );
 }
