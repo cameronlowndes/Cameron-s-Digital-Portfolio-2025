@@ -88,11 +88,11 @@ export default function ConsultationTerms() {
             </p>
           </div>
 
-              {/* Explanation of "+" symbol for prices */}
-        <section className="mb-16 max-w-md mx-auto bg-indigo-100 bg-opacity-30 rounded-lg p-4 text-center text-gray-700 italic text-sm">
-          <strong>Note:</strong> The symbol <span className="font-bold">+</span> next to a price (e.g., £1999+) indicates that the price is a starting estimate and may vary based on project scope and additional requirements.
-        </section>
-        
+          {/* Explanation of "+" symbol for prices */}
+          <section className="mb-16 max-w-md mx-auto bg-indigo-100 bg-opacity-30 rounded-lg p-4 text-center text-gray-700 italic text-sm">
+            <strong>Note:</strong> The symbol <span className="font-bold">+</span> next to a price (e.g., £1999+) indicates that the price is a starting estimate and may vary based on project scope and additional requirements.
+          </section>
+
         </section>
 
         <div className="mt-16 text-center pb-6 sm:pb-0">

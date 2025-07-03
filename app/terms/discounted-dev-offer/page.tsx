@@ -13,7 +13,7 @@ export default function DiscountedDevTerms() {
         />
       </Head>
 
-  
+
 
       <main className="max-w-4xl mx-auto w-full py-16">
         <div className="mb-10 text-center">
@@ -83,7 +83,13 @@ export default function DiscountedDevTerms() {
             <p>
               Ongoing maintenance, such as software updates, bug fixes, backups, and content updates, is not included by default. Maintenance packages can be purchased as monthly add-ons and are billed separately. Clients who opt-in can cancel with 14 days’ written notice. Emergency support is available but may be billed at an hourly rate if no plan is in place.
             </p>
+
           </div>
+          {/* Explanation of "+" symbol for prices */}
+          <section className="mb-16 max-w-md mx-auto bg-indigo-100 bg-opacity-30 rounded-lg p-4 text-center text-gray-700 italic text-sm">
+            <strong>Note:</strong> The symbol <span className="font-bold">+</span> next to a price (e.g., £1999+) indicates that the price is a starting estimate and may vary based on project scope and additional requirements.
+          </section>
+
         </section>
 
         <div className="mt-16 text-center pb-6 sm:pb-0">
