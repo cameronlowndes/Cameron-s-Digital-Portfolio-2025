@@ -71,7 +71,7 @@ export default function ConsultationServicesContactForm() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700 disabled:opacity-50 transition"
+        className=" cursor-pointer w-full bg-blue-600 text-white font-semibold px-6 py-3 rounded hover:bg-blue-700 disabled:opacity-50 transition"
       >
         Submit
       </button>

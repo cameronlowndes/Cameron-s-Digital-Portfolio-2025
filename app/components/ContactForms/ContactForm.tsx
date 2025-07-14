@@ -147,7 +147,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-xl py-4
+        className=" cursor-pointer bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-xl py-4
           hover:from-purple-700 hover:to-indigo-700 disabled:opacity-60 disabled:cursor-not-allowed
           transition-all duration-300 shadow-lg"
       >

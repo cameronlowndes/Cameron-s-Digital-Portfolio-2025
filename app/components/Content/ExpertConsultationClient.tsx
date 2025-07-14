@@ -129,7 +129,7 @@ export default function ExpertConsultationClient() {
         <Link href="/terms/ConsultationTerms" passHref>
           <button
             type="button"
-            className="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full shadow-xl hover:scale-110 hover:shadow-2xl transition-transform duration-300 font-semibold text-lg whitespace-pre-line select-none"
+            className=" cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 text-white px-8 py-4 rounded-full shadow-xl hover:scale-110 hover:shadow-2xl transition-transform duration-300 font-semibold text-lg whitespace-pre-line select-none"
           >
             Terms and Conditions{"\n"}for{"\n"}Expert Consultation Services
           </button>
@@ -220,7 +220,7 @@ export default function ExpertConsultationClient() {
           <Link href="/services" passHref>
             <button
               type="button"
-              className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-full shadow-xl hover:scale-110 hover:shadow-2xl transition-transform duration-300 font-semibold text-lg"
+              className=" cursor-pointer inline-block bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-full shadow-xl hover:scale-110 hover:shadow-2xl transition-transform duration-300 font-semibold text-lg"
             >
               ⬅ Back to Services
             </button>

@@ -17,7 +17,7 @@ const fadeInUp = {
 
 export default function AboutClient() {
   return (
-    <main className="flex-grow flex flex-col items-center justify-start px-6 pt-32 pb-32 bg-gradient-to-tr from-blue-900 via-indigo-900 to-purple-900 min-h-screen text-gray-100 select-none font-sans">
+    <main className="flex-grow flex flex-col items-center justify-start px-6 pt-32 pb-32 bg-gradient-to-tr from-blue-900 via-indigo-900 to-purple-900 min-h-screen text-gray-100 font-sans">
       <section className="relative w-full max-w-5xl rounded-3xl bg-gradient-to-br from-indigo-800/90 via-blue-800/90 to-purple-900/90 shadow-2xl border border-indigo-700 backdrop-blur-lg p-14 md:p-20 overflow-hidden">
         {/* Glowing circles */}
         <div className="absolute -top-20 -left-10 w-72 h-72 bg-purple-700 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000" />

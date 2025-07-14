@@ -54,7 +54,7 @@ export default function NextJsReactDevelopment() {
           <Link href="/terms/TermsNextJsReact" passHref>
             <button
               type="button"
-              className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 
+              className=" cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 
                 text-white px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-pre-line font-semibold tracking-wide"
               aria-label="View Terms and Conditions for Next.js React Development"
             >
@@ -197,7 +197,7 @@ export default function NextJsReactDevelopment() {
         >
           <Link href="/services" passHref>
             <button
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700
+              className=" cursor-pointer bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700
                 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-[0_4px_20px_rgba(139,92,246,0.8)] transition transform hover:-translate-y-1 duration-300 font-semibold"
               aria-label="Back to Services"
             >

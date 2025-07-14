@@ -156,7 +156,7 @@ export default function BuildTerms() {
 
         <div className="mt-16 text-center pb-6 sm:pb-0">
           <Link href="/services/HTMLCssDevelopment">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
+            <button className=" cursor-pointer bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               ⬅HTML/CSS Development
             </button>
           </Link>

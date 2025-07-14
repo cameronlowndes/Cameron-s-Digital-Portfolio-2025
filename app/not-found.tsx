@@ -35,7 +35,7 @@ export default function NotFound() {
 
       <Link href="/">
         <motion.button
-          className="bg-gradient-to-r from-purple-600 to-blue-500 px-6 py-3 rounded-full text-white font-semibold shadow-lg hover:scale-105 transition"
+          className=" cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 px-6 py-3 rounded-full text-white font-semibold shadow-lg hover:scale-105 transition"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

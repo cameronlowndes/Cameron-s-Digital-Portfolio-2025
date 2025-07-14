@@ -60,7 +60,7 @@ export default function DiscountedDevOfferContent() {
             Empower your cause or startup with modern, scalable web solutions.
           </motion.p>
           <motion.div custom={2} variants={fadeInUpVariants} whileHover="hover" {...buttonHover}>
-            <Link href="/terms/discounted-dev-offer" passHref>
+            <Link href="/terms/SpecialOfferPage" passHref>
               <button
                 type="button"
                 className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 px-8 py-4 rounded-full shadow-xl transition-transform font-semibold whitespace-pre-line"

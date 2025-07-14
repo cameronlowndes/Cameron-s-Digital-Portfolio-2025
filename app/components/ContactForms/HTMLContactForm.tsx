@@ -1,132 +1,134 @@
-"use client"
+"use client";
 
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function HTMLContactForm() {
   const [state, handleSubmit] = useForm("mrbklbla");
 
   if (state.succeeded) {
-    return <p className="text-white text-center text-lg font-semibold">Thanks for joining!</p>;
+    return (
+      <p className="text-green-400 text-center text-xl font-semibold">
+        ✅ Thanks for joining!
+      </p>
+    );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-lg mx-auto p-6 bg-indigo-900 rounded-xl text-white">
-      <label htmlFor="email" className="block font-semibold">
-        Email Address
-      </label>
-      <input
-        id="email"
-        type="email"
-        name="email"
-        required
-        className="w-full px-3 py-2 rounded border border-white bg-transparent text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-        placeholder="you@example.com"
-      />
-      <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-400 mt-1" />
-
-      <label htmlFor="message" className="block font-semibold">
-        Message
-      </label>
-      <textarea
-        id="message"
-        name="message"
-        required
-        rows={5}
-        className="w-full px-3 py-2 rounded border border-white bg-transparent text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-        placeholder="Your message here..."
-      />
-      <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 mt-1" />
-
-      <label htmlFor="level" className="block font-semibold">
-        Different Levels *
-      </label>
-      <select
-        id="level"
-        name="level"
-        required
-        defaultValue=""
-        className="w-full px-3 py-2 rounded border border-white bg-transparent text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-      >
-        <option value="" disabled className="text-gray-400">
-          -- Select a level --
-        </option>
-        <option value="Starter" className="text-black">Starter</option>
-        <option value="Professional" className="text-black">Professional</option>
-        <option value="Premium" className="text-black">Premium</option>
-      </select>
-      <ValidationError prefix="Level" field="level" errors={state.errors} className="text-red-400 mt-1" />
-
-      <fieldset className="space-y-2 mt-4 border-t border-indigo-700 pt-4">
-        <legend className="font-semibold mb-2">Add-Ons</legend>
-
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            name="addons"
-            value="E-commerce-ready HTML templates: +£250"
-            className="accent-purple-500"
-          />
-          E-commerce-ready HTML templates: +£250
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-6 max-w-lg mx-auto p-6 bg-indigo-900 rounded-xl text-white"
+      noValidate
+    >
+      {/* Email */}
+      <div>
+        <label htmlFor="email" className="block text-sm font-medium mb-1">
+          Email Address
         </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 px-4 py-2 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600"
+        />
+        <ValidationError
+          prefix="Email"
+          field="email"
+          errors={state.errors}
+          className="text-red-400 mt-1 text-sm"
+        />
+      </div>
 
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            name="addons"
-            value="Newsletter signup integration: +£200"
-            className="accent-purple-500"
-          />
-          Newsletter signup integration: +£200
+      {/* Message */}
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium mb-1">
+          Message
         </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          rows={5}
+          placeholder="Your message here..."
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 px-4 py-2 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600"
+        />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+          className="text-red-400 mt-1 text-sm"
+        />
+      </div>
 
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            name="addons"
-            value="Multilingual static site support: +£150"
-            className="accent-purple-500"
-          />
-          Multilingual static site support: +£150
+      {/* Level Selection */}
+      <div>
+        <label htmlFor="level" className="block text-sm font-medium mb-1">
+          Different Levels *
         </label>
+        <select
+          id="level"
+          name="level"
+          required
+          defaultValue=""
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600"
+        >
+          <option value="" disabled className="text-gray-400">
+            -- Select a level --
+          </option>
+          <option value="Starter" className="text-black">
+            Starter
+          </option>
+          <option value="Professional" className="text-black">
+            Professional
+          </option>
+          <option value="Premium" className="text-black">
+            Premium
+          </option>
+        </select>
+        <ValidationError
+          prefix="Level"
+          field="level"
+          errors={state.errors}
+          className="text-red-400 mt-1 text-sm"
+        />
+      </div>
 
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            name="addons"
-            value="Monthly updates + hosting support: £150/mo"
-            className="accent-purple-500"
-          />
-          Monthly updates + hosting support: £150/mo
-        </label>
+      {/* Add-Ons Checkboxes */}
+      <fieldset className="space-y-3 mt-6 border-t border-indigo-700 pt-4">
+        <legend className="text-lg font-semibold mb-3">Add-Ons</legend>
 
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            name="addons"
-            value="JavaScript functionality (modals, sliders, form validation, etc.): +£200"
-            className="accent-purple-500"
-          />
-          JavaScript functionality (modals, sliders, form validation, etc.): +£200
-        </label>
-
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            name="addons"
-            value="Remove WaterMark: +£150"
-            className="accent-purple-500"
-          />
-          Remove WaterMark: +£150
-        </label>
+        {[
+          "E-commerce-ready HTML templates: +£250",
+          "Newsletter signup integration: +£200",
+          "Multilingual static site support: +£150",
+          "Monthly updates + hosting support: £150/mo",
+          "JavaScript functionality (modals, sliders, form validation, etc.): +£200",
+          "Remove WaterMark: +£150",
+        ].map((addon) => (
+          <label
+            key={addon}
+            className="flex items-center gap-3 text-white cursor-pointer"
+          >
+            <input
+              type="checkbox"
+              name="addons"
+              value={addon}
+              className="accent-purple-500 rounded"
+            />
+            {addon}
+          </label>
+        ))}
       </fieldset>
 
+      {/* Submit Button */}
       <button
         type="submit"
         disabled={state.submitting}
-        className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg mt-6 w-full disabled:opacity-50 transition-colors duration-300"
+        className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-full w-full transition-transform transform hover:scale-105 disabled:opacity-50"
       >
-        Submit
+        {state.submitting ? "Sending..." : "Submit"}
       </button>
     </form>
   );

@@ -70,7 +70,7 @@ export default function OngoingMaintenanceClient() {
         variants={fadeInUp}
       >
         <Link href="/terms/MaintenanceTerms">
-          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform text-lg font-semibold">
+          <button className=" cursor-pointer bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform text-lg font-semibold">
             📄 View Maintenance Terms & Conditions
           </button>
         </Link>
@@ -172,7 +172,7 @@ export default function OngoingMaintenanceClient() {
         variants={fadeInUp}
       >
         <Link href="/services">
-          <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform text-lg font-semibold">
+          <button className=" cursor-pointer bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform text-lg font-semibold">
             ⬅ Back to Services
           </button>
         </Link>

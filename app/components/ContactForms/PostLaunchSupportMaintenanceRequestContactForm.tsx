@@ -110,7 +110,7 @@ export default function PostLaunchSupportMaintenanceRequestContactForm() {
           <button
             type="submit"
             disabled={state.submitting}
-            className="bg-gradient-to-r from-pink-500 to-indigo-500 hover:from-pink-600 hover:to-indigo-600 px-6 py-3 rounded-full font-semibold text-white shadow-lg transition-transform transform hover:scale-105 disabled:opacity-50"
+            className=" cursor-pointer bg-gradient-to-r from-pink-500 to-indigo-500 hover:from-pink-600 hover:to-indigo-600 px-6 py-3 rounded-full font-semibold text-white shadow-lg transition-transform transform hover:scale-105 disabled:opacity-50"
           >
             🚀 Submit
           </button>

@@ -175,7 +175,7 @@ export default function DiscountedDevOfferForm() {
         <button
           type="submit"
           disabled={state.submitting}
-          className="bg-blue-600 text-white rounded py-2 font-semibold hover:bg-blue-700 disabled:bg-blue-300"
+          className=" cursor-pointer bg-blue-600 text-white rounded py-2 font-semibold hover:bg-blue-700 disabled:bg-blue-300"
         >
           Submit
         </button>

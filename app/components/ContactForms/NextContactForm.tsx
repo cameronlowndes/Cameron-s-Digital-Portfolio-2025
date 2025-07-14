@@ -1,12 +1,11 @@
-// components/ContactForm.tsx
-
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function NextContactForm() {
   const [state, handleSubmit] = useForm("xdkzdkev");
+  const formRef = useRef<HTMLFormElement>(null);
 
   if (state.succeeded) {
     return (
@@ -17,7 +16,12 @@ export default function NextContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 text-white">
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="space-y-6 text-white"
+      noValidate
+    >
       {/* Email */}
       <div>
         <label htmlFor="email" className="block text-sm font-medium mb-1">
@@ -30,7 +34,12 @@ export default function NextContactForm() {
           required
           className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
         />
-        <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-400 mt-1 text-sm" />
+        <ValidationError
+          prefix="Email"
+          field="email"
+          errors={state.errors}
+          className="text-red-400 mt-1 text-sm"
+        />
       </div>
 
       {/* Package Selection */}
@@ -43,8 +52,11 @@ export default function NextContactForm() {
           name="package"
           required
           className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
+          defaultValue=""
         >
-          <option value="">Select a package</option>
+          <option value="" disabled>
+            Select a package
+          </option>
           <option value="Starter - £499">🟢 Starter – £499</option>
           <option value="Professional - £999">🔵 Professional – £999</option>
           <option value="Premium - £1999+">🟣 Premium – £1999+</option>
@@ -90,17 +102,25 @@ export default function NextContactForm() {
           required
           className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
         />
-        <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 mt-1 text-sm" />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+          className="text-red-400 mt-1 text-sm"
+        />
       </div>
+
+      {/* Removed icon button */}
 
       {/* Submit Button */}
       <button
-        type="submit"
-        disabled={state.submitting}
-        className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-transform transform hover:scale-105 disabled:opacity-50"
-      >
-        {state.submitting ? "Sending..." : "Submit"}
-      </button>
+  type="submit"
+  disabled={state.submitting}
+  className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-transform transform hover:scale-105 disabled:opacity-50 w-full"
+>
+  {state.submitting ? "Sending..." : "Submit"}
+</button>
+
     </form>
   );
 }

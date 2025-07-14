@@ -1,122 +1,197 @@
+"use client";
+
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Terms() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="min-h-screen flex flex-col pt-16 px-4">
+    <>
       <Head>
-        <title>Terms and Conditions | Cameron Lowndes - Full-Stack Developer</title>
+        <title>Terms and Conditions | Cameron Digital Works</title>
         <meta
           name="description"
-          content="Read the terms and conditions for using the services offered by Cameron Lowndes, a full-stack developer. Understand the rules and guidelines for using this website and related services."
+          content="Review the terms and conditions that govern use of services provided by Cameron Digital Works, including policies on payment, privacy, cancellations, and ethical standards."
         />
-        <meta property="og:title" content="Terms and Conditions - Cameron Lowndes" />
+        <meta property="og:title" content="Terms and Conditions - Cameron Digital Works" />
         <meta
           property="og:description"
-          content="Read the terms and conditions for using the services offered by Cameron Lowndes, a full-stack developer. Understand the rules and guidelines for using this website and related services."
+          content="Review the terms and conditions that govern use of services provided by Cameron Digital Works, including policies on payment, privacy, cancellations, and ethical standards."
         />
-        <meta property="og:image" content="/image/cameron.jpg" />
+        <meta property="og:image" content="/image/logo.jpg" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <main className="max-w-6xl mx-auto w-full py-16">
-        <h1 className="text-5xl font-semibold text-center text-gray-900 mb-16">
-          Terms and Conditions
-        </h1>
+      <main className="min-h-screen flex flex-col pt-20 pb-20 px-6 bg-white text-gray-900 max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-8">Terms and Conditions</h1>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Introduction</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            These Terms and Conditions ("Terms") govern your use of the website and the services provided by Cameron Lowndes, a sole trader operating under the business name [Your Business Name]. By accessing or using the website and services, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, please do not use the website or services.
-          </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Cameron Lowndes is a sole trader registered with HMRC in the United Kingdom, offering [description of services]. The business operates under the registered trading name [Your Business Name].
-          </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Scope of Services</h2>
-          <p className="text-lg text-gray-700 mb-4">We provide the following services:</p>
-          <ul className="list-disc pl-6 text-lg text-gray-700 mb-4">
-            <li>Web development (including design, development, and maintenance)</li>
-            <li>Server management and hosting services</li>
-            <li>Custom web applications</li>
-            <li>SEO optimization</li>
-            <li>Mobile-first website design</li>
-            <li>Technical support and consultancy</li>
+        {/* Quick Summary Accordion */}
+        <details className="mb-12 border rounded-md p-4 bg-gray-50">
+          <summary className="cursor-pointer font-semibold text-lg select-none">
+            Quick Summary
+          </summary>
+          <ul className="list-disc pl-6 mt-4 space-y-2 text-base">
+            <li>Using our services means you agree to these Terms.</li>
+            <li>Payments are due within 7 days of invoice.</li>
+            <li>We respect your privacy and data security.</li>
+            <li>Project changes and cancellations have defined policies.</li>
+            <li>We are not liable for indirect damages.</li>
           </ul>
-          <p className="text-lg text-gray-700">
-            These services are subject to availability and may change from time to time. Additional or custom services can be requested and are subject to mutual agreement.
+        </details>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">1. Introduction</h2>
+          <p className="text-base leading-relaxed">
+            These Terms and Conditions ("Terms") govern the provision of services by Cameron
+            Digital Works. By using our website or engaging our services, you agree to be legally
+            bound by these Terms. These Terms apply to all clients, collaborators, and visitors.
           </p>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Contract Formation</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            By placing an order or requesting services from us, you are making an offer to purchase services under these Terms and Conditions. We reserve the right to accept or reject any offer, and the contract will be deemed to have been formed upon our acceptance.
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">2. About Cameron Digital Works</h2>
+          <p className="text-base leading-relaxed">
+            Cameron Digital Works is a sole proprietorship owned and operated by Cameron Lowndes in
+            the United Kingdom. We specialise in ethical and accessible web development services
+            built around values of inclusivity, transparency, and respect.
           </p>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Payment Terms</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            - Payments for services will be due within <strong>7 days</strong> of the invoice date.<br />
-            - A <strong>5% interest charge</strong> may apply to overdue balances after <strong>7 days</strong> from the invoice date.<br />
-            - Continued <strong>non-payment</strong> may result in <strong>service suspension</strong> until the outstanding amount is paid.<br />
-            - Please <strong>reference the invoice number</strong> when making payment to avoid processing delays.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Failure to make payment in accordance with these terms may result in the suspension or termination of services, and the client will be responsible for any recovery costs associated with overdue payments.
-          </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Liability</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Cameron Lowndes will not be liable for any indirect, special, or consequential damages resulting from the use of our services. Our liability is limited to the total amount paid for the services that directly caused the damage.
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">3. Services</h2>
+          <ul className="list-disc pl-6 text-base space-y-1">
+            <li>Full-stack web development (frontend & backend)</li>
+            <li>Mobile-first and responsive web design</li>
+            <li>Technical consultation and troubleshooting</li>
+            <li>Server setup, monitoring, and maintenance</li>
+            <li>SEO improvements and content adjustments</li>
+            <li>Ongoing site management and updates</li>
+          </ul>
+          <p className="mt-2 text-base">
+            A full project proposal including scope, timeline, and costs will be shared before any
+            work begins. Work is accepted only if it aligns with our values and capabilities.
           </p>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Privacy and Data Protection</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            We are committed to protecting your privacy and handling your data in compliance with UK data protection laws, including the Data Protection Act 2018 and GDPR. For more information, please refer to our Privacy Policy.
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">4. Project Deliverables & Revisions</h2>
+          <p className="text-base leading-relaxed">
+            All deliverables, including code, designs, and documentation, will be provided upon
+            completion and final payment. Minor revisions are typically included within 14 days of
+            project completion. Substantial revisions or scope changes may be billed separately.
           </p>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Cancellation and Refunds</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            If you wish to cancel a service, you must notify us in writing. Refunds are only provided in accordance with our refund policy, which may vary depending on the nature of the service. In most cases, once the work has commenced or services have been rendered, refunds may not be issued.
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">5. Payments and Invoicing</h2>
+          <p className="text-base leading-relaxed mb-2">
+            Payment terms are net <strong>7 days</strong> from the date of invoice unless otherwise
+            agreed in writing. Invoices unpaid after 7 days may incur:
+          </p>
+          <ul className="list-disc pl-6 text-base space-y-1">
+            <li>A 5% late fee applied monthly</li>
+            <li>Temporary suspension of services or access</li>
+            <li>Referral to a collections or legal service after 30 days</li>
+          </ul>
+          <p className="mt-2 text-base">
+            Invoices should be paid via bank transfer (details provided on the invoice). Please
+            quote the invoice reference number when paying.
           </p>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Governing Law</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            These Terms and Conditions shall be governed by and construed in accordance with the laws of the United Kingdom. Any disputes shall be subject to the exclusive jurisdiction of the courts of the United Kingdom.
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">6. Intellectual Property</h2>
+          <p className="text-base leading-relaxed">
+            All custom work remains the intellectual property of Cameron Digital Works until full
+            payment is received. Upon final payment, clients receive a license to use the code or
+            assets for their intended business purposes. Reuse or resale is not permitted without
+            prior written consent.
           </p>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Changes to Terms</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            We reserve the right to update or modify these Terms and Conditions at any time. Any changes will be posted on this page, and it is your responsibility to review them regularly.
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">7. Cancellations & Refunds</h2>
+          <p className="text-base leading-relaxed">
+            Clients may cancel a project by giving written notice. If work has already started, a
+            cancellation fee may apply to cover work completed to date. Refunds are not issued for
+            completed milestones or digital goods already delivered. Projects may be paused or
+            rescheduled where appropriate.
           </p>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Information</h2>
-          <p className="text-lg text-gray-700 mb-4">
-            For any questions or concerns regarding these Terms and Conditions, you can contact us at: <strong>camerondigitalwork@gmail.com</strong>.
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">8. Privacy and Data Security</h2>
+          <p className="text-base leading-relaxed">
+            We comply with the Data Protection Act 2018 and UK GDPR. All client data is stored
+            securely and is not shared with third parties without explicit consent. Clients are
+            responsible for the legality of any data or content they provide. Backups are taken
+            regularly but we recommend clients retain their own copies.
           </p>
         </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">9. Client Responsibilities</h2>
+          <p className="text-base leading-relaxed">
+            Clients must provide timely access to content, assets, and feedback to ensure the
+            project timeline is met. Delays in providing required materials may result in project
+            rescheduling or additional charges.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">10. Limitation of Liability</h2>
+          <p className="text-base leading-relaxed">
+            Cameron Digital Works is not responsible for indirect or consequential damages,
+            including but not limited to lost profits, loss of data, or downtime. Total liability is
+            limited to the amount paid by the client for the specific service involved in the
+            dispute.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">11. Force Majeure</h2>
+          <p className="text-base leading-relaxed">
+            Cameron Digital Works shall not be liable for failure or delay in performance due to
+            circumstances beyond reasonable control including natural disasters, cyberattacks,
+            strikes, outages, or changes in legal regulations.
+          </p>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-2xl font-semibold mb-2">12. Changes to These Terms</h2>
+          <p className="text-base leading-relaxed">
+            Terms may be updated at any time. It is the client’s responsibility to check this page
+            periodically. Continued use of our services constitutes acceptance of the most recent
+            version of these Terms.
+          </p>
+          <p className="text-sm text-gray-500 mt-2 select-none">Last updated: July 14, 2025</p>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold mb-2">13. Contact</h2>
+          <p className="text-base leading-relaxed">
+            Questions or concerns about these Terms should be directed to:
+            <br />
+            <a
+              href="mailto:camerondigitalwork@gmail.com"
+              className="underline text-blue-700 hover:text-blue-900"
+            >
+              cameron<strong>digital</strong>work@gmail.com
+            </a>
+          </p>
+        </section>
+
+        <div className="mt-16 text-center pb-6 sm:pb-2">
+          <Link href="/terms/PrivacyPolicy">
+            <button className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
+              Privacy Policy Page
+            </button>
+          </Link>
+        </div>
       </main>
-    </div>
+    </>
   );
 }
