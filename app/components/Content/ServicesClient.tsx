@@ -25,21 +25,6 @@ const fadeInUpVariants: Variants = {
   }),
 };
 
-const cardHover = {
-  hover: {
-    scale: 1.05,
-    boxShadow: "0 15px 30px rgba(139, 92, 246, 0.7)",
-    transition: { duration: 0.3 },
-  },
-};
-
-const buttonHover = {
-  hover: {
-    scale: 1.1,
-    transition: { duration: 0.2 },
-  },
-};
-
 export default function ServicesClient() {
   return (
     <main className="flex-1 max-w-7xl mx-auto w-full pt-16 pb-32 px-4 sm:px-6 lg:px-8">
@@ -165,6 +150,13 @@ export default function ServicesClient() {
               price: "Custom Pricing",
               link: "/services/SpecialOfferPage",
             },
+            {
+              title: "HTML Starter Website Package",
+              description:
+                "A simple but professional HTML/CSS website, perfect for small businesses wanting a cost-effective online presence.",
+              price: "£149 - £399",
+              link: "/services/SpecialOfferPageHTML",
+            },
           ]}
         />
       </motion.div>
@@ -189,7 +181,6 @@ function ServiceSection({
 }) {
   return (
     <motion.section
-      className=""
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -234,7 +225,6 @@ function ServiceCard({
   comingSoon?: boolean;
   custom?: number;
 }) {
-  // Combined variants for fadeInUp + hover
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i = 1) => ({
@@ -291,7 +281,7 @@ function ServiceCard({
           className="w-full bg-gray-600 text-gray-300 font-semibold py-3 rounded-xl cursor-not-allowed select-none shadow-inner"
           title="Coming Soon"
           variants={buttonHoverVariants}
-          whileHover={{ scale: 1 }} // no scale on disabled
+          whileHover={{ scale: 1 }}
         >
           Coming Soon
         </motion.button>
