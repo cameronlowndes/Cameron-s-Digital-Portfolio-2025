@@ -52,7 +52,7 @@ const packages = [
   },
   {
     title: "🔵 Advanced",
-    price: "£200",
+    price: "£250",
     color: "blue",
     features: [
       "3 hour consultation",

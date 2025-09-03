@@ -1,23 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
-export default function HTMLContactForm() {
+export default function NextContactForm() {
   const [state, handleSubmit] = useForm("mrbklbla");
+  const formRef = useRef<HTMLFormElement>(null);
 
   if (state.succeeded) {
     return (
       <p className="text-green-400 text-center text-xl font-semibold">
-        ✅ Thanks for joining!
+        ✅ Thanks for reaching out! I’ll get back to you soon.
       </p>
     );
   }
 
   return (
     <form
+      ref={formRef}
       onSubmit={handleSubmit}
-      className="space-y-6 max-w-lg mx-auto p-6 bg-indigo-900 rounded-xl text-white"
+      className="space-y-6 text-white"
       noValidate
     >
       {/* Email */}
@@ -30,8 +32,7 @@ export default function HTMLContactForm() {
           type="email"
           name="email"
           required
-          placeholder="you@example.com"
-          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 px-4 py-2 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600"
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
         />
         <ValidationError
           prefix="Email"
@@ -39,6 +40,58 @@ export default function HTMLContactForm() {
           errors={state.errors}
           className="text-red-400 mt-1 text-sm"
         />
+      </div>
+
+      {/* Package Selection */}
+      <div>
+        <label htmlFor="package" className="block text-sm font-medium mb-1">
+          Package
+        </label>
+        <select
+          id="package"
+          name="package"
+          required
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
+          defaultValue=""
+        >
+          <option value="" disabled>
+            Select a package
+          </option>
+          <option value="Starter - £499">🟢 Starter  £199</option>
+          <option value="Professional - £999">🔵 Professional – £399+</option>
+          <option value="Premium - £1999+">🟣 Premium – £699+</option>
+        </select>
+      </div>
+
+      {/* Add-Ons Checkboxes */}
+      <div>
+        <label className="block text-sm font-medium mb-2">Add-Ons</label>
+        <div className="space-y-2 pl-2">
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="addOns" value="E-commerce-ready templates: " />
+           E-commerce-ready templates: £250+
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="addOns" value="Newsletter signup integration: +£200" />
+           Newsletter signup integration: £200+
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="addOns" value="Multilingual static site support: +£150" />
+            Multilingual static site support: £150+
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="addOns" value="Monthly updates + hosting support: +£150/mo" />
+            Monthly updates + hosting support: £150+/mo
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="addOns" value="JavaScript functionality (sliders, modals, validation): +£200)" />
+          JavaScript functionality (sliders, modals, validation): £200+
+          </label>
+           <label className="flex items-center gap-2">
+            <input type="checkbox" name="addOns" value="Remove watermark: +£150" />
+          Remove watermark: £150+
+          </label>
+        </div>
       </div>
 
       {/* Message */}
@@ -49,10 +102,9 @@ export default function HTMLContactForm() {
         <textarea
           id="message"
           name="message"
-          required
           rows={5}
-          placeholder="Your message here..."
-          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 px-4 py-2 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600"
+          required
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
         />
         <ValidationError
           prefix="Message"
@@ -62,74 +114,17 @@ export default function HTMLContactForm() {
         />
       </div>
 
-      {/* Level Selection */}
-      <div>
-        <label htmlFor="level" className="block text-sm font-medium mb-1">
-          Different Levels *
-        </label>
-        <select
-          id="level"
-          name="level"
-          required
-          defaultValue=""
-          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-purple-600"
-        >
-          <option value="" disabled className="text-gray-400">
-            -- Select a level --
-          </option>
-          <option value="Starter" className="text-black">
-            Starter
-          </option>
-          <option value="Professional" className="text-black">
-            Professional
-          </option>
-          <option value="Premium" className="text-black">
-            Premium
-          </option>
-        </select>
-        <ValidationError
-          prefix="Level"
-          field="level"
-          errors={state.errors}
-          className="text-red-400 mt-1 text-sm"
-        />
-      </div>
-
-      {/* Add-Ons Checkboxes */}
-      <fieldset className="space-y-3 mt-6 border-t border-indigo-700 pt-4">
-        <legend className="text-lg font-semibold mb-3">Add-Ons</legend>
-
-        {[
-          "E-commerce-ready HTML templates: +£250",
-          "Newsletter signup integration: +£200",
-          "Multilingual static site support: +£150",
-          "Monthly updates + hosting support: £150/mo",
-          "JavaScript functionality (modals, sliders, form validation, etc.): +£200",
-          "Remove WaterMark: +£150",
-        ].map((addon) => (
-          <label
-            key={addon}
-            className="flex items-center gap-3 text-white cursor-pointer"
-          >
-            <input
-              type="checkbox"
-              name="addons"
-              value={addon}
-              className="accent-purple-500 rounded"
-            />
-            {addon}
-          </label>
-        ))}
-      </fieldset>
+      {/* Removed icon button */}
 
       {/* Submit Button */}
       <button
-        type="submit"
-        disabled={state.submitting}
-        className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-full w-full transition-transform transform hover:scale-105 disabled:opacity-50"
-      >
-        {state.submitting ? "Sending..." : "Submit"}
-      </button>
+  type="submit"
+  disabled={state.submitting}
+  className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-transform transform hover:scale-105 disabled:opacity-50 w-full"
+>
+  {state.submitting ? "Sending..." : "Submit"}
+</button>
+
     </form>
   );
 }

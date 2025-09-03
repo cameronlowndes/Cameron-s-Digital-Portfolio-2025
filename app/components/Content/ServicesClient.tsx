@@ -119,7 +119,7 @@ export default function ServicesClient() {
               title: "Ongoing Maintenance",
               description:
                 "Regular updates, bug fixes, security patches, and performance optimizations. Monthly reports and priority support included.",
-              price: "£500 - £1500 / month",
+              price: "£150 - £1500 / month",
               link: "/services/OngoingMaintenance",
             },
           ]}
@@ -140,15 +140,30 @@ export default function ServicesClient() {
         />
 
         <ServiceSection
+          title="Social Media Starter Package"
+          description="Affordable social media management designed specifically for small businesses. Includes posting, engagement tracking, and content creation."
+          services={[
+            {
+              title: "Social Media Starter Package",
+              description:
+                "Basic social media management for small businesses—posting, engagement tracking, and content creation included.",
+              price: "£149 - £499",
+              link: "/services/SocialMedia",
+            },
+          ]}
+        />
+
+
+        <ServiceSection
           title="Special Offer for Small Companies"
           description="If you’re a small business, I offer customized pricing and special discounts. Please get in touch—I'd love to help your business grow."
           services={[
             {
-              title: "Special Discount for Charities & Small Businesses",
+              title: "Discounted Soical Meida",
               description:
-                "Affordable rates and flexible packages to support charities and small businesses with limited budgets.",
-              price: "Custom Pricing",
-              link: "/services/SpecialOfferPage",
+                "Affordable social media management services for charities and small businesses — content creation, posting, engagement tracking, and tailored support to grow your audience responsibly.",
+              price: "£99 - £299+",
+              link: "/services/SoicalMediaForCharity",
             },
             {
               title: "HTML Starter Website Package",
@@ -157,8 +172,16 @@ export default function ServicesClient() {
               price: "£149 - £399",
               link: "/services/SpecialOfferPageHTML",
             },
+            {
+              title: "Special Discount for Charities & Small Businesses",
+              description:
+                "Affordable rates and flexible packages to support charities and small businesses with limited budgets.",
+              price: "Custom Pricing",
+              link: "/services/SpecialOfferPage",
+            },
           ]}
         />
+
       </motion.div>
     </main>
   );

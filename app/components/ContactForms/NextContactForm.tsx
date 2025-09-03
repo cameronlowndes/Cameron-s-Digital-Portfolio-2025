@@ -57,9 +57,9 @@ export default function NextContactForm() {
           <option value="" disabled>
             Select a package
           </option>
-          <option value="Starter - £499">🟢 Starter – £499</option>
-          <option value="Professional - £999">🔵 Professional – £999</option>
-          <option value="Premium - £1999+">🟣 Premium – £1999+</option>
+          <option value="Starter - £499">🟢 Starter  £499</option>
+          <option value="Professional - £999">🔵 Professional  £999</option>
+          <option value="Premium - £1999+">🟣 Premium  £1999+</option>
         </select>
       </div>
 
@@ -69,15 +69,15 @@ export default function NextContactForm() {
         <div className="space-y-2 pl-2">
           <label className="flex items-center gap-2">
             <input type="checkbox" name="addOns" value="E-commerce setup (+£400)" />
-            E-commerce setup (Stripe + product pages): +£400
+            E-commerce setup (Stripe + product pages): £400+
           </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" name="addOns" value="Multilingual support (+£250)" />
-            Multilingual support: +£250
+            Multilingual support: £250+
           </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" name="addOns" value="Hosting migration (+£100)" />
-            Hosting migration: +£100
+            Hosting migration: £100+
           </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" name="addOns" value="Monthly maintenance (£250+/month)" />
@@ -85,7 +85,7 @@ export default function NextContactForm() {
           </label>
           <label className="flex items-center gap-2">
             <input type="checkbox" name="addOns" value="Remove watermark (+£300)" />
-            Remove Watermark: +£300
+            Remove Watermark: £300+
           </label>
         </div>
       </div>

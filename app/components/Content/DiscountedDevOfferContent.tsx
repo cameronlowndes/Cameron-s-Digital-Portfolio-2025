@@ -116,7 +116,7 @@ export default function DiscountedDevOfferContent() {
             <PackageCard
               color="purple"
               title="Premium"
-              price="£1,100"
+              price="£1,100+"
               items={[
                 "10+ pages",
                 "API integrations",

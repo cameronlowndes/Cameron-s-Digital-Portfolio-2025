@@ -108,7 +108,7 @@ export default function HtmlStarterPackageContent() {
             <PackageCard
               color="yellow"
               title="Ultimate"
-              price="£500+"
+              price="£550+"
               items={[
                 "Unlimited static pages",
                 "Advanced layouts & components",

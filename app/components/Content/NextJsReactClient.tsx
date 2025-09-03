@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import NextContactForm from "../ContactForms/NextContactForm";
+import ServiceCard from "../ServiceCard"; // make sure path is correct
 
-export const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
@@ -13,66 +15,132 @@ export const fadeInUp = {
   }),
 };
 
-type PricingCardProps = {
-  title: string;
-  price: string;
-  color: "green" | "blue" | "purple";
-  features: string[];
-  custom?: number;
-};
-
-export function PricingCard({ title, price, color, features, custom = 0 }: PricingCardProps) {
-  const colors = {
-    green: {
-      text: "text-green-400",
-      border: "border-green-400",
-      bg: "bg-gradient-to-tr from-green-900 via-green-800 to-green-700",
-      icon: "text-green-400",
-    },
-    blue: {
-      text: "text-blue-400",
-      border: "border-blue-400",
-      bg: "bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-700",
-      icon: "text-blue-400",
-    },
-    purple: {
-      text: "text-purple-400",
-      border: "border-purple-400",
-      bg: "bg-gradient-to-tr from-purple-900 via-purple-800 to-purple-700",
-      icon: "text-purple-400",
-    },
-  };
-
-  const colorClasses = colors[color];
-
+export default function NextJsReactClient() {
   return (
-    <motion.div
-      className={`${colorClasses.bg} rounded-3xl p-8 shadow-2xl border-4 border-opacity-70 border-white flex flex-col text-white
-      hover:shadow-[0_0_30px_5px_rgba(255,255,255,0.3)] transition-shadow duration-400`}
-      initial="hidden"
-      animate="visible"
-      variants={fadeInUp}
-      custom={custom + 9}
-    >
-      <h3 className={`text-3xl font-extrabold mb-3 tracking-tight ${colorClasses.text} drop-shadow-lg`}>
-        {title}
-      </h3>
-      <p className="text-2xl font-bold mb-6">{price}</p>
-      <ul className="flex-1 space-y-4 text-lg font-semibold drop-shadow-sm">
-        {features.map((feature, i) => (
-          <li key={i} className="flex items-center gap-3">
-            <CheckCircle className={`${colorClasses.icon} w-6 h-6 flex-shrink-0 drop-shadow-md`} />
-            <span>{feature}</span>
-          </li>
-        ))}
-      </ul>
-      <button
-        disabled
-        className="mt-8 bg-white bg-opacity-20 text-white font-semibold py-3 rounded-xl cursor-default select-none opacity-70"
-        aria-label={`${title} package purchase coming soon`}
+    <>
+      {/* Intro */}
+      <motion.div
+        className="text-center mb-16 max-w-3xl mx-auto"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        custom={0}
       >
-        Coming Soon
-      </button>
-    </motion.div>
+        <motion.h1
+          className="text-6xl font-extrabold mb-4 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+          variants={fadeInUp}
+          custom={1}
+        >
+          Next.js / React Development
+        </motion.h1>
+        <motion.p
+          className="text-2xl font-light text-indigo-200"
+          variants={fadeInUp}
+          custom={2}
+        >
+          Build blazing-fast, scalable web apps with cutting-edge technology and modern design.
+        </motion.p>
+      </motion.div>
+
+      {/* Terms Link */}
+      <motion.div
+        className="flex justify-center mb-20"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        custom={3}
+      >
+        <Link href="/terms/TermsNextJsReact" passHref>
+          <button className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 whitespace-pre-line font-semibold tracking-wide">
+            Terms and Conditions{"\n"}for{"\n"}Next.js / React Development
+          </button>
+        </Link>
+      </motion.div>
+
+      {/* Packages */}
+      <motion.section
+        className="mb-32"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        custom={4}
+      >
+        <h2 className="text-4xl font-extrabold text-center mb-12 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] tracking-wide">
+          💼 Packages & Pricing
+        </h2>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <ServiceCard
+            title="🟢 Starter"
+            price="£499"
+            gradient="bg-gradient-to-tr from-green-900 via-green-800 to-green-700"
+            features={[
+              "1–3 pages (Home, About, Contact)",
+              "Responsive design",
+              "SEO-friendly setup",
+              "Simple contact form",
+              "Vercel deployment",
+              "5–7 day turnaround",
+            ]}
+          />
+
+          <ServiceCard
+            title="🔵 Professional"
+            price="£999"
+            gradient="bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-700"
+            features={[
+              "Up to 6 pages",
+              "CMS integration",
+              "Custom UI components",
+              "Performance tuning",
+              "Google Analytics setup",
+              "Admin dashboard (optional) + £300",
+            ]}
+          />
+
+          <ServiceCard
+            title="🟣 Premium"
+            price="£1999+"
+            gradient="bg-gradient-to-tr from-purple-900 via-purple-800 to-purple-700"
+            features={[
+              "Unlimited pages & components",
+              "API integrations",
+              "Authentication & roles",
+              "Advanced dashboard",
+              "Full CMS setup",
+              "Ongoing support £150+",
+            ]}
+          />
+        </div>
+      </motion.section>
+
+      {/* Contact Form */}
+      <motion.section
+        className="mb-32 max-w-3xl mx-auto"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        custom={5}
+      >
+        <h2 className="text-3xl font-extrabold text-center mb-8 text-indigo-100 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]">
+          📩 Let’s Work Together
+        </h2>
+        <NextContactForm />
+      </motion.section>
+
+      {/* Back to Services */}
+      <motion.div
+        className="text-center pb-10"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        custom={6}
+      >
+        <Link href="/services" passHref>
+          <button className="cursor-pointer bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-[0_4px_20px_rgba(139,92,246,0.8)] transition transform hover:-translate-y-1 duration-300 font-semibold">
+            ⬅ Back to Services
+          </button>
+        </Link>
+      </motion.div>
+    </>
   );
 }
