@@ -1,45 +1,25 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
-// Package options
-const packages = [
-  { title: "Starter", price: "£149" },
-  { title: "Professional", price: "£299" },
-  { title: "Premium", price: "£499+" },
-];
-
-// Add-ons options
-const addOnsOptions = [
-  { label: "Instagram/Facebook ad campaigns: +£150/month", value: "ads" },
-  { label: "Custom graphics & video content: +£200", value: "graphics" },
-  { label: "Influencer collaboration: +£250", value: "influencer" },
-];
-
-export default function SocialMediaContactForm() {
-  const [state, handleSubmit] = useForm("mandlwkd"); // Replace with your Formspree form ID
-  const [selectedPackage, setSelectedPackage] = useState("");
-  const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
-
-  const handleAddOnChange = (value: string) => {
-    setSelectedAddOns((prev) =>
-      prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
-    );
-  };
+export default function NextContactForm() {
+  const [state, handleSubmit] = useForm("mandlwkd");
+  const formRef = useRef<HTMLFormElement>(null);
 
   if (state.succeeded) {
     return (
       <p className="text-green-400 text-center text-xl font-semibold">
-        ✅ Thanks for your inquiry! We'll get back to you soon.
+        ✅ Thanks for reaching out! I’ll get back to you soon.
       </p>
     );
   }
 
   return (
     <form
+      ref={formRef}
       onSubmit={handleSubmit}
-      className="space-y-6 text-white max-w-md mx-auto"
+      className="space-y-6 text-white"
       noValidate
     >
       {/* Email */}
@@ -51,9 +31,8 @@ export default function SocialMediaContactForm() {
           id="email"
           type="email"
           name="email"
-          placeholder="Your email address"
           required
-          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2 placeholder:text-gray-300"
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
         />
         <ValidationError
           prefix="Email"
@@ -63,20 +42,27 @@ export default function SocialMediaContactForm() {
         />
       </div>
 
-      {/* Name */}
+      {/* Package Selection */}
       <div>
-        <label htmlFor="name" className="block text-sm font-medium mb-1">
-          Name
+        <label htmlFor="package" className="block text-sm font-medium mb-1">
+          Package
         </label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          placeholder="Your name"
+        <select
+          id="package"
+          name="package"
           required
-          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2 placeholder:text-gray-300"
-        />
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
+          defaultValue=""
+        >
+          <option value="" disabled>
+            Select a package
+          </option>
+          <option value="Starter  £499">🟢 Starter  £200/mo</option>
+          <option value="Professional - £999">🔵 Professional  £450/mo</option>
+          <option value="Premium - £1999+">🟣 Premium  £600+/mo</option>
+        </select>
       </div>
+
 
       {/* Message */}
       <div>
@@ -87,9 +73,8 @@ export default function SocialMediaContactForm() {
           id="message"
           name="message"
           rows={5}
-          placeholder="Your message"
           required
-          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2 placeholder:text-gray-300"
+          className="w-full rounded-lg border border-indigo-500 bg-indigo-800 text-white px-4 py-2"
         />
         <ValidationError
           prefix="Message"
@@ -99,54 +84,17 @@ export default function SocialMediaContactForm() {
         />
       </div>
 
-      {/* Package Selection */}
-      <div>
-        <label className="block text-sm font-medium mb-2">Select a Package</label>
-        <div className="space-y-2 pl-2">
-          {packages.map((pkg) => (
-            <label key={pkg.title} className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="package"
-                value={`${pkg.title} - ${pkg.price}`}
-                checked={selectedPackage === pkg.title}
-                onChange={() => setSelectedPackage(pkg.title)}
-                className="accent-purple-500 w-5 h-5"
-                required
-              />
-              {pkg.title} – {pkg.price}
-            </label>
-          ))}
-        </div>
-      </div>
+      {/* Removed icon button */}
 
-      {/* Add-Ons */}
-      <div>
-        <label className="block text-sm font-medium mb-2">Optional Add-Ons</label>
-        <div className="space-y-2 pl-2">
-          {addOnsOptions.map((addon) => (
-            <label key={addon.value} className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                value={addon.value}
-                checked={selectedAddOns.includes(addon.value)}
-                onChange={() => handleAddOnChange(addon.value)}
-                className="accent-purple-500 w-5 h-5"
-              />
-              {addon.label}
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Submit */}
+      {/* Submit Button */}
       <button
-        type="submit"
-        disabled={state.submitting}
-        className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-transform transform hover:scale-105 disabled:opacity-50 w-full"
-      >
-        {state.submitting ? "Sending..." : "Submit"}
-      </button>
+  type="submit"
+  disabled={state.submitting}
+  className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white px-6 py-3 rounded-full font-semibold transition-transform transform hover:scale-105 disabled:opacity-50 w-full"
+>
+  {state.submitting ? "Sending..." : "Submit"}
+</button>
+
     </form>
   );
 }

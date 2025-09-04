@@ -27,7 +27,7 @@ export default function NextJsReactClient() {
         custom={0}
       >
         <motion.h1
-          className="text-6xl font-extrabold mb-4 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+         className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
           variants={fadeInUp}
           custom={1}
         >

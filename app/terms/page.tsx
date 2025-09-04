@@ -12,12 +12,12 @@ export default function Terms() {
         <title>Terms and Conditions | Cameron Digital Works</title>
         <meta
           name="description"
-          content="Review the terms and conditions that govern use of services provided by Cameron Digital Works, including policies on payment, privacy, cancellations, and ethical standards."
+          content="Review the terms and conditions that govern use of services provided by Cameron Digital Works, including policies on payment, privacy, cancellations, social media services, and ethical standards."
         />
         <meta property="og:title" content="Terms and Conditions - Cameron Digital Works" />
         <meta
           property="og:description"
-          content="Review the terms and conditions that govern use of services provided by Cameron Digital Works, including policies on payment, privacy, cancellations, and ethical standards."
+          content="Review the terms and conditions that govern use of services provided by Cameron Digital Works, including policies on payment, privacy, cancellations, social media services, and ethical standards."
         />
         <meta property="og:image" content="/image/logo.jpg" />
         <meta property="og:type" content="website" />
@@ -28,7 +28,7 @@ export default function Terms() {
       <main className="min-h-screen flex flex-col pt-20 pb-20 px-6 bg-white text-gray-900 max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Terms and Conditions</h1>
 
-        {/* Quick Summary Accordion */}
+        {/* Quick Summary */}
         <details className="mb-12 border rounded-md p-4 bg-gray-50">
           <summary className="cursor-pointer font-semibold text-lg select-none">
             Quick Summary
@@ -38,10 +38,13 @@ export default function Terms() {
             <li>Payments are due within 7 days of invoice.</li>
             <li>We respect your privacy and data security.</li>
             <li>Project changes and cancellations have defined policies.</li>
+            <li>Social media services may include additional disclaimers regarding engagement & followers.</li>
             <li>We are not liable for indirect damages.</li>
+            <li>All work aligns with our values of inclusivity, integrity, and respect.</li>
           </ul>
         </details>
 
+        {/* Core Terms 1-13 */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-2">1. Introduction</h2>
           <p className="text-base leading-relaxed">
@@ -184,10 +187,64 @@ export default function Terms() {
           </p>
         </section>
 
-        <div className="mt-16 text-center pb-6 sm:pb-2">
+       
+
+        {/* Values Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-semibold mb-2">14. Our Values</h2>
+
+          <p className="text-base leading-relaxed mb-2">
+            At Cameron Digital Works, I hold strong core values that guide everything I do as a web developer.
+            I believe in fairness and integrity, and I’m committed to working only with clients whose projects align with my values.
+            If a website doesn’t reflect the principles I stand for, I will respectfully decline to create it.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-4 mb-2">Inclusion for All</h3>
+          <p className="text-base leading-relaxed mb-2">
+            No matter your background, beliefs, or identity, you deserve respect and equal opportunity.
+            I’m committed to building websites that reflect these values.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-4 mb-2">Celebrating Diversity</h3>
+          <p className="text-base leading-relaxed mb-2">
+            I am a passionate pansexual developer who believes diversity is essential. Projects are inclusive and welcoming for all.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-4 mb-2">Supporting Neurodiversity</h3>
+          <p className="text-base leading-relaxed mb-2">
+            I focus on creating accessible, user-friendly websites for people with dyslexia and other neurodivergent conditions, including clear typography and simple navigation.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-4 mb-2">Respect & Integrity</h3>
+          <p className="text-base leading-relaxed mb-2">
+            I maintain professionalism and courtesy, declining work that conflicts with inclusivity, ethics, or equality.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-4 mb-2">Transparency & Collaboration</h3>
+          <p className="text-base leading-relaxed mb-2">
+            I commit to clear, honest communication, detailed agreements, and collaborative partnerships to ensure mutual understanding and successful outcomes.
+          </p>
+
+          <h3 className="text-xl font-semibold mt-4 mb-2">Online Responsibility & Ongoing Growth</h3>
+          <p className="text-base leading-relaxed mb-2">
+            All websites created reflect respect, kindness, and positive digital presence. Continuous learning ensures that services evolve with the changing digital landscape.
+          </p>
+
+          <p className="text-base leading-relaxed">
+            By partnering with Cameron Digital Works, clients receive projects built with integrity, inclusivity, transparency, and user-focused design.
+          </p>
+        </section>
+
+        {/* Buttons */}
+        <div className="mt-16 text-center pb-6 sm:pb-2 space-y-4">
           <Link href="/terms/PrivacyPolicy">
             <button className="cursor-pointer bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
               Privacy Policy Page
+            </button>
+          </Link>
+          <Link href="/values">
+            <button className="cursor-pointer bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform">
+              Our Values Page
             </button>
           </Link>
         </div>

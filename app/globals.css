@@ -38,3 +38,6 @@ main {
   flex-grow: 1; /* Ensures the main content grows to take the available space */
 }
 
+#__next {
+  min-height: 100%;
+}

@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function NextContactForm() {
-  const [state, handleSubmit] = useForm("xdkzdkev");
+  const [state, handleSubmit] = useForm("mgvyzneg");
   const formRef = useRef<HTMLFormElement>(null);
 
   if (state.succeeded) {
@@ -57,9 +57,11 @@ export default function NextContactForm() {
           <option value="" disabled>
            Type of Service Requested
           </option>
-          <option value="FREE Consult">🟢  Free Consult</option>
-          <option value=" Basic £50">🟢 Basic £50</option>
-          <option value="Premium - £1999+">🟣 Premium  £1999+</option>
+          <option value="FREE Consult">🟢 Free Consult</option>
+          <option value="Basic £50">🟢 Basic £50</option>
+          <option value="Advanced £250">🔵  Advanced £250</option>
+          <option value="Premium £450">🟣 Premium £450</option>
+          <option value="VIP £600+"> ⭐ VIP £600+</option>
         </select>
       </div>
 

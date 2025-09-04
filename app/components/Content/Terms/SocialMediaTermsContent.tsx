@@ -15,7 +15,7 @@ export default function SocialMediaTermsContent() {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-2">📦 Packages & Deliverables</h2>
           <p className="text-gray-700 mb-2">
-            Cameron Digital Works offers three main social media packages: Starter, Professional, and Premium. Each package includes specific services, such as content creation, posting, analytics, and engagement tracking. 
+            Cameron Digital Works offers three main social media packages: Starter, Professional, and Premium. Each package includes specific services, such as content creation, posting, analytics, and engagement tracking.
           </p>
           <p className="text-gray-700">
             Deliverables are provided according to the package selected at the time of booking. Any requests beyond the listed features (e.g., additional platforms, custom campaigns) may require extra charges. Cameron Digital Works will communicate clearly about what is included and provide timelines for delivery.
@@ -30,6 +30,30 @@ export default function SocialMediaTermsContent() {
           </p>
           <p className="text-gray-700">
             All payments are non-refundable once work has started. This is to cover the time, effort, and resources Cameron Digital Works dedicates to creating and managing your social media content.
+          </p>
+        </section>
+
+        {/* Cancellation Policy */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2">❌ Cancellation Policy</h2>
+          <p className="text-gray-700">
+            Clients may cancel their project before work begins for a full refund. Once work has started, payments are non-refundable.
+          </p>
+        </section>
+
+        {/* Intellectual Property */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2">📄 Intellectual Property</h2>
+          <p className="text-gray-700">
+            Cameron Digital Works retains ownership of all content created until full payment is received. After payment, ownership of approved deliverables is transferred to the client. Cameron Digital Works reserves the right to showcase work in portfolios or marketing materials unless requested otherwise.
+          </p>
+        </section>
+
+        {/* Confidentiality */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2">🔒 Confidentiality</h2>
+          <p className="text-gray-700">
+            All client information, accounts, and content provided to Cameron Digital Works will be kept confidential and not shared with third parties, except as required to provide services.
           </p>
         </section>
 
@@ -71,6 +95,30 @@ export default function SocialMediaTermsContent() {
           </p>
         </section>
 
+        {/* Client Responsibilities */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2">📝 Client Responsibilities</h2>
+          <p className="text-gray-700">
+            Clients are responsible for providing timely access to social media accounts, logos, images, and approvals. Clients must ensure all content is legally compliant, including copyright and platform guidelines.
+          </p>
+        </section>
+
+        {/* Limitation of Liability */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2">⚖️ Limitation of Liability</h2>
+          <p className="text-gray-700">
+            Cameron Digital Works is not liable for indirect, incidental, or consequential damages resulting from social media services, including revenue loss, platform restrictions, or technical issues.
+          </p>
+        </section>
+
+        {/* Force Majeure */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2">🌪️ Force Majeure</h2>
+          <p className="text-gray-700">
+            Cameron Digital Works is not responsible for delays or failure to perform due to circumstances beyond its reasonable control, such as natural disasters, platform outages, or changes in regulations.
+          </p>
+        </section>
+
         {/* Communication Section */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold text-gray-800 mb-2">📩 Communication</h2>
@@ -87,6 +135,14 @@ export default function SocialMediaTermsContent() {
           </p>
         </section>
 
+        {/* Plus Symbol */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-2">➕ Plus Symbol</h2>
+          <p className="text-gray-700">
+            The symbol + next to a price (e.g., £1999+) indicates that the price is a starting estimate and may vary based on project scope and additional requirements.
+          </p>
+        </section>
+
         {/* Note Section */}
         <section className="mb-16 max-w-md mx-auto bg-indigo-100 bg-opacity-30 rounded-lg p-4 text-center text-gray-700 italic text-sm">
           <strong>Note:</strong> Optional add-ons incur extra charges and are not included in base package prices. Cameron Digital Works will provide clear quotes before any additional services are implemented.
@@ -99,7 +155,7 @@ export default function SocialMediaTermsContent() {
               type="button"
               className="cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform"
             >
-              ⬅ Back to Services
+              ⬅ Back to Social Media Page
             </button>
           </Link>
         </div>

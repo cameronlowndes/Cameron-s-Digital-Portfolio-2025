@@ -76,7 +76,7 @@ export default function HtmlCssDevelopmentClient() {
         custom={0}
         variants={fadeInUp}
       >
-        <h1 className="text-6xl font-extrabold mb-6 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
           HTML / CSS Development
         </h1>
         <p className="text-2xl font-light text-indigo-200 leading-relaxed">
@@ -121,7 +121,7 @@ export default function HtmlCssDevelopmentClient() {
 
   <ServiceCard
     title="🔵 Professional"
-    price="£399"
+    price="£550"
     gradient="bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-700"
     features={[
       "Up to 5 pages",
@@ -134,7 +134,7 @@ export default function HtmlCssDevelopmentClient() {
 
   <ServiceCard
     title="🟣 Premium"
-    price="£699+"
+    price="£750+"
     gradient="bg-gradient-to-tr from-purple-900 via-purple-800 to-purple-700"
     features={[
       "Unlimited static pages",
