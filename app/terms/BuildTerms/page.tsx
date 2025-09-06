@@ -1,6 +1,29 @@
 import Head from "next/head";
-
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Build Terms & Conditions | HTML/CSS Development | Cameron Lowndes",
+  description:
+    "Detailed terms and conditions for HTML/CSS development services offered by Cameron Lowndes.",
+  keywords: [
+    "Cameron Lowndes",
+    "HTML development",
+    "CSS development",
+    "web development terms",
+    "website build",
+  ],
+  openGraph: {
+    title: "Build Terms & Conditions | HTML/CSS Development | Cameron Lowndes",
+    description:
+      "Detailed terms and conditions for HTML/CSS development services offered by Cameron Lowndes.",
+    images: ["/image/logo.jpg"],
+    type: "website",
+  },
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
+};
+
 
 export default function BuildTerms() {
   return (

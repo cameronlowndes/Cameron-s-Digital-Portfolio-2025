@@ -52,14 +52,14 @@ export default function ServicesClient() {
               title: "Next.js/React Development",
               description:
                 "Build fast and scalable websites using Next.js or React, optimized for SEO, accessibility, and performance. Includes SSR, SSG, and client-side interactivity.",
-              price: "£499 - £3000",
+              price: "£550 - £2,200+",
               link: "/services/NextJSDevelopment",
             },
             {
               title: "Basic HTML/CSS Development",
               description:
                 "Clean, semantic, and responsive static websites or landing pages. Ideal for portfolios, small business sites, or marketing pages.",
-              price: "£199 - £699",
+              price: "£499 - £750+",
               link: "/services/HTMLCssDevelopment",
             },
           ]}
@@ -119,7 +119,7 @@ export default function ServicesClient() {
               title: "Ongoing Maintenance",
               description:
                 "Regular updates, bug fixes, security patches, and performance optimizations. Monthly reports and priority support included.",
-              price: "£150 - £1500 / month",
+              price:  "Custom Pricing",
               link: "/services/OngoingMaintenance",
             },
           ]}
@@ -162,14 +162,14 @@ export default function ServicesClient() {
               title: "Discounted Soical Meida",
               description:
                 "Affordable social media management services for charities and small businesses — content creation, posting, engagement tracking, and tailored support to grow your audience responsibly.",
-              price: "£99 - £299+",
+              price: "Custom Pricing",
               link: "/services/SoicalMediaForCharity",
             },
             {
               title: "HTML Starter Website Package",
               description:
                 "A simple but professional HTML/CSS website, perfect for small businesses wanting a cost-effective online presence.",
-              price: "£149 - £399",
+              price: "Custom Pricing",
               link: "/services/SpecialOfferPageHTML",
             },
             {

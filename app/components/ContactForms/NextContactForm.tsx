@@ -57,9 +57,9 @@ export default function NextContactForm() {
           <option value="" disabled>
             Select a package
           </option>
-          <option value="Starter - £499">🟢 Starter  £499</option>
+          <option value="Starter - £550">🟢 Starter  £550</option>
           <option value="Professional - £999">🔵 Professional  £999</option>
-          <option value="Premium - £1999+">🟣 Premium  £1999+</option>
+          <option value="Premium - £2,200+">🟣 Premium  £2,200+</option>
         </select>
       </div>
 

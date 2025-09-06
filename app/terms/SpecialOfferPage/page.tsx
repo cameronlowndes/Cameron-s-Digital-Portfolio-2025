@@ -1,6 +1,31 @@
 import Head from "next/head";
-
+import type { Metadata } from "next";
 import Link from "next/link";
+
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions | Discounted Offer | Cameron Lowndes",
+  description:
+    "Terms and conditions for the discounted web development services offered to charities and small businesses by Cameron Lowndes.",
+  keywords: [
+    "Cameron Lowndes",
+    "discounted web development",
+    "charity websites",
+    "small business websites",
+    "Next.js development",
+    "React development",
+    "terms and conditions",
+  ],
+  openGraph: {
+    title: "Terms & Conditions | Discounted Offer | Cameron Lowndes",
+    description:
+      "Terms and conditions for the discounted web development services offered to charities and small businesses by Cameron Lowndes.",
+    images: ["/image/logo.jpg"],
+    type: "website",
+  },
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
+};
 
 export default function DiscountedDevTerms() {
   return (

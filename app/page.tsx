@@ -1,27 +1,21 @@
-import Head from "next/head";
 import HomeContent from "./components/Content/HomeContent";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cameron Digitl Works HomePage",
+  description:
+    "Explore the work and skills of Cameron Lowndes, a full-stack web developer with a passion for coding and cloud technologies.",
+  openGraph: {
+    title: "Cameron's Digital Portfolio",
+    description:
+      "Explore the work and skills of Cameron Lowndes, a full-stack web developer with a passion for coding and cloud technologies.",
+    images: ["/image/cameron.jpg"],
+    type: "website",
+  },
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
+};
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Cameron Lowndes | Full-Stack Developer Portfolio</title>
-        <meta
-          name="description"
-          content="Explore the work and skills of Cameron Lowndes, a full-stack web developer with a passion for coding and cloud technologies."
-        />
-        <meta property="og:title" content="Cameron's Digital Portfolio" />
-        <meta
-          property="og:description"
-          content="Explore the work and skills of Cameron Lowndes, a full-stack web developer with a passion for coding and cloud technologies."
-        />
-        <meta property="og:image" content="/image/cameron.jpg" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-
-      <HomeContent />
-    </>
-  );
+  return <HomeContent />;
 }

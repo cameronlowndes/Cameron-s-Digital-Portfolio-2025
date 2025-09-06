@@ -1,16 +1,34 @@
 import Head from "next/head";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions | Ongoing Maintenance | Cameron Lowndes",
+  description:
+    "View the terms and conditions for ongoing maintenance and post-launch support services provided by Cameron Lowndes.",
+  keywords: [
+    "Cameron Lowndes",
+    "ongoing maintenance",
+    "post-launch support",
+    "web maintenance",
+    "website support",
+    "bug fixes",
+  ],
+  openGraph: {
+    title: "Terms & Conditions | Ongoing Maintenance | Cameron Lowndes",
+    description:
+      "View the terms and conditions for ongoing maintenance and post-launch support services provided by Cameron Lowndes.",
+    images: ["/image/logo.jpg"],
+    type: "website",
+  },
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
+};
 
 export default function MaintenanceTerms() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b">
-      <Head>
-        <title>Terms & Conditions | Ongoing Maintenance | Cameron Lowndes</title>
-        <meta
-          name="description"
-          content="View the terms and conditions for ongoing maintenance and post-launch support services provided by Cameron Lowndes."
-        />
-      </Head>
+     
 
       <main className="flex-grow pt-20 pb-16 px-6 max-w-5xl mx-auto">
         <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-10">

@@ -1,16 +1,32 @@
-import Head from "next/head";
 import Link from "next/link";
+import type {Metadata}  from "next";
+
+export const metadata: Metadata = {
+  title: "Consultation Terms & Conditions | Cameron Lowndes",
+  description:
+    "Terms and conditions governing the consultation services provided by Cameron Lowndes.",
+  keywords: [
+    "Cameron Lowndes",
+    "consultation services",
+    "terms and conditions",
+    "business advice",
+    "expert consultation",
+  ],
+  openGraph: {
+    title: "Consultation Terms & Conditions | Cameron Lowndes",
+    description:
+      "Terms and conditions governing the consultation services provided by Cameron Lowndes.",
+    images: ["/image/logo.jpg"],
+    type: "website",
+  },
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
+};
 
 export default function ConsultationTerms() {
   return (
     <div className="min-h-screen flex flex-col pt-16 px-4">
-      <Head>
-        <title>Consultation Terms & Conditions | Cameron Lowndes</title>
-        <meta
-          name="description"
-          content="Terms and conditions governing the consultation services provided by Cameron Lowndes."
-        />
-      </Head>
+    
 
       <main className="flex-grow max-w-4xl mx-auto w-full py-16">
         <h1 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">
