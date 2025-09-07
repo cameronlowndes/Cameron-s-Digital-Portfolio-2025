@@ -72,7 +72,7 @@ export default function SocialMediaOfferClient() {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <ServiceCard
             title="🟢 Starter"
-            price="£200/mo"
+            price="£300/mo"
             gradient="bg-gradient-to-tr from-green-900 via-green-800 to-green-700"
             features={[
               "2 posts/week",
@@ -83,7 +83,7 @@ export default function SocialMediaOfferClient() {
 
           <ServiceCard
             title="🔵 Professional"
-            price="£450/mo"
+            price="£500/mo"
             gradient="bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-700"
             features={[
               "5 posts/week",
@@ -95,7 +95,7 @@ export default function SocialMediaOfferClient() {
 
           <ServiceCard
             title="🟣 Premium"
-            price="£600+/mo"
+            price="£700+/mo"
             gradient="bg-gradient-to-tr from-purple-900 via-purple-800 to-purple-700"
             features={[
               "Daily posts",

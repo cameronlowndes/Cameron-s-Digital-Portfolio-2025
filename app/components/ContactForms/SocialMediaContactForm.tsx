@@ -57,9 +57,9 @@ export default function NextContactForm() {
           <option value="" disabled>
             Select a package
           </option>
-          <option value="Starter  £499">🟢 Starter  £200/mo</option>
-          <option value="Professional - £999">🔵 Professional  £450/mo</option>
-          <option value="Premium - £1999+">🟣 Premium  £600+/mo</option>
+          <option value="Starter  £300/mo">🟢 Starter  £300/mo</option>
+          <option value="Professional  £500/mo">🔵 Professional  £500/mo</option>
+          <option value="Premium £700+/mo">🟣 Premium  £700+/mo</option>
         </select>
       </div>
 
@@ -84,7 +84,7 @@ export default function NextContactForm() {
         />
       </div>
 
-      {/* Removed icon button */}
+      
 
       {/* Submit Button */}
       <button

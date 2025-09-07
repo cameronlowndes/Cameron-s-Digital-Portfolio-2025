@@ -140,14 +140,14 @@ export default function ServicesClient() {
         />
 
         <ServiceSection
-          title="Social Media Starter Package"
-          description="Affordable social media management designed specifically for small businesses. Includes posting, engagement tracking, and content creation."
+          title="Social Media Help and management"
+          description="Full social media management and support — including strategic posting, content creation, and engagement tracking. This service is designed to strengthen your online presence, boost audience interaction, and ensure your brand’s voice is consistent and professional across all platforms."
           services={[
             {
-              title: "Social Media Starter Package",
+              title: "Social Media",
               description:
                 "Basic social media management for small businesses—posting, engagement tracking, and content creation included.",
-              price: "£149 - £499",
+              price: "£300/mo - £700+/mo",
               link: "/services/SocialMedia",
             },
           ]}
@@ -173,9 +173,9 @@ export default function ServicesClient() {
               link: "/services/SpecialOfferPageHTML",
             },
             {
-              title: "Special Discount for Charities & Small Businesses",
+              title: "Next.js Website For Small Business And Charity",
               description:
-                "Affordable rates and flexible packages to support charities and small businesses with limited budgets.",
+                "Build fast and scalable websites using Next.js or React, optimized for SEO, accessibility, and performance. Includes SSR, SSG, and client-side interactivity.",
               price: "Custom Pricing",
               link: "/services/SpecialOfferPage",
             },

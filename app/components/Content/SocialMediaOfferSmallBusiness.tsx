@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import SocialMediaContactForm from "../ContactForms/CharityContactFormForSoicalMedia";
 import ServiceCard from "../ServiceCard";
 
+// Base fade-in variant
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i = 0) => ({
@@ -13,6 +14,27 @@ const fadeInUp = {
     y: 0,
     transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
   }),
+};
+
+// Container for staggered animations
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+// Heading fade-in
+const fadeInUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+// List item animation
+const listItemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 export default function SocialMediaOfferClient() {
@@ -72,7 +94,7 @@ export default function SocialMediaOfferClient() {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <ServiceCard
             title="🟢 Starter"
-            price="£100/mo"
+            price="£150/mo"
             gradient="bg-gradient-to-tr from-green-900 via-green-800 to-green-700"
             features={[
               "2 posts/week",
@@ -105,6 +127,76 @@ export default function SocialMediaOfferClient() {
             ]}
           />
         </div>
+      </motion.section>
+
+      {/* Eligibility */}
+      <motion.section
+        className="mb-32 max-w-4xl mx-auto bg-white bg-opacity-10 rounded-3xl p-10 shadow-lg backdrop-blur-md border border-white/20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+      >
+        <motion.h2
+          className="text-3xl font-bold text-black mb-6 tracking-wide text-center drop-shadow-md"
+          custom={0}
+          variants={fadeInUpVariants}
+        >
+          📜 Eligibility Requirements
+        </motion.h2>
+        <motion.ul
+          className="list-disc pl-8 space-y-4 text-black text-lg font-medium max-w-xl mx-auto"
+          variants={containerVariants}
+        >
+          {[
+            <>
+              <strong>Charities:</strong> Must be officially registered with the
+              UK Charity Commission or an equivalent authority in their country.
+              Proof of registration (such as a registration number) may be
+              required to verify eligibility.
+            </>,
+            <>
+              <strong>Small Businesses:</strong> Must have fewer than 10
+              employees and an annual turnover under £200,000. Verification
+              through business registration or financial documentation may be
+              requested to confirm eligibility.
+            </>,
+            <>
+              These criteria protect my time and resources by focusing efforts
+              on clients who genuinely qualify and align with this offer’s
+              scope. It prevents misuse of discounted or special terms and
+              ensures fair treatment for all eligible clients.
+            </>,
+            <>
+              <strong>Verification is Mandatory:</strong> Failure to provide
+              requested documentation or falsifying eligibility information will
+              result in immediate disqualification from this offer.
+            </>,
+            <>
+              <strong>Offer Limitations:</strong> This offer is not intended for
+              larger enterprises, individuals, or organizations outside these
+              eligibility brackets to avoid resource strain and maintain service
+              quality.
+            </>,
+            <>
+              <strong>Contractual Clarity:</strong> All terms, including
+              eligibility and pricing, are clearly documented in the contract.
+              Non-compliance or misrepresentation may lead to termination of
+              service without refund.
+            </>,
+            <>
+              By accepting this offer, clients confirm that they meet these
+              eligibility criteria and agree to provide any necessary
+              documentation promptly. This approach ensures a professional,
+              smooth working relationship while safeguarding my business
+              interests.
+            </>,
+          ].map((item, i) => (
+            <motion.li key={i} custom={i} variants={listItemVariants}>
+              {item}
+            </motion.li>
+          ))}
+        </motion.ul>
       </motion.section>
 
       {/* Contact Form */}
