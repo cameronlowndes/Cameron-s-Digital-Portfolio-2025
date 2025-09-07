@@ -71,7 +71,7 @@ export default function NextJsReactClient() {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <ServiceCard
             title="🟢 Starter"
-            price="£550"
+            price="£1,500"
             gradient="bg-gradient-to-tr from-green-900 via-green-800 to-green-700"
             features={[
               "1–3 pages (Home, About, Contact)",
@@ -85,7 +85,7 @@ export default function NextJsReactClient() {
 
           <ServiceCard
             title="🔵 Professional"
-            price="£999"
+            price="£2,500"
             gradient="bg-gradient-to-tr from-blue-900 via-blue-800 to-blue-700"
             features={[
               "Up to 6 pages",
@@ -99,7 +99,7 @@ export default function NextJsReactClient() {
 
           <ServiceCard
             title="🟣 Premium"
-            price="£2,200+"
+            price="£3,500+"
             gradient="bg-gradient-to-tr from-purple-900 via-purple-800 to-purple-700"
             features={[
               "Unlimited pages & components",
