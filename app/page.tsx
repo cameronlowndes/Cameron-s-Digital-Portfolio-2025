@@ -2,7 +2,7 @@ import HomeContent from "./components/Content/HomeContent";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cameron Digitl Works HomePage",
+  title: "Cameron Digital Works HomePage",
   description:
     "Explore the work and skills of Cameron Lowndes, a full-stack web developer with a passion for coding and cloud technologies.",
   openGraph: {
